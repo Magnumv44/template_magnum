@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site" method="upgrade">
+	<name>magnum</name>
+	<creationDate>2014-09-05</creationDate>
+	<author>Magnum</author>
+	<authorEmail>vitaliy1984@gmail.com</authorEmail>
+	<authorUrl>http://www.magnum-blog.pp.ua</authorUrl>
+	<copyright>Magnum 2014</copyright>
+	<license>GNU/GPL 2 or Later</license>
+	<version>1.0.8</version>
+	<description>TPL_MAGNUM_DESC</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>error.php</filename>
+		<filename>offline.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+	</files>
+	
+	<!-- Позиции модулей, используемые в шаблоне -->
+	<positions>
+		<position>breadcrumb</position>
+		<position>left</position>
+		<position>right</position>
+		<position>footer</position>
+		<position>debug</position>
+		<position>syndicate</position>
+	</positions>
+	
+	<!-- Установка/Удаление файлов локализации -->
+    <languages folder="language">
+        <language tag="ru-RU">ru-RU/ru-RU.tpl_magnum.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.tpl_magnum.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="logo" type="media" label="TPL_MAGNUM_LOGO_LABEL" description="TPL_MAGNUM_LOGO_DESC" />
+			</fieldset>
+		</fields>
+	</config>	
+</extension>
