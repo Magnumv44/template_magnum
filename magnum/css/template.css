@@ -248,6 +248,7 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 	background-color: #434343;
 	color: #fff;
 	/*vertical-align: middle;*/
+	line-height: 45px;
 	border-top: 2px solid #0080c0;
 }
 
@@ -259,7 +260,7 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 	border: 1px red solid; /*Дебаг линия*/
 	width: 20.5%; /*нужно будет уменьшить или увеличить что-бы отображалось нормально на смартах и тд*/
 	font-size: 11px;
-	margin-top: 1em;
+	/*margin: auto 0;*/
 	padding-left: 10px;
 	float: left;
 }
