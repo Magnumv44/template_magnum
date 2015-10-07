@@ -70,9 +70,8 @@ abbr:hover {
 
 /*Меню сайта*/
 .con .content .span2 {
-	border: 1px red solid; /*Дебаг линия*/
 	width: 22%;
-	min-width: 200px;
+	min-width: 119px; /*Стиль отвечающий за минимальную ширну при сужении окна*/
 	margin-top: 1%;
 	padding: 0 7px 0;
 }
