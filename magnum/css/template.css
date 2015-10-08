@@ -241,6 +241,12 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 	display: none;
 }
 
+/*Начало стилей постраничной навигации*/
+.pagination {
+	text-align: center;
+}
+
+/*Начало стилей футера*/
 .powered {
 	height: 50px; /*Задает высоту блока*/
 	background-color: #434343;
