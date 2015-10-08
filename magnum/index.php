@@ -54,12 +54,12 @@
                 </div>
             </div>
             <div class="visible-phone mobicontent"> <!--Будет отображатся только на телефонах-->
+                <div class="span2">
+                	<jdoc:include type="modules" name="left" style="rounded" />
+                </div>
             	<div class="span8">
                 	<jdoc:include type="message" />
                     <jdoc:include type="component" />
-                </div>
-                <div class="span2">
-                	<jdoc:include type="modules" name="left" style="rounded" />
                 </div>
             </div>
         </div>
