@@ -30,7 +30,7 @@
     	<!--начало шапки-->
     	<div class="container-fluid">
   			<div class="row-fluid">
-            	<div class="visible-desktop">
+            	<div class="hidden-phone">
     				<div class="span10 logo">
                 		<img id="logo" src="templates/<?php echo $this->template; ?>/images/logo.jpg" alt="Magnum news" />
                 	</div>
@@ -67,14 +67,16 @@
         <!--Футер начало-->
         <div class="container-fluid">
         	<div class="row-fluid">
-            	<div class="span10 powered">
-                	<div class="developed">
-                    	Developed by: <a href="http://www.magnum-blog.pp.ua" title="Developed by Magnum">Magnum</a>
-                    </div>
-                    <div class="counter">
-                    	<a href="http://www.eomy.net/"><img src="http://www.eomy.net/eomy.net.3d-graf6.gif" border="0" alt="EOMY.NET: бесплатный хостинг" /></a>
-                    </div>
-               	</div>
+            	<div class="hidden-phone"> <!--Будет отображатся только на планшетах и компьютерах-->
+            		<div class="span10 powered">
+                		<div class="span2 developed">
+                    		Developed by: <a href="http://www.magnum-blog.pp.ua" title="Developed by Magnum">Magnum</a>
+                    	</div>
+                    	<div class="span8 counter">
+                    		<a href="http://www.eomy.net/"><img src="http://www.eomy.net/eomy.net.3d-graf6.gif" border="0" alt="EOMY.NET: бесплатный хостинг" /></a>
+                    	</div>
+               		</div>
+                </div>
             </div>
         </div>
         <!--Футер конец-->      	

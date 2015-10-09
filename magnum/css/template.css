@@ -36,7 +36,7 @@ abbr:hover {
 }
 
 /*Выравнивание и боковые линии шапки сайта и футера*/
-.row-fluid .visible-desktop .logo, .container-fluid .row-fluid .powered {
+.row-fluid .hidden-phone .logo, .container-fluid .row-fluid .powered {
 	/*border: 1px red solid;*/ /*Дебаг линия*/
 	float: none;
 	margin: 0 auto;
@@ -253,10 +253,19 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 	color: #fff;
 	line-height: 45px; /*Выравнивает по вертикали благодаря междустрочному интервалу*/
 	border-top: 2px solid #0080c0;
+	white-space: nowrap;
+}
+
+.powered .span2 {
+	width: 30%;
+}
+
+.powered .span8 {
+	width: 60%;
+	float: right;
 }
 
 .developed {
-	width: 20.5%; /*нужно будет уменьшить или увеличить что-бы отображалось нормально на смартах и тд*/
 	font-size: 11px;
 	padding-left: 10px;
 	float: left;
@@ -273,8 +282,6 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 }
 
 .counter {
-	width: 77%; /*нужно будет уменьшить или увеличить что-бы отображалось нормально на смартах и тд*/
-	float: right;
 	text-align: right;
 	padding-right: 10px;
 }
