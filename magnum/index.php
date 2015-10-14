@@ -25,6 +25,15 @@
     	<jdoc:include type="head" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
+        <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-1697908-1', 'auto');
+			ga('send', 'pageview');
+		</script>
     </head>
 	<body>
     	<!--начало шапки-->
@@ -73,7 +82,18 @@
                     		Developed by: <a href="http://www.magnum-blog.pp.ua" title="Developed by Magnum">Magnum</a>
                     	</div>
                     	<div class="span8 counter">
-                    		<a href="http://www.eomy.net/"><img src="http://www.eomy.net/eomy.net.3d-graf6.gif" border="0" alt="EOMY.NET: бесплатный хостинг" /></a>
+                        	<script type="text/javascript" src="/orphus/orphus.js"></script>
+                    		<a href="http://orphus.ru" id="orphus" target="_blank" rel="nofollow"><img alt="Система Orphus" src="/orphus/orphus.gif" border="0" width="88" height="31" /></a>
+                            <!-- Rating@Mail.ru logo -->
+							<a href="http://top.mail.ru/jump?from=1123023">
+								<img src="//top-fwz1.mail.ru/counter?id=1123023;t=395;l=1" style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" />
+                            </a>
+							<!-- //Rating@Mail.ru logo -->
+							<!-- begin of Top100 code -->
+							<a href="http://top100.rambler.ru/navi/2264667/">
+								<img src="http://counter.rambler.ru/top100.cnt?2264667" alt="Rambler's Top100" border="0" />
+							</a>
+							<!-- end of Top100 code -->                            
                     	</div>
                		</div>
                 </div>
