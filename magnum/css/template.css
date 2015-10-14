@@ -175,7 +175,7 @@ div.column-1 blockquote, .content-full blockquote {
 
 div.column-1 p, .content-full p { margin-top: 10px; }
 
-.content-full blockquote p { font: 13px Verdana; line-height: 1.5; }
+div.column-1 blockquote p, .content-full blockquote p { font: 13px Verdana; line-height: 1.5; }
 
 div.column-1 p img, .content-full p img { margin: 5px 10px; }
 
