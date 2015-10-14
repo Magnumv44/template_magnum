@@ -76,7 +76,7 @@ abbr:hover {
 	padding: 0 7px 0;
 }
 
-div.module_menu h3 {
+div.module_menu h3, .module h3, .module_contacts h3 { /*Вывод заголовка модулей слева*/
 	text-align: center;
 	background-color: #434343;
 	color: #fff;
@@ -109,6 +109,17 @@ div.module_menu h3 {
 	font-weight: bold;
 	color: #2a68d2;
 	cursor: default;
+}
+
+/*Стили для модулей контактов и объявлений*/
+div.module, div.module_contacts { margin-top: 20px; }
+
+div.module p, .custom_contacts {
+	margin-top: 10px;
+	padding: 7px;
+	border: 1px dotted #ccc;
+	font-size: 1em;
+	line-height: 1.5;
 }
 
 /*Контент*/
