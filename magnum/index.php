@@ -83,15 +83,15 @@
                     	</div>
                     	<div class="span8 counter">
                         	<script type="text/javascript" src="/orphus/orphus.js"></script>
-                    		<a href="http://orphus.ru" id="orphus" target="_blank" rel="nofollow"><img alt="Система Orphus" src="/orphus/orphus.gif" border="0" width="88" height="31" /></a>
+                    		<a href="http://orphus.ru" id="orphus" target="_blank" rel="nofollow"><img alt="Система Orphus" src="/orphus/orphus.gif" width="88" height="31" /></a>
                             <!-- Rating@Mail.ru logo -->
 							<a href="http://top.mail.ru/jump?from=1123023">
-								<img src="//top-fwz1.mail.ru/counter?id=1123023;t=395;l=1" style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" />
+								<img src="//top-fwz1.mail.ru/counter?id=1123023;t=395;l=1" height="31" width="88" alt="Рейтинг@Mail.ru" />
                             </a>
 							<!-- //Rating@Mail.ru logo -->
 							<!-- begin of Top100 code -->
 							<a href="http://top100.rambler.ru/navi/2264667/">
-								<img src="http://counter.rambler.ru/top100.cnt?2264667" alt="Rambler's Top100" border="0" />
+								<img src="http://counter.rambler.ru/top100.cnt?2264667" alt="Rambler's Top100" />
 							</a>
 							<!-- end of Top100 code -->                            
                     	</div>

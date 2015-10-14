@@ -13,9 +13,7 @@ body {
 	color: #000;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-}
+h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 a {
 	text-decoration: none;
@@ -27,13 +25,11 @@ a:hover {
 	color: #0a0a0a;
 }
 
-abbr:hover {
-	cursor: help;
-}
+abbr:hover { cursor: help; }
 
-.container-fluid {
-	padding: 0;
-}
+img { border: 0; }
+
+.container-fluid { padding: 0; }
 
 /*Выравнивание и боковые линии шапки сайта и футера*/
 .row-fluid .hidden-phone .logo, .container-fluid .row-fluid .powered {
