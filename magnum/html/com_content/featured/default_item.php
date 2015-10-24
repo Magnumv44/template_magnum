@@ -224,9 +224,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 			<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
 			<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
 		<?php endif; ?>
-	</dl>
 <?php //Начало показа кнопки "Подробнее..." ?>
-	<div class="read_link">
 <?php if ($params->get('show_readmore') && $this->item->readmore) :
 	if ($params->get('access-view')) :
 		$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid));
@@ -243,9 +241,8 @@ $info    = $this->item->params->get('info_block_position', 0);
 	<?php echo JLayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link)); ?>
 
 <?php endif; ?>
-     
-	</div>
-	
+        
+	</dl>
 <?php endif; ?>
 
 
