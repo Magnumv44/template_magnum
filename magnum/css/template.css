@@ -206,10 +206,6 @@ div.column-1 dl {
 
 .hidden-phone .content-info-full .createdby, .hidden-phone .content-info-full .published { margin-bottom: 1%; }
 
-.read_link {
-	float: left;
-}
-
 .createdby, .published {
 	display: inline-block;
 	width: 16px;
