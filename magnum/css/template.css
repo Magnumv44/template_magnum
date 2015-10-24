@@ -15,6 +15,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
+p { margin: 0; }
+
 a {
 	text-decoration: none;
 	color: #0a0a0a;
@@ -132,8 +134,8 @@ div.cols-1 {
 
 div.column-1 {
 	border: 1px #ccc solid;
-	padding: 10px;
-	line-height: 1.5;
+	padding: 5px 10px 0;
+	/*line-height: 1.5;*/
 }
 
 div.column-1, .content-full {
@@ -198,12 +200,13 @@ div.column-1 p a[href^="http://"], div.column-1 blockquote a[href^="http://"], d
 
 /*Стили вывода информации о авторе и даты*/
 div.column-1 dl {
-	margin: 0;
+	margin: 10px 0 0;
+	display: inline-block; /*Стиль отвечающий за то что-бы автор, дата и тд не выпадали за рамку контента*/
 }
 
 .hidden-phone .content-info-full .createdby, .hidden-phone .content-info-full .published { margin-bottom: 1%; }
 
-.createdby, .published, .read_link {
+.read_link {
 	float: left;
 }
 
