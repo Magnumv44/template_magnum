@@ -292,6 +292,8 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 	padding-right: 10px;
 }
 
+.counter a:hover { text-decoration: none; }
+
 .counter img { opacity: 0.3; }
 
 .counter a:hover img { opacity: 0.9; }
