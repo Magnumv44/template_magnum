@@ -35,7 +35,6 @@ img { border: 0; }
 
 /*Выравнивание и боковые линии шапки сайта и футера*/
 .row-fluid .hidden-phone .logo, .container-fluid .row-fluid .powered {
-	/*border: 1px red solid;*/ /*Дебаг линия*/
 	float: none;
 	margin: 0 auto;
 	width: 75.1%;
@@ -74,7 +73,8 @@ img { border: 0; }
 	padding: 0 7px 0;
 }
 
-div.module_menu h3, .module h3, .module_contacts h3 { /*Вывод заголовка модулей слева*/
+/*Вывод заголовка модулей слева*/
+div.module_menu h3, .module h3, .module_contacts h3 {
 	text-align: center;
 	background-color: #434343;
 	color: #fff;
@@ -135,12 +135,9 @@ div.cols-1 {
 div.column-1 {
 	border: 1px #ccc solid;
 	padding: 5px 10px 0;
-	/*line-height: 1.5;*/
 }
 
-div.column-1, .content-full {
-	line-height: 1.5;	
-}
+div.column-1, .content-full { line-height: 1.5; }
 
 /*Размер шрифта для заголовка страници*/
 .page-header {
@@ -148,13 +145,9 @@ div.column-1, .content-full {
 	border: none;
 }
 
-.page-header h1 {
-	font-size: 1.2em;
-}
+.page-header h1 { font-size: 1.2em; }
 
-.item-title, .item-title-full {
-	font: bold 14px Verdana;
-}
+.item-title, .item-title-full { font: bold 14px Verdana; }
 
 .item-title {
 	margin-left: 10px;
@@ -210,11 +203,15 @@ div.column-1 dl {
 	display: inline-block;
 	width: 16px;
 	height: 16px;
+	padding-left: 20px;
 }
 
-.createdby, .published { padding-left: 20px; }
+/*.createdby, .published { padding-left: 20px; }*/
 
-.createdby { background: url('../images/sprite.png') no-repeat -41px 0; }
+.createdby {
+	margin-left: 0;
+	background: url('../images/sprite.png') no-repeat -41px 0;
+}
 
 .published { background: url('../images/sprite.png') no-repeat 0 0; }
 
