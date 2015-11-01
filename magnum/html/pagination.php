@@ -180,7 +180,7 @@ function pagination_item_active(&$item)
 		$class   = ' class="hidden-phone"';
 	}
 
-	return '<li' . $class . '><a title="' . $item->text . '" href="' . $item->link . '" class="pagenav">' . $display . '</a></li>';
+	return '<li' . $class . '><a href="' . $item->link . '" class="pagenav">' . $display . '</a></li>';
 }
 
 /**
