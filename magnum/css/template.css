@@ -61,16 +61,14 @@ img { border: 0; }
 	background-color: #f9f9f9;
 }
 
-.container-fluid .con .content {
-	width: 100%;
-}
+.container-fluid .con .content { width: 100%; }
 
 /*Меню сайта*/
 .con .content .span2 {
 	width: 22%;
 	min-width: 119px; /*Стиль отвечающий за минимальную ширну при сужении окна*/
 	margin-top: 1%;
-	padding: 0 7px 0;
+	padding: 0 7px 15px;
 }
 
 /*Вывод заголовка модулей слева*/
@@ -326,9 +324,7 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 	white-space: nowrap;
 }
 
-.powered .span2 {
-	width: 30%;
-}
+.powered .span2 { width: 30%; }
 
 .powered .span8 {
 	width: 60%;
