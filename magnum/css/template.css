@@ -154,6 +154,13 @@ div.column-1, .content-full { line-height: 1.5; }
 	vertical-align: top;
 }
 
+.blog .empty {
+    margin-top: 1em;
+    text-align: center;
+    font: bold 18px Verdana;
+    text-shadow: 1px 1px 1px silver, -1px 1px 1px silver;
+}
+
 /*Стили вывода статей*/
 div.column-1 ol, .content-full ol { margin-left: 7%; margin-top: 5px; }
 
