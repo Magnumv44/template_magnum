@@ -28,7 +28,6 @@
     	<jdoc:include type="head" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
-		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.js"></script>
         <script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -98,6 +97,7 @@
                 </div>
             </div>
         </div>
-        <!--Футер конец-->      	
+        <!--Футер конец-->
+        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.js"></script>     	
 	</body>
 </html>
