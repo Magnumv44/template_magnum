@@ -98,6 +98,6 @@
             </div>
         </div>
         <!--Футер конец-->
-        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.js"></script>     	
+        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.js" type="text/javascript"></script>
 	</body>
 </html>
