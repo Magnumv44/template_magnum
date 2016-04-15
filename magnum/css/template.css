@@ -177,6 +177,7 @@ div.column-1 p, .content-full p, pre { margin-top: 10px; }
 
 div.column-1 blockquote p, .content-full blockquote p { font: 13px Verdana; line-height: 1.5; }
 
+/*Стиль отвечавший за вывод кода*/
 .hljs {
 	background: none;
 }
