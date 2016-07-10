@@ -118,6 +118,29 @@ div.module p, .custom_contacts {
 	line-height: 1.5;
 }
 
+.contacts-icq, .contacts-skype {
+    background-image: url('../images/contacts.png');
+    background-repeat: no-repeat;
+    display: block;
+	float: left;
+}
+
+.contacts-icq {
+    width: 18px;
+    height: 18px;
+    background-position: -5px -5px;
+}
+
+.contacts-skype {
+    width: 18px;
+    height: 18px;
+    background-position: -31px -5px;
+}
+
+.contacts-pos {
+	margin-left: 5px;
+}
+
 /*Контент*/
 .con .content .span8 {
 	margin-left: 1%;
