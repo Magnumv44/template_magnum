@@ -23,6 +23,7 @@
 	<head>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name='yandex-verification' content='5141454251eba7ae' />
+        <meta name="yandex-verification" content="078ecede026c3de9" />
         <meta name="google-site-verification" content="3EutjLuhAK4xbS7NQzrUoQ6oYs5eTv3nWno9ZiEEdOU" />
         <meta name="wot-verification" content="0da95e472682f0116875"/>
     	<jdoc:include type="head" />
