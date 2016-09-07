@@ -1,9 +1,9 @@
 <?php
 /**
- * Данный шаблон был разработан под для сайта http://www.magnum-blog.pp.ua
+ * Данный шаблон был разработан под для сайта http://www.magnumblog.space
  * При копировнии данного шаблона в обезательно порядке уведомите адмнистрацию сайта http://www.magnum-blog.pp.ua
- * И пропишите копирайты разработчика:
- * Developed by Magnum http://www.magnum-blog.pp.ua
+ * А так же укажите копирайт разработчика:
+ * Developed by Magnum http://www.magnumblog.space
  */
  	// No direct access.
 	defined('_JEXEC') or  die;
