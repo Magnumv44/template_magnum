@@ -8,7 +8,7 @@
 	<authorUrl>http://www.magnum-blog.pp.ua</authorUrl>
 	<copyright>Magnum 2014</copyright>
 	<license>GNU/GPL 2 or Later</license>
-	<version>1.3.5</version>
+	<version>1.3.6</version>
 	<description>TPL_MAGNUM_DESC</description>
 	<files>
 		<filename>index.php</filename>
