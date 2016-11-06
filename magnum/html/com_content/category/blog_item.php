@@ -59,6 +59,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 
 		<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
 			<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+				<span class="createdby-ico"></span>
 				<?php $author = ($this->item->created_by_alias) ? $this->item->created_by_alias : $this->item->author; ?>
 				<?php $author = '<span itemprop="name">' . $author . '</span>'; ?>
 				<?php if (!empty($this->item->contact_link) && $params->get('link_author') == true) : ?>
@@ -95,6 +96,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 
 		<?php if ($params->get('show_publish_date')) : ?>
 			<dd class="published">
+				<span class="published-ico"></span>
 				<time datetime="<?php echo JHtml::_('date', $this->item->publish_up, 'c'); ?>" itemprop="datePublished">
 					<?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE_ON', JHtml::_('date', $this->item->publish_up, JText::_('DATE_FORMAT_LC1'))); ?>
 				</time>
@@ -153,6 +155,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 		<?php if ($info == 1) : ?>
 			<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
 				<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+					<span class="createdby-ico"></span>
 					<?php $author = $this->item->created_by_alias ? $this->item->created_by_alias : $this->item->author; ?>
 					<?php $author = '<span itemprop="name">' . $author . '</span>'; ?>
 					<?php if (!empty($this->item->contact_link) && $params->get('link_author') == true) : ?>
@@ -189,6 +192,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 
 			<?php if ($params->get('show_publish_date')) : ?>
 				<dd class="published">
+					<span class="published-ico"></span>
 					<time datetime="<?php echo JHtml::_('date', $this->item->publish_up, 'c'); ?>" itemprop="datePublished">
 						<?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE_ON', JHtml::_('date', $this->item->publish_up, JText::_('DATE_FORMAT_LC1'))); ?>
 					</time>
