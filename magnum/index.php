@@ -83,7 +83,7 @@
             	<div class="hidden-phone"> <!--Будет отображатся только на планшетах и компьютерах-->
             		<div class="span10 powered">
                 		<div class="span2 developed">
-                    		Developed by: <a href="http://www.magnum-blog.pp.ua" title="Developed by Magnum">Magnum</a>
+                    		Developed by: <a href="http://www.magnumblog.space" title="Developed by Magnum">Magnum</a>
                     	</div>
                     	<div class="span8 counter">
                         	<script type="text/javascript" src="/orphus/orphus.js"></script>
