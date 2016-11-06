@@ -1,11 +1,4 @@
 @charset "utf-8";
-/* Глобальный сброс, срабатывает не везде */
-* {
-	margin: 0;
-	padding: 0;
-	outline: none;
-}
-
 /*Общие стили бля html*/
 body {
 	background: #efefef url('../images/fon.jpg');
@@ -72,7 +65,7 @@ img { border: 0; }
 }
 
 /*Вывод заголовка модулей слева*/
-div.module_menu h3, .module h3, .module_contacts h3 {
+div.moduletable_menu h3, .moduletable h3, .moduletable_contacts h3 {
 	text-align: center;
 	background-color: #434343;
 	color: #fff;
@@ -108,9 +101,9 @@ div.module_menu h3, .module h3, .module_contacts h3 {
 }
 
 /*Стили для модулей контактов и объявлений*/
-div.module, div.module_contacts { margin-top: 20px; }
+div.moduletable, div.moduletable_contacts { margin-top: 20px; }
 
-div.module p, .custom_contacts {
+div.moduletable p, .custom_contacts {
 	margin-top: 10px;
 	padding: 7px;
 	border: 1px dotted #ccc;
@@ -118,21 +111,24 @@ div.module p, .custom_contacts {
 	line-height: 1.5;
 }
 
+/*Спрайт контактов, данных контента и кнопки вверх*/
 .contacts-icq, .contacts-skype {
-    background-image: url('../images/contacts.png');
-    background-repeat: no-repeat;
-    display: block;
 	width: 18px;
-    height: 18px;
+	height: 18px;
+    display: block;
 	float: left;
 }
 
 .contacts-icq {
-    background-position: -5px -5px;
+	background: url('../images/spritesheet.png') no-repeat -5px -31px;
 }
 
 .contacts-skype {
-    background-position: -31px -5px;
+	background: url('../images/spritesheet.png') no-repeat -31px -31px;
+}
+
+.contacts-telegram {
+	background: url('../images/spritesheet.png') no-repeat -59px -5px;
 }
 
 .contacts-pos {
@@ -198,26 +194,188 @@ div.column-1 p, .content-full p, pre { margin-top: 10px; }
 
 div.column-1 blockquote p, .content-full blockquote p { font: 13px Verdana; line-height: 1.5; }
 
-/*Стиль отвечавший за вывод кода*/
-.hljs {
+/*Стили для вывода цветного кода в контенте*/
+code[class*="language-"], pre[class*="language-"] {
+	color: black;
 	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] { background: #f5f2f0; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: slategray; }
+
+.token.punctuation { color: #999; }
+
+.namespace { opacity: .7; }
+
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
+	color: #905;
+}
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+	color: #690;
+}
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule, .token.attr-value, .token.keyword { color: #07a; }
+
+.token.function { color: #DD4A68; }
+
+.token.regex, .token.important, .token.variable { color: #e90; }
+
+.token.important, .token.bold { font-weight: bold; }
+
+.token.italic { font-style: italic; }
+
+.token.entity { cursor: help; }
+
+.prism-previewer, .prism-previewer:before, .prism-previewer:after {
+	position: absolute;
+	pointer-events: none;
+}
+
+.prism-previewer, .prism-previewer:after { left: 50%; }
+
+.prism-previewer {
+	margin-top: -48px;
+	width: 32px;
+	height: 32px;
+	margin-left: -16px;
+	opacity: 0;
+	-webkit-transition: opacity .25s;
+	-o-transition: opacity .25s;
+	transition: opacity .25s;
+}
+
+.prism-previewer.flipped {
+	margin-top: 0;
+	margin-bottom: -48px;
+}
+
+.prism-previewer:before, .prism-previewer:after {
+	content: '';
+	position: absolute;
+	pointer-events: none;
+}
+
+.prism-previewer:before {
+	top: -5px;
+	right: -5px;
+	left: -5px;
+	bottom: -5px;
+	border-radius: 10px;
+	border: 5px solid #fff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.prism-previewer:after {
+	top: 100%;
+	width: 0;
+	height: 0;
+	margin: 5px 0 0 -7px;
+	border: 7px solid transparent;
+	border-color: rgba(255, 0, 0, 0);
+	border-top-color: #fff;
+}
+
+.prism-previewer.flipped:after {
+	top: auto;
+	bottom: 100%;
+	margin-top: 0;
+	margin-bottom: 5px;
+	border-top-color: rgba(255, 0, 0, 0);
+	border-bottom-color: #fff;
+}
+
+.prism-previewer.active {
+	opacity: 1;
+}
+
+.prism-previewer-color {
+	background-image: linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb), linear-gradient(45deg, #bbb 25%, #eee 25%, #eee 75%, #bbb 75%, #bbb);
+	background-size: 10px 10px;
+	background-position: 0 0, 5px 5px;
+}
+
+.prism-previewer-color:before {
+	background-color: inherit;
+	background-clip: padding-box;
 }
 
 div.column-1 p img, .content-full p img { margin: 5px 10px; }
 
-div.column-1 p a, div.column-1 blockquote a, div.column-1 ol a, div.column-1 ul a, .content-full p a, .content-full blockquote a, .content-full ol a, .content-full ul a {
+div.column-1 p a, div.column-1 blockquote a, div.column-1 ol a, div.column-1 ul a, .content-full p a,
+.content-full blockquote a, .content-full ol a, .content-full ul a {
 	color: #2a68d2;
 	text-decoration: none;
 	background-image: none;
 	padding-right: 0;
 }
 
-div.column-1 p a:hover, div.column-1 blockquote a:hover, div.column-1 ol a:hover, .content-full ul a:hover, .content-full p a:hover, .content-full blockquote a:hover, .content-full ol a:hover, .content-full ul a:hover {
+div.column-1 p a:hover, div.column-1 blockquote a:hover, div.column-1 ol a:hover, .content-full ul a:hover,
+.content-full p a:hover, .content-full blockquote a:hover, .content-full ol a:hover, .content-full ul a:hover {
 	color: #2a68d2;
 	text-decoration: underline;
 }
 
-div.column-1 p a[href^="http://"], div.column-1 blockquote a[href^="http://"], div.column-1 ol a[href^="http://"], div.column-1 ul a[href^="http://"], div.column-1 p a[href^="https://"], div.column-1 blockquote a[href^="https://"], div.column-1 ol a[href^="https://"], div.column-1 ul a[href^="https://"], .content-full p a[href^="http://"], .content-full blockquote a[href^="http://"], .content-full ol a[href^="http://"], .content-full ul a[href^="http://"], .content-full p a[href^="https://"], .content-full blockquote a[href^="https://"], .content-full ol a[href^="https://"], .content-full ul a[href^="https://"] {
+div.column-1 p a[href^="http://"], div.column-1 blockquote a[href^="http://"], div.column-1 ol a[href^="http://"],
+div.column-1 ul a[href^="http://"], div.column-1 p a[href^="https://"], div.column-1 blockquote a[href^="https://"],
+div.column-1 ol a[href^="https://"], div.column-1 ul a[href^="https://"], .content-full p a[href^="http://"],
+.content-full blockquote a[href^="http://"], .content-full ol a[href^="http://"], .content-full ul a[href^="http://"],
+.content-full p a[href^="https://"], .content-full blockquote a[href^="https://"], .content-full ol a[href^="https://"],
+.content-full ul a[href^="https://"] {
 	background: url('../images/external.png') no-repeat right top;
 	padding-right: 12px;
 }
@@ -417,9 +575,7 @@ body:after {
 	transition: opacity 0.2s;
 }
 
-.lb-data .lb-close:hover {
-	cursor: pointer;
-}
+.lb-data .lb-close:hover { cursor: pointer; }
 
 /*Стили вывода информации о авторе и даты*/
 div.column-1 dl {
@@ -429,21 +585,30 @@ div.column-1 dl {
 
 .hidden-phone .content-info-full .createdby, .hidden-phone .content-info-full .published { margin-bottom: 1%; }
 
-.createdby, .published {
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	padding-left: 20px;
-}
-
 .createdby {
 	margin-left: 0;
-	background: url('../images/sprite.png') no-repeat -41px 0;
+	float: left;
 }
 
 .published {
-	margin-left: 3.5em;
-	background: url('../images/sprite.png') no-repeat 0 0;
+	margin-left: 13px;
+	float: left;
+}
+
+.createdby-ico, .published-ico, .up {
+	display: inline-block; /* inline-block вместо block для того что-бы картинка и надпись были в одну строку*/
+	width: 16px;
+	height: 16px;
+}
+
+.createdby-ico {
+	margin-left: 0;
+	background: url('../images/spritesheet.png') no-repeat -31px -5px;
+}
+
+.published-ico {
+	margin-right: 1px;
+	background: url('../images/spritesheet.png') no-repeat -5px -5px;
 }
 
 .createdby, .published, a.readmore {
@@ -452,9 +617,8 @@ div.column-1 dl {
 }
 
 a.readmore {
-	margin-top: 10px;
-	margin-left: 4.5em;
-	padding: 1px 5px 1px 14px;
+	margin-left: 0.7em;
+	padding: 1px 5px 0 14px;
 	background: url('../images/arrow.png') no-repeat 5px 48%;
 	font-weight: normal;
 	text-decoration: none;
@@ -517,3 +681,21 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 .counter img { opacity: 0.3; }
 
 .counter a:hover img { opacity: 0.9; }
+
+/*Стили кнопки Вверх*/
+#go-top {
+	position: fixed;
+	line-height: 40px; /*регулирует отступ от верхнего края*/
+	text-align: center;
+	bottom: 25px; /*Отступ от нижней части окна браузера*/
+	right: 11px; /*Отступ от правой части окна браузера*/
+	cursor: pointer;
+	display: none;
+	width: 34px;
+	height: 35px;
+	background-color: #f9f9f9;
+	border: solid 1px #ccc;
+	border-radius: 40px;
+}
+
+.up { background: url('../images/spritesheet.png') no-repeat -59px -33px; }
