@@ -1,9 +1,9 @@
 <?php
 /**
- * Данный шаблон был разработан для сайта http://www.magnumblog.space
- * При копировнии данного шаблона в обязательном порядке уведомите адмнистрацию сайта http://www.magnum-blog.pp.ua
- * А так же укажите копирайт разработчика:
- * Developed by Magnum http://www.magnumblog.space
+ * Данный шаблон был разработан для сайта http://www.magnum-blog.pp.ua
+ * При копировнии данного шаблона в обезательно порядке уведомите адмнистрацию сайта http://www.magnum-blog.pp.ua
+ * И пропишите копирайты разработчика:
+ * Developed by Magnum http://www.magnum-blog.pp.ua
  */
  	// No direct access.
 	defined('_JEXEC') or  die;
@@ -22,13 +22,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 	<head>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name='yandex-verification' content='5141454251eba7ae' />
         <meta name="yandex-verification" content="078ecede026c3de9" />
         <meta name="google-site-verification" content="3EutjLuhAK4xbS7NQzrUoQ6oYs5eTv3nWno9ZiEEdOU" />
         <meta name="wot-verification" content="0da95e472682f0116875"/>
     	<jdoc:include type="head" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/prism.js" type="text/javascript"></script>
         <script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -57,7 +57,7 @@
             	<div class="hidden-phone"> <!--Будет отображатся только на планшетах и компьютерах-->
             		<div class="span10 content">
                 		<div class="span2">
-                			<jdoc:include type="modules" name="left" style="rounded" />
+                			<jdoc:include type="modules" name="left" style="html5" />
                 		</div>
                 		<div class="span8">
                 			<jdoc:include type="message" />
@@ -68,7 +68,7 @@
             </div>
             <div class="visible-phone mobicontent"> <!--Будет отображатся только на телефонах-->
                 <div class="span2">
-                	<jdoc:include type="modules" name="left" style="rounded" />
+                	<jdoc:include type="modules" name="left" style="html5" />
                 </div>
             	<div class="span8">
                 	<jdoc:include type="message" />
@@ -100,5 +100,6 @@
         </div>
         <!--Футер конец-->
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.js" type="text/javascript"></script>
+	    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/go_top.js" type="text/javascript"></script>
 	</body>
 </html>
