@@ -186,6 +186,7 @@ div.column-1 ul, .content-full ul { margin-left: 6%; }
 div.column-1 blockquote, .content-full blockquote {
 	margin: 5px 30px;
     padding: 7px;
+	word-wrap: break-word; /*Фикс для принудительного переноса строки в цитатах если не помещается*/
     background-color: #f6f6f6;
     border: 1px #ccc solid;
 }
@@ -201,7 +202,7 @@ code[class*="language-"], pre[class*="language-"] {
 	text-shadow: 0 1px white;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	text-align: left;
-	white-space: pre;
+	white-space: pre-wrap;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
@@ -216,13 +217,8 @@ code[class*="language-"], pre[class*="language-"] {
 }
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-	text-shadow: none;
-	background: #b3d4fc;
-}
-
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection, pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection, code[class*="language-"]::selection, code[class*="language-"] ::selection {
 	text-shadow: none;
 	background: #b3d4fc;
 }
@@ -271,7 +267,7 @@ pre[class*="language-"] {
 
 .token.atrule, .token.attr-value, .token.keyword { color: #07a; }
 
-.token.function { color: #DD4A68; }
+.token.function { color: #dd4a68; }
 
 .token.regex, .token.important, .token.variable { color: #e90; }
 
@@ -339,9 +335,7 @@ pre[class*="language-"] {
 	border-bottom-color: #fff;
 }
 
-.prism-previewer.active {
-	opacity: 1;
-}
+.prism-previewer.active { opacity: 1; }
 
 .prism-previewer-color {
 	background-image: linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb), linear-gradient(45deg, #bbb 25%, #eee 25%, #eee 75%, #bbb 75%, #bbb);
@@ -685,7 +679,7 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 /*Стили кнопки Вверх*/
 #go-top {
 	position: fixed;
-	line-height: 40px; /*регулирует отступ от верхнего края*/
+	line-height: 42px; /*регулирует отступ от верхнего края*/
 	text-align: center;
 	bottom: 25px; /*Отступ от нижней части окна браузера*/
 	right: 11px; /*Отступ от правой части окна браузера*/
