@@ -28,7 +28,6 @@
     	<jdoc:include type="head" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
-		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/prism.js" type="text/javascript"></script>
         <script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -84,6 +83,7 @@
             		<div class="span10 powered">
                 		<div class="span2 developed">
                     		Developed by: <a href="http://www.magnumblog.space" title="Developed by Magnum">Magnum</a>
+							&copy; 2005 - <?php echo date('Y'); ?>
                     	</div>
                     	<div class="span8 counter">
                         	<script type="text/javascript" src="/orphus/orphus.js"></script>
@@ -100,6 +100,7 @@
         </div>
         <!--Футер конец-->
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.js" type="text/javascript"></script>
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/prism.js" type="text/javascript"></script>
 	    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/go_top.js" type="text/javascript"></script>
 	</body>
 </html>
