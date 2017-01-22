@@ -572,6 +572,10 @@ body:after {
 .lb-data .lb-close:hover { cursor: pointer; }
 
 /*Стили вывода информации о авторе и даты*/
+.visible-phone .content-info-full {
+	display: inline-block;
+}
+
 div.column-1 dl {
 	margin: 10px 0 0;
 	display: inline-block; /*Стиль отвечающий за то что-бы автор, дата и тд не выпадали за рамку контента*/
