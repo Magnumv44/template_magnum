@@ -572,8 +572,15 @@ body:after {
 .lb-data .lb-close:hover { cursor: pointer; }
 
 /*Стили вывода информации о авторе и даты*/
-.visible-phone .content-info-full {
+.visible-phone .content-info-full, .hidden-phone .content-info-full {
+	width: 100%;
 	display: inline-block;
+}
+
+.visible-phone .content-info-full .article-info, .hidden-phone .content-info-full .article-info {
+	float: right;
+	margin-bottom: 0;
+	padding-right: 5px;
 }
 
 div.column-1 dl {
