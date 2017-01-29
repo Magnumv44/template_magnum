@@ -680,7 +680,7 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 
 .counter {
 	text-align: right;
-	padding-right: 10px;
+	padding: 5px 10px 0 0;
 }
 
 .counter a:hover { text-decoration: none; }
