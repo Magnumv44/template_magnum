@@ -82,17 +82,17 @@
             	<div class="hidden-phone"> <!--Будет отображатся только на планшетах и компьютерах-->
             		<div class="span10 powered">
                 		<div class="span2 developed">
-                    		Developed by: <a href="http://www.magnumblog.space" title="Developed by Magnum">Magnum</a>
-							&copy; 2005 - <?php echo date('Y'); ?>
+                    		<div>Developed by: <a href="http://www.magnumblog.space" title="Developed by Magnum">Magnum</a>
+                                &copy; 2005 - <?php echo date('Y'); ?></div>
+                            <div class="disclaimers">
+                                <a title="Нажмите что-бы открыть пользовательское соглашение" href="<?php echo $this->baseurl ?>terms-of-use/121-disclaimers" target="_blank">Disclaimers</a>
+                            </div>
                     	</div>
                     	<div class="span8 counter">
                         	<script type="text/javascript" src="/orphus/orphus.js"></script>
-                    		<a href="http://orphus.ru" id="orphus" target="_blank" rel="nofollow"><img alt="Система Orphus" src="/orphus/orphus.gif" width="88" height="31" /></a>
-							<!-- begin of Top100 code -->
-							<a href="http://top100.rambler.ru/navi/2264667/">
-								<img src="http://counter.rambler.ru/top100.cnt?2264667" alt="Rambler's Top100" />
-							</a>
-							<!-- end of Top100 code -->                            
+                    		<a href="http://orphus.ru" id="orphus" target="_blank" rel="nofollow">
+                                <img alt="Система Orphus" src="/orphus/orphus.gif" width="88" height="31" />
+                            </a>
                     	</div>
                		</div>
                 </div>
