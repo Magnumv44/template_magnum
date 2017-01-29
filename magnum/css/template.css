@@ -112,7 +112,7 @@ div.moduletable p, .custom_contacts {
 }
 
 /*Спрайт контактов, данных контента и кнопки вверх*/
-.contacts-icq, .contacts-skype {
+.contacts-icq, .contacts-skype, .contacts-telegram {
 	width: 18px;
 	height: 18px;
     display: block;
@@ -648,7 +648,7 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 	height: 50px; /*Задает высоту блока*/
 	background-color: #434343;
 	color: #fff;
-	line-height: 45px; /*Выравнивает по вертикали благодаря междустрочному интервалу*/
+	line-height: 35px; /*Выравнивает по вертикали благодаря междустрочному интервалу*/
 	border-top: 2px solid #0080c0;
 	white-space: nowrap;
 }
@@ -675,6 +675,8 @@ a.readmore:hover, a.readmore:active, a.readmore:focus {
 	text-decoration: underline;
 	color: #ccc;
 }
+
+.disclaimers { line-height: 5px; }
 
 .counter {
 	text-align: right;
