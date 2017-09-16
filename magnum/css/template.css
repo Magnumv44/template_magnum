@@ -182,19 +182,32 @@ div.column-1, .content-full { line-height: 1.5; }
 div.column-1 ol, .content-full ol {
 	margin-left: 7%;
 	margin-top: 5px;
-    counter-reset: nested-list 0;
+	counter-reset: item;
+	list-style: none;
 }
 
-div.column-1 ol li, .content-full ol li {
-    counter-increment: nested-list;
+/*Многоуровневые нумерованые списки*/
+div.column-1 ol li:before, .content-full ol li:before {
+	counter-increment: item;
+	content: counter(item)". ";
 }
 
-div.column-1 ol.nested, .content-full ol.nested {
-    list-style: none;
+div.column-1 ol li:before, .content-full ol li:before {
+	content: counters(item,".") " ";
 }
 
-div.column-1 ol.nested > li:before, .content-full ol.nested > li:before {
-    content: counters(nested-list, '.') '.';
+/*Отмена стилей ресета нумерованых списков*/
+div.column-1 .listNoneReset, .content-full .listNoneReset {
+	counter-reset: none;
+}
+
+/*Стили для списков с буквенной нумерацией*/
+div.column-1 .listType, .content-full .listType {
+	list-style-type: lower-alpha;
+}
+
+div.column-1 ol.listType li:before, .content-full ol.listType li:before {
+	content: normal;
 }
 
 div.column-1 ul, .content-full ul { margin-left: 6%; }
