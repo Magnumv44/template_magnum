@@ -17,14 +17,25 @@
 	
 	//подключение настрйки логотипа в шоблоне
 	//$tmpl_logo = $this->params->get('logo');
+
+    //отключили мета-тег generator выводящий надпись "Joomla! - Open Source Content Management"
+    $this->setGenerator(null);
+
+    // Отключение лишних скриптов в шаблоне
+    $document = JFactory::getDocument();
+    unset($this->_scripts[$this->baseurl.'/media/jui/js/jquery-migrate.min.js']);
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 	<head>
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="yandex-verification" content="078ecede026c3de9" />
         <meta name="google-site-verification" content="3EutjLuhAK4xbS7NQzrUoQ6oYs5eTv3nWno9ZiEEdOU" />
         <meta name="wot-verification" content="0da95e472682f0116875"/>
+        <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+        <![endif]-->
     	<jdoc:include type="head" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
