@@ -100,10 +100,7 @@
                             </div>
                     	</div>
                     	<div class="span8 counter">
-                        	<script type="text/javascript" src="/orphus/orphus.js"></script>
-                    		<a href="http://orphus.ru" id="orphus" target="_blank" rel="nofollow">
-                                <img alt="Система Orphus" src="/orphus/orphus.gif" width="88" height="31" />
-                            </a>
+
                     	</div>
                		</div>
                 </div>
