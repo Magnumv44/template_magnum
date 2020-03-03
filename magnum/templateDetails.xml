@@ -5,10 +5,10 @@
 	<creationDate>2014-09-05</creationDate>
 	<author>Magnum</author>
 	<authorEmail>vitaliy1984@gmail.com</authorEmail>
-	<authorUrl>http://www.magnum-blog.pp.ua</authorUrl>
+	<authorUrl>https://www.magnumblog.space</authorUrl>
 	<copyright>Magnum 2014</copyright>
 	<license>GNU/GPL 2 or Later</license>
-	<version>1.5.2</version>
+	<version>1.5.3</version>
 	<description>TPL_MAGNUM_DESC</description>
 	<files>
 		<filename>index.php</filename>
