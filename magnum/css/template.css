@@ -1,0 +1,1201 @@
+/*
+TODO Сверстать место под банер в десктоп версии, хотя в мобальной он более актуален
+TODO сделать в версиях для маленьких экранов меньше боковые отступы, для лучшей читабельности
+TODO Попробовать сделать https://web.dev/font-display/?utm_source=lighthouse&utm_medium=unknown
+*/
+@charset "utf-8";
+/*Общие стили бля html*/
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+	background: #efefef url('../images/fon.jpg');
+	color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    line-height: 0;
+}
+
+p { margin: 0; }
+
+/* Делаем нестандартный цест выделения текста */
+p::selection {
+    color: white; /* Цвет текста */
+    background: #434343; /* Цвет фона */
+}
+
+a {
+	text-decoration: none;
+	color: #0a0a0a;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #0a0a0a;
+}
+
+abbr:hover { cursor: help; }
+
+img { border: 0; }
+
+/* Выравнивание элементов по центру */
+.container-fluid .row-fluid .logo,
+.container-fluid .row-fluid .top-menu,
+.container-fluid .row-fluid .menu,
+.container-fluid .content,
+.container-fluid .row-fluid .footer {
+    float: none;
+    margin: 0 auto;  
+}
+
+/*Стили шапки сайта*/
+.logo {
+    padding-left: 4em; /*Отступ слева для более красивого выравнивания на десктопе*/
+    padding-bottom: 4.5em;
+}
+
+.logo img {
+    float: left; /*Для обтекания текста справа от логотипа*/
+}
+
+/*
+FIXME в Edge почему то не срабатывает, нужно починить
+*/
+/*Импорт своего шрифта в шаблон*/
+@font-face {
+    font-family: MrRobot;
+    src: url(fonts/mrrobot.ttf);
+}
+
+/*Стили названи блога*/
+.logo-name {
+    display: inline-block;
+    color: #434343;
+    font-family: MrRobot;
+    font-size: 60px;
+    margin-top: 2em;
+    margin-left: 1em;
+}
+
+.logo-name a:hover {
+    text-decoration: none;
+    color: #434343;
+}
+
+/*Стили слогана во шапке*/
+.logo-slogan {
+    display: inline-block;
+    color: #0088cc;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    margin-top: 1em;
+    margin-left: 3.2em;
+}
+
+.logo-slogan a:hover {
+    text-decoration: none;
+    color: #0022cc;
+}
+
+/*Стили горизонтального меню */
+
+/* Задаем цвет фона меню */
+.navbar {
+    margin: 0;
+}
+
+.navbar .nav>li>a {
+    text-shadow: none;
+}
+
+.navbar .nav>.active>a {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.container-fluid .span10 .navbar-inner {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-color: #434343;
+    border-left: 1px solid Gray;
+	border-right: 1px solid Gray;
+    border-radius: 0;
+}
+
+/* Цвет ссылок в меню */
+.container-fluid .row-fluid .menu li a {
+    color: white;
+}
+
+/* Стили контетной части */
+
+/* Задаем цвет фона и боковые линии у контетной части */
+.container-fluid .content {
+    border-left: 1px solid Gray;
+	border-right: 1px solid Gray;
+	background-color: #f9f9f9;
+}
+
+/*Стили для модулей контактов и объявлений*/
+
+/* Поиск */
+
+.search-on {
+    text-align: center; /* Выравниваем поиск по центру блока*/
+}
+
+/* Размер поля для ввода поискового запроса*/
+.search-query {
+    width: 60%;
+}
+
+.search .btn-primary {
+    background-image: none;
+    background-color: #434343;
+}
+
+.search .btn-primary:hover {
+    background-color: #ffad29;
+}
+
+#searchForm {
+    margin-left: 3px;
+}
+.search-results, .result-title {
+    margin: 0 2px 0 2px;
+}
+
+.result-created {
+    font-size: 11px;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted #ccc;
+}
+
+/*Вывод заголовка модулей слева*/
+.moduletable h3, .moduletable_contacts h3 {
+	text-align: center;
+	background-color: #434343;
+	color: #fff;
+	font-size: 15px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+/* Стили оступа левых блоков от верхего меню */
+div.moduletable, div.moduletable_contacts { margin-top: 10px; }
+
+div.moduletable p, .custom_contacts {
+	margin-top: 10px;
+	padding: 7px;
+	border: 1px dotted #ccc;
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+/* CSS спрайт с иконками контактов */
+.sprite {
+    background-image: url('../images/spritesheet.png');
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+}
+
+.contacts-gmail, .contacts-icq, .contacts-skype, .contacts-telegram {
+    width: 18px;
+    height: 18px;
+}
+
+.contacts-gmail {
+    background-position: -5px -5px;
+}
+
+.contacts-icq {
+    background-position: -33px -5px;
+}
+
+.contacts-skype {
+    background-position: -61px -5px;
+}
+
+.contacts-telegram {
+    background-position: -89px -5px;
+}
+
+.contacts-pos {
+	margin-left: 5px;
+}
+/*****************************************************/
+
+/* Стили вывода контента */
+div.cols-1 {
+	padding-bottom: 5px;
+}
+
+div.column-1 {
+    border: 1px #ccc solid;
+    margin-top: 1%; /* Отступ контента от верхнего меню */
+	padding: 5px 10px 2px;
+}
+
+div.column-1, .content-full { line-height: 1.5; }
+
+/*Размер шрифта для заголовка страници*/
+.page-header {
+	padding-top: 15px;
+	border: none;
+}
+
+.page-header h1 { font-size: 1.2em; }
+
+.item-title a, .item-title-full { font: bold 16px Verdana; }
+
+.item-title {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 2px 0 2px;
+	vertical-align: top;
+}
+
+.blog .empty {
+    margin-top: 1em;
+    text-align: center;
+    font: bold 18px Verdana;
+    text-shadow: 1px 1px 1px silver, -1px 1px 1px silver;
+}
+
+/*Стили вывода статей*/
+div.column-1 ol, .content-full ol {
+	margin-left: 7%;
+	margin-top: 5px;
+	counter-reset: item;
+	list-style: none;
+}
+
+/*Многоуровневые нумерованые списки*/
+div.column-1 ol li:before, .content-full ol li:before {
+	counter-increment: item;
+	content: counter(item)". ";
+}
+
+div.column-1 ol li:before, .content-full ol li:before {
+	content: counters(item,".") " ";
+}
+
+/*Отмена стилей ресета нумерованых списков*/
+div.column-1 .listNoneReset, .content-full .listNoneReset {
+	counter-reset: none;
+}
+
+/*Стили для списков с буквенной нумерацией*/
+div.column-1 .listType, .content-full .listType {
+	list-style-type: lower-alpha;
+}
+
+div.column-1 ol.listType li:before, .content-full ol.listType li:before {
+	content: normal;
+}
+
+div.column-1 ul, .content-full ul { margin-left: 6%; }
+
+div.column-1 blockquote, .content-full blockquote {
+	margin: 5px 30px;
+    padding: 7px;
+	word-wrap: break-word; /*Фикс для принудительного переноса строки в цитатах если не помещается*/
+    background-color: #f6f6f6;
+    border: 1px #ccc solid;
+}
+
+div.column-1 p, .content-full p, div.column-1 h4, .content-full h4, div.column-1 h5, .content-full h5,
+pre {
+	margin-top: 10px;
+}
+
+/* Ширина строки для отступа между заголовками */
+div.column-1 p, .content-full p, div.column-1 h4, .content-full h4, div.column-1 h5, .content-full h5 {
+    line-height: 20px;
+}
+
+div.column-1 h4, .content-full h4 { font-size: 16px; }
+
+div.column-1 blockquote p, .content-full blockquote p { font: 13px Verdana; line-height: 1.5; }
+
+div.column-1 table, .content-full table {
+	margin: 10px auto;
+	border-collapse: collapse;
+}
+
+div.column-1 table, div.column-1 table th, div.column-1 table td, .content-full table, .content-full table th,
+.content-full table td {
+	border: 1px solid Gray;
+}
+
+div.column-1 table td, .content-full table td {
+	padding: 0 4px;
+}
+
+div.column-1 table pre, .content-full table pre {
+	background: none;
+	border: none;
+}
+
+div.column-1 p img, .content-full p img { margin: 5px 10px; }
+
+div.column-1 p a, div.column-1 blockquote a, div.column-1 ol a, div.column-1 ul a, .content-full p a,
+.content-full blockquote a, .content-full ol a, .content-full ul a {
+	color: #2a68d2;
+	text-decoration: none;
+	background-image: none;
+	padding-right: 0;
+	word-wrap: break-word;
+}
+
+div.column-1 p a:hover, div.column-1 blockquote a:hover, div.column-1 ol a:hover, .content-full ul a:hover,
+.content-full p a:hover, .content-full blockquote a:hover, .content-full ol a:hover, .content-full ul a:hover {
+	color: #2a68d2;
+	text-decoration: underline;
+}
+
+div.column-1 p a[href^="http://"], div.column-1 blockquote a[href^="http://"], div.column-1 ol a[href^="http://"],
+div.column-1 ul a[href^="http://"], div.column-1 p a[href^="https://"], div.column-1 blockquote a[href^="https://"],
+div.column-1 ol a[href^="https://"], div.column-1 ul a[href^="https://"], .content-full p a[href^="http://"],
+.content-full blockquote a[href^="http://"], .content-full ol a[href^="http://"], .content-full ul a[href^="http://"],
+.content-full p a[href^="https://"], .content-full blockquote a[href^="https://"], .content-full ol a[href^="https://"],
+.content-full ul a[href^="https://"] {
+	background: url('../images/external.png') no-repeat right top;
+	padding-right: 12px;
+}
+
+/* Стили PrismJS для вывода цветного кода в контенте */
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre-wrap; /* Перенос строки если код не помещается на экране, обычно на мобильной версии*/
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em; /* Same as .prism’s padding-top */
+
+	background: hsla(24, 20%, 50%,.08);
+	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+
+	pointer-events: none;
+
+	line-height: inherit;
+	white-space: pre;
+}
+
+	.line-highlight:before,
+	.line-highlight[data-end]:after {
+		content: attr(data-start);
+		position: absolute;
+		top: .4em;
+		left: .6em;
+		min-width: 1em;
+		padding: 0 .5em;
+		background-color: hsla(24, 20%, 50%,.4);
+		color: hsl(24, 20%, 95%);
+		font: bold 65%/1.5 sans-serif;
+		text-align: center;
+		vertical-align: .3em;
+		border-radius: 999px;
+		text-shadow: none;
+		box-shadow: 0 1px white;
+	}
+
+	.line-highlight[data-end]:after {
+		content: attr(data-end);
+		top: auto;
+		bottom: .4em;
+	}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+	content: none;
+}
+
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+
+.token a {
+	color: inherit;
+}
+span.inline-color {
+	display: inline-block;
+	height: 1.333ch;
+	width: 1.333ch;
+	margin: 0 .333ch;
+	box-sizing: border-box;
+	border: 1px solid white;
+	outline: 1px solid black;
+}
+
+.command-line-prompt {
+	border-right: 1px solid #999;
+	display: block;
+	float: left;
+	font-size: 100%;
+	letter-spacing: -1px;
+	margin-right: 1em;
+	pointer-events: none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.command-line-prompt > span:before {
+	color: #999;
+	content: ' ';
+	display: block;
+	padding-right: 0.8em;
+}
+
+.command-line-prompt > span[data-user]:before {
+	content: "[" attr(data-user) "@" attr(data-host) "] $";
+}
+
+.command-line-prompt > span[data-user="root"]:before {
+	content: "[" attr(data-user) "@" attr(data-host) "] #";
+}
+
+.command-line-prompt > span[data-prompt]:before {
+	content: attr(data-prompt);
+}
+
+.token.punctuation.brace-hover,
+.token.punctuation.brace-selected {
+	outline: solid 1px;
+}
+
+.rainbow-braces .token.punctuation.brace-level-1,
+.rainbow-braces .token.punctuation.brace-level-5,
+.rainbow-braces .token.punctuation.brace-level-9 {
+	color: #E50;
+	opacity: 1;
+}
+.rainbow-braces .token.punctuation.brace-level-2,
+.rainbow-braces .token.punctuation.brace-level-6,
+.rainbow-braces .token.punctuation.brace-level-10 {
+	color: #0B3;
+	opacity: 1;
+}
+.rainbow-braces .token.punctuation.brace-level-3,
+.rainbow-braces .token.punctuation.brace-level-7,
+.rainbow-braces .token.punctuation.brace-level-11 {
+	color: #26F;
+	opacity: 1;
+}
+.rainbow-braces .token.punctuation.brace-level-4,
+.rainbow-braces .token.punctuation.brace-level-8,
+.rainbow-braces .token.punctuation.brace-level-12 {
+	color: #E0E;
+	opacity: 1;
+}
+/********************************************************************/
+
+/* Стили для lightbox */
+
+/* Preload images */
+body:after {
+	content: url('../images/close.png') url('../images/loading.gif') url('../images/prev.png') url('../images/next.png');
+	display: none;
+}
+
+body.lb-disable-scrolling {
+    overflow: hidden;
+}
+
+.lightboxOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: black;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8;
+    display: none;
+}
+
+.lightbox {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    text-align: center;
+    line-height: 0;
+    font-weight: normal;
+    outline: none;
+}
+
+.lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    max-height: none;
+    border-radius: 3px;
+    border: 4px solid white; /* Image border */
+}
+
+.lightbox a img {
+    border: none;
+}
+
+.lb-outerContainer {
+    position: relative;
+    *zoom: 1;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: white; /* Background color behind image. This is visible during transitions. */
+}
+
+.lb-outerContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.lb-loader {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    line-height: 0;
+}
+
+.lb-cancel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('../images/loading.gif') no-repeat;
+}
+
+.lb-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.lb-container > .nav {
+    left: 0;
+}
+
+.lb-nav a {
+    outline: none;
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+.lb-prev, .lb-next {
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+.lb-nav a.lb-prev {
+    width: 34%;
+    left: 0;
+    float: left;
+    background: url('../images/prev.png') left 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.lb-nav a.lb-next {
+    width: 64%;
+    right: 0;
+    float: right;
+    background: url('../images/next.png') right 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.lb-dataContainer {
+    margin: 0 auto;
+    padding-top: 5px;
+    *zoom: 1;
+    width: 100%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.lb-data {
+    padding: 0 4px;
+    color: #ccc;
+}
+
+.lb-data .lb-details {
+    width: 85%;
+    float: left;
+    text-align: left;
+    line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+    color: #4ae;
+}
+
+.lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: #999999;
+}
+
+.lb-data .lb-close {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url('../images/close.png') top right no-repeat;
+    text-align: right;
+    outline: none;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:hover {
+    cursor: pointer;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+/**************************************************************************/
+
+/* Стили иформации о посте */
+div.column-1 dl {
+	margin: 10px 0 0;
+    display: inline-block; /*Стиль отвечающий за то что-бы автор, дата и тд не выпадали за рамку контента*/
+}
+
+/* Отключение тображения надписи "Подробности" тега <dt> для соблюдения валидации */
+.article-info-term { display: none; }
+
+.createdby, .published, div.column-1 .readmore a {
+	color: #666;
+}
+
+.createdby {
+	margin-left: 0;
+	float: left;
+}
+
+.published {
+	margin-left: 13px;
+	float: left;
+}
+
+div.column-1 .readmore {
+    margin-top: 0;
+	margin-left: 11.6em;
+	padding: 0 5px 0 14px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .readmore a:focus {
+	color: #747474;
+	border: 1px solid #dadada;
+	background-color: #ededed;
+	text-decoration: none;
+}
+
+/* Стили информации о посте в полном варианте */
+.content-info-full {
+	width: 100%;
+    display: inline-block;
+}
+
+.content-info-full .article-info {
+    float: right;
+    margin-top: 10px;
+	margin-bottom: 0;
+	padding-right: 5px;
+}
+
+/* Fix для proofreader*/
+#proofreader_form h2 {
+    line-height: 40px;
+}
+
+/* Стили постраничной навигации */
+.pagination {
+    margin: 20px 0 10px 0;
+}
+
+.pagination a:hover {
+    color: #00a3f4;
+}
+
+/* Стили футера */
+.container-fluid .row-fluid .footer {
+    background-color: #434343;
+    border-top: 2px solid #0080c0;
+    color: #fff;
+    line-height: 35px; /*Выравнивает по вертикали благодаря междустрочному интервалу*/
+    min-height: 50px;
+    width: 85.5%;
+}
+
+.developed {
+	padding-left: 10px;
+	float: left;
+}
+
+.developed a {
+	text-decoration: none;
+	color: #f5f5f5;
+}
+
+.developed a:hover {
+	text-decoration: underline;
+	color: #ccc;
+}
+
+.disclaimers { line-height: 5px; }
+
+/* Стили кнопки Вверх */
+#go-top {
+	position: fixed;
+	line-height: 35px; /*отступ иконки от верхнего края для центровки*/
+	text-align: center;
+	bottom: 25px; /*Отступ от нижней части окна браузера*/
+	right: 11px; /*Отступ от правой части окна браузера*/
+	cursor: pointer;
+	display: none;
+	width: 34px;
+	height: 35px;
+	background-color: #f9f9f9;
+	border: solid 1px #ccc;
+	border-radius: 40px;
+}
+
+.up {
+    display: inline-block; /* inline-block вместо block для того что-бы картинка и надпись были в одну строку*/
+}
+
+/* Responsive style */
+
+/*
+FIXME исправить футер при ресайзе, где-то выходит (или недоходит) за рамки на пол процента
+*/
+
+/* Стили названия сайта в мобильной версии*/
+.navbar .brand {
+    color: white;
+    font-weight: 300;
+    text-shadow: none;
+    padding-left: 0;
+}
+
+/* Стили кнопки отображения мобильного меню */
+.navbar .btn-navbar {
+    margin-top: 8px;
+    margin-right: 4px;
+}
+
+/* Стили будут применятся на компьютерах с разрешением от 1200 пикселей */
+@media screen and (min-width: 1200px) {
+    /*Стил горизонтального меню*/
+
+    /* Уменьшаем размер и выравниваем элементы меню по центру */
+    .container-fluid .row-fluid .menu {
+        width: 57%;
+    }
+
+    .container-fluid .row-fluid .menu li a {
+        border-bottom: 2px solid #434343;
+    }
+
+    .container-fluid .row-fluid .menu li a:hover {
+        background-color: #e5e5e5;
+        border-bottom: 2px solid #0080c0;
+        color: #0a0a0a;
+    }
+
+    /* Убираем задниф вон на фокусной ссылке в меню и добавляя линию внизу */
+    .container-fluid .row-fluid .menu li a:focus {
+        background-color: transparent;
+        border-bottom: 2px solid #0080c0;
+    }
+
+    .container-fluid .row-fluid .menu li.current a {
+        border-bottom: 2px solid #0080c0;
+        cursor: default;
+        font-weight: bold;
+    }
+
+    /* Стили вывода модулей с левой стороны */
+    .content .left {
+        width: 22%;
+        min-width: 119px; /*Стиль отвечающий за минимальную ширну при сужении окна*/
+        padding: 0 7px 15px;
+    }
+
+    /* Ширина контетной части с отступами */
+    .content .con {
+        margin-left: 1%;
+        width: 77%;
+        padding-right: 8px;
+    }
+}
+
+/* Стили будут применятся на телефонах и планшетах */
+
+@media screen and (min-width: 1000px) and (max-width: 1190px) {
+
+    .container-fluid .row-fluid .menu {
+        width: 75%;
+    }
+
+    .content .left {
+        width: 20%;
+        padding: 0 7px 15px;
+    }
+
+    .search-query {
+        width: 70%;
+    }
+
+    .search .btn-primary {
+        margin-top: 5px;
+    }
+
+    .content .con {
+        margin-left: 1%;
+        width: 78%;
+    }
+
+    /* Стили футера 1024x768 */
+    .container-fluid .row-fluid .footer {
+        width: 86.5%;
+    }
+}
+
+/* 768x1024 */
+@media screen and (min-width: 760px) and (max-width: 800px) {
+
+    .content .left {
+        width: 100%;
+    }
+
+    .container-fluid .row-fluid .footer {
+        width: 87.8%;
+    }
+}
+
+/* 800x600 */
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+
+    .content .left {
+        width: 100%;
+    }
+
+    .container-fluid .row-fluid .footer {
+        width: 87.6%;
+    }
+}
+
+/* Общие стили для раширений 800x600, 600x800, 768x1024 */
+@media screen and (min-width: 590px) and (max-width: 700px),
+screen and (min-width: 800px) and (max-width: 1000px),
+screen and (min-width: 760px) and (max-width: 800px),
+screen and (min-width: 590px) and (max-width: 765px),
+screen and (min-width: 480px) and (max-width: 500px),
+screen and (max-width: 479px) {
+
+    /* Делаем кнопку мобильного мен. другим цветом */
+    .navbar .btn-navbar {
+        background-image: none;
+        background-color: #575757;
+        box-shadow: none;
+    }
+
+    .navbar .btn-navbar:hover {
+        background-color: #ffad29;
+    }
+
+    /*Убирает белый фон при наведении на ссылку в меню и устанавливает картинку*/
+    .nav-collapse .nav>li>a:hover {
+        color: #000;
+    }
+
+    .container-fluid .span10 .navbar-inner {
+        padding-right: 10px;
+    }
+
+    .moduletable_contacts {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .content .con {
+        width: 99%;
+        margin-left: 3px;
+        margin-right: 2px;
+    }
+
+    .proofreader_prompt {
+        display: none;
+    }
+}
+
+/* 600x800 */
+@media screen and (min-width: 590px) and (max-width: 765px) {
+
+    .container-fluid .row-fluid .footer {
+        width: 100%;
+    }
+}
+
+/* 480x320 */
+@media screen and (min-width: 480px) and (max-width: 500px) {
+    /* Стили футера */
+    .container-fluid .row-fluid .footer {
+        width: 100%;
+    }
+}
+
+/* 320x480 */
+@media screen and (max-width: 479px) {
+
+    .content .left {
+        width: 100%;
+    }
+
+    .content .con {
+        width: 98%;
+    }
+
+    div.column-1 .readmore {
+        margin: 25px 0 0 0;
+        padding-left: 0;
+    }
+
+    /* Стили футера */
+    .container-fluid .row-fluid .footer {
+        width: 100%;
+    }
+}
