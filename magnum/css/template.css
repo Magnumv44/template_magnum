@@ -94,21 +94,19 @@ a .logo-slogan:hover {
 
 /*Стили горизонтального меню */
 
-/* Задаем цвет фона меню */
-.navbar {
-    margin: 0;
-}
-
+/* Убирайм лишние декорации у пунтов меню 1-го уровня */
 .navbar .nav>li>a {
     text-shadow: none;
 }
 
+/* Убираем лишние декорации у активного пункат меню 1-го уровня*/
 .navbar .nav>.active>a {
     background-color: transparent;
     box-shadow: none;
 }
 
 .container-fluid .span10 .navbar-inner {
+    margin: 0;
     background-image: none;
     background-repeat: no-repeat;
     background-color: #434343;
