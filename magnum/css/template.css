@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 p { margin: 0; }
 
 /* Делаем нестандартный цест выделения текста */
-p::selection {
+::selection {
     color: white; /* Цвет текста */
     background: #434343; /* Цвет фона */
 }
