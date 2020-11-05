@@ -947,7 +947,7 @@ div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .r
 }
 
 /* Стили футера */
-.container-fluid .row-fluid .footer {
+.row-fluid .footer {
     background-color: #434343;
     border-top: 2px solid #0080c0;
     color: #fff;
@@ -1055,6 +1055,14 @@ FIXME исправить футер при ресайзе, где-то выхо�
         margin-left: 1%;
         width: 77%;
         padding-right: 8px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    
+    /* Фикс footer для экранов с большим расширением */
+    .row-fluid .footer {
+        width: 84.69%;
     }
 }
 
