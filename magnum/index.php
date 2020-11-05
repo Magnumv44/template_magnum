@@ -19,6 +19,9 @@
     $document = JFactory::getDocument();
     unset($this->_scripts[$this->baseurl.'/media/jui/js/jquery-migrate.min.js']);
     unset($this->_scripts[$this->baseurl.'/media/jui/js/jquery-noconflict.js']);
+
+    // Извлечение переменных из параметров шаблона
+    $analytics = $this->params->get("analytics");
 ?>
 <!doctype html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -38,15 +41,8 @@
     <link href="templates/<?php echo $this->template ?>/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
     <link href="templates/<?php echo $this->template ?>/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="templates/<?php echo $this->template ?>/images/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1697908-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-1697908-1');
-    </script>
+    <?php echo $analytics ?>
+  
   </head>
   <body>
       <!-- Начало шапки сайта -->

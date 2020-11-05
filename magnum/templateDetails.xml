@@ -34,6 +34,15 @@
 		<position>footer</position>
 	</positions>
 
+    <!-- Вывод параметров в админку шаблона -->
+    <config>
+        <fields name="params">
+            <fieldset name="advanced" >
+                <field name="analytics" type="textarea" rows="15" cols="25" default="" filter="raw" label="TPL_ANALYTICS" description="TPL_ANALYTICS_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+
 	<!-- Установка/Удаление файлов локализации -->
     <languages folder="language">
         <language tag="ru-RU">ru-RU/ru-RU.tpl_magnum.ini</language>
