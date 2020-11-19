@@ -72,7 +72,9 @@
                 <span class="icon-align-justify icon-white"></span>
               </a>
               <div class="nav-collapse">
-                <jdoc:include type="modules" name="top-menu" style="menu" />
+                <div class="align-menu">
+                  <jdoc:include type="modules" name="top-menu" style="menu" />
+                </div>
               </div>
             </div>
           </div>
