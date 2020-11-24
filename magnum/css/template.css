@@ -1173,16 +1173,11 @@ screen and (max-width: 479px) {
     }
 }
 
-/* 600x800 */
-@media screen and (min-width: 590px) and (max-width: 765px) {
+/* Общие стили для раширений 600x800, 480x320, 320x480 */
+@media screen and (min-width: 590px) and (max-width: 765px),
+screen and (min-width: 480px) and (max-width: 500px),
+screen and (max-width: 479px) {
 
-    .container-fluid .row-fluid .footer {
-        width: 100%;
-    }
-}
-
-/* 480x320 */
-@media screen and (min-width: 480px) and (max-width: 500px) {
     /* Стили футера */
     .container-fluid .row-fluid .footer {
         width: 100%;
@@ -1203,10 +1198,5 @@ screen and (max-width: 479px) {
     div.column-1 .readmore {
         margin: 25px 0 0 0;
         padding-left: 0;
-    }
-
-    /* Стили футера */
-    .container-fluid .row-fluid .footer {
-        width: 100%;
     }
 }
