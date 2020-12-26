@@ -263,7 +263,8 @@ div.column-1, .content-full { line-height: 1.5; }
 }
 
 /*Стили вывода статей*/
-div.column-1 p, .content-full p {
+div.column-1 p, .content-full p,
+div.column-1 blockquote, .content-full blockquote {
     word-wrap: break-word; /*Фикс для принудительного переноса строки если текст не помещается*/
 }
 
