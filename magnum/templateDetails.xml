@@ -8,7 +8,7 @@
 	<authorUrl>https://www.magnumblog.space</authorUrl>
 	<copyright>Copyright (C) 2005 - 2020</copyright>
 	<license>comercial</license>
-	<version>2.3.2</version>
+	<version>2.4.0</version>
 	<description>TPL_MAGNUM_DESC</description>
 
 	<files>
@@ -38,7 +38,38 @@
     <config>
         <fields name="params">
             <fieldset name="TPL_GOOGLE_ANALYTICS" >
-                <field name="analytics" type="textarea" rows="15" cols="25" default="" filter="raw" label="TPL_ANALYTICS" description="TPL_ANALYTICS_DESC" />
+                <field 
+                name="analytics"
+					type="textarea"
+					rows="15"
+					cols="25"
+					default=""
+					filter="raw"
+					label="TPL_ANALYTICS"
+					description="TPL_ANALYTICS_DESC"
+				/>
+            </fieldset>
+			<fieldset name="TPL_LOGO" >
+                <field
+                    name="logoFile"
+                    type="radio"
+                    default="images/logo.png"
+                    label="TPL_MAGNUM_LOGO_LABEL"
+                    description="TPL_MAGNUM_LOGO_DESC"
+                >
+                    <option value="images/logo.png">TPL_MAGNUM_LOGO_OPTIONS_MAIN</option>
+                    <option value="images/christmas-logo.png">TPL_MAGNUM_LOGO_OPTIONS_CHRISTMAS</option>
+                </field>
+                <field
+                    name="backgroundFon"
+                    type="radio"
+                    default="main-fon"
+                    label="TPL_MAGNUM_FON_LABEL"
+                    description="TPL_MAGNUM_FON_DESC"
+                >
+                    <option value="main-fon">TPL_MAGNUM_FON_OPTIONS_MAIN</option>
+                    <option value="christmas-fon">TPL_MAGNUM_FON_OPTIONS_CHRISTMAS</option>
+                </field>
             </fieldset>
         </fields>
     </config>

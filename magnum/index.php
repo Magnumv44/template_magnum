@@ -22,6 +22,8 @@
 
     // Извлечение переменных из параметров шаблона
     $analytics = $this->params->get("analytics");
+    $backgroundFon = $this->params->get("backgroundFon");
+    $logoFile = $this->params->get("logoFile");
 ?>
 <!doctype html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -44,14 +46,14 @@
     <?php echo $analytics ?>
   
   </head>
-  <body>
+  <body id="<?php echo $backgroundFon ?>">
       <!-- Начало шапки сайта -->
       <header>
         <div class="container-fluid visible-desktop">
           <div class="row-fluid">
             <div class="span10 logo">
               <a href="/" title="Magnum news - Блог IT-шника">
-                <img id="logo" src="templates/<?php echo $this->template ?>/images/logo.png" alt="Magnum news - Блог IT-шника" />
+                <img src="templates/<?php echo $this->template ?>/<?php echo $logoFile ?>" alt="Magnum news - Блог IT-шника" />
                 <span class="logo-name">Magnum news</span><br />
                 <span class="logo-slogan">Блог <span style="color: red;">IT</span>-шника</span>
               </a>
@@ -65,7 +67,7 @@
           <div class="span10 top-menu">
             <div class="navbar navbar-inner">
               <a class="brand hidden-desktop" href="/">
-                <img id="smal-logo" src="templates/<?php echo $this->template ?>/images/small-logo.png" alt="Magnum news - Блог IT-шника" />
+                <img src="templates/<?php echo $this->template ?>/images/small-logo.png" alt="Magnum news - Блог IT-шника" />
                 Magnum news
               </a> <!-- На компьютерах не будет отображатся -->
               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
