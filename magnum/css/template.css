@@ -875,7 +875,6 @@ div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .r
     color: #fff;
     line-height: 35px; /*Выравнивает по вертикали благодаря междустрочному интервалу*/
     min-height: 50px;
-    width: 85.5%;
 }
 
 .developed {
@@ -916,10 +915,6 @@ div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .r
 }
 
 /* Responsive style */
-
-/*
-FIXME исправить футер при ресайзе, где-то выходит (или недоходит) за рамки на пол процента
-*/
 
 /* Стили названия сайта в мобильной версии*/
 .navbar .brand {
@@ -993,11 +988,6 @@ FIXME исправить футер при ресайзе, где-то выхо�
     input.search-query {
         width: 72%;
     }
-
-    /* Фикс footer для экранов с большим расширением */
-    .row-fluid .footer {
-        width: 84.7%;
-    }
 }
 
 /* Стили будут применятся на телефонах и планшетах */
@@ -1025,34 +1015,14 @@ FIXME исправить футер при ресайзе, где-то выхо�
         margin-left: 0.1%;
         width: 78%;
     }
-
-    /* Стили футера 1024x768 */
-    .container-fluid .row-fluid .footer {
-        width: 86.5%;
-    }
 }
 
-/* 768x1024 */
-@media screen and (min-width: 760px) and (max-width: 800px) {
+/* Общие стили для раширений 800x600, 768x1024 */
+@media screen and (min-width: 800px) and (max-width: 1000px),
+screen and (min-width: 760px) and (max-width: 800px) {
 
     .content .left {
         width: 100%;
-    }
-
-    .container-fluid .row-fluid .footer {
-        width: 87.8%;
-    }
-}
-
-/* 800x600 */
-@media screen and (min-width: 800px) and (max-width: 1000px) {
-
-    .content .left {
-        width: 100%;
-    }
-
-    .container-fluid .row-fluid .footer {
-        width: 87.6%;
     }
 }
 
@@ -1097,17 +1067,6 @@ screen and (max-width: 479px) {
 
     .proofreader_prompt {
         display: none;
-    }
-}
-
-/* Общие стили для раширений 600x800, 480x320, 320x480 */
-@media screen and (min-width: 590px) and (max-width: 765px),
-screen and (min-width: 480px) and (max-width: 500px),
-screen and (max-width: 479px) {
-
-    /* Стили футера */
-    .container-fluid .row-fluid .footer {
-        width: 100%;
     }
 }
 

@@ -91,6 +91,7 @@
                 <jdoc:include type="component" />
               </div>
             </div>
+          </div>
         </div>
       </div>
       <!-- Начало футера -->
