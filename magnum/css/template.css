@@ -976,9 +976,10 @@ div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .r
 
     /* Ширина контетной части с отступами */
     .content .con {
-        margin-left: 0.1%;
+        /*margin-left: 0.1%;
+        margin-right: 0.1%;*/
+        margin: auto 0.1% auto 0.1%;
         width: 77%;
-        padding-right: 8px;
     }
 }
 
@@ -1013,7 +1014,7 @@ div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .r
 
     .content .con {
         margin-left: 0.1%;
-        width: 78%;
+        width: 79%;
     }
 }
 
