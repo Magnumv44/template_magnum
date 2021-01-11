@@ -1,7 +1,7 @@
 <?php
 /**
  * Данный шаблон был разработан для сайта https://www.magnumblog.space
- * При копировнии данного шаблона в обязательном порядке уведомите адмнистрацию сайта https://www.magnumblog.space
+ * При копировнии данного шаблона в обязательном порядке уведомите администрацию сайта https://www.magnumblog.space
  * И пропишите копирайты разработчика:
  * Developed by Magnum https://www.magnumblog.space
  */
@@ -69,7 +69,7 @@
               <a class="brand hidden-desktop" href="/">
                 <img src="templates/<?php echo $this->template ?>/images/small-logo.png" alt="Magnum news - Блог IT-шника" />
                 Magnum news
-              </a> <!-- На компьютерах не будет отображатся -->
+              </a> <!-- На компьютерах не будет отображаться -->
               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-align-justify icon-white"></span>
               </a>
@@ -111,7 +111,7 @@
           </div>
         </div>
       </footer>
-    <!-- Скрипты кнопоки lightbox, для вставок кода в контент, кнопки вверх -->
+    <!-- Скрипты lightbox, вставки примеров кода в контент, кнопки вверх -->
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.js" type="text/javascript"></script>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/prism.js" type="text/javascript"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/go_top.js" type="text/javascript"></script>

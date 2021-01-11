@@ -47,10 +47,10 @@ img { border: 0; }
 #christmas-fon {
     background-image:  url('../images/christmas-fon.jpg');
 }
+
 /* Выравнивание элементов по центру */
 .container-fluid .row-fluid .logo,
 .container-fluid .row-fluid .top-menu,
-.container-fluid .row-fluid .menu,
 .container-fluid .content,
 .container-fluid .row-fluid .footer {
     float: none;
@@ -59,7 +59,7 @@ img { border: 0; }
 
 /*Стили шапки сайта*/
 .logo {
-    padding-left: 4em; /*Отступ слева для более красивого выравнивания на десктопе*/
+    padding-left: 4em; /*Отступ слева для более красивого выравнивания на desktop*/
     padding-bottom: 4.5em;
 }
 
@@ -73,7 +73,7 @@ img { border: 0; }
     src: url('../fonts/mrrobot.ttf');
 }
 
-/*Стили названи блога*/
+/*Стили названия блога*/
 .logo-name {
     display: inline-block;
     color: #434343;
@@ -100,12 +100,22 @@ a .logo-slogan:hover {
 
 /*Стили горизонтального меню */
 
-/* Убирайм лишние декорации у пунтов меню 1-го уровня */
-.navbar .nav>li>a {
-    text-shadow: none;
+/* Делаем элемент блочным для выравнивания меню по центру */
+.align-menu {
+    display: inline-block;
 }
 
-/* Убираем лишние декорации у активного пункат меню 1-го уровня*/
+.navbar .nav {
+    margin: 0;
+}
+
+/* Убираем лишние декорации у пунктов меню 1-го уровня */
+.navbar .nav>li>a {
+    text-shadow: none;
+    padding: 10px;
+}
+
+/* Убираем лишние декорации у активного пункта меню 1-го уровня*/
 .navbar .nav>.active>a {
     background-color: transparent;
     box-shadow: none;
@@ -183,7 +193,7 @@ input.search-query {
     line-height: 40px;
 }
 
-/* Стили оступа левых блоков от верхего меню */
+/* Стили отступа левых блоков от верхнего меню */
 div.moduletable, div.moduletable_contacts { margin-top: 10px; }
 
 div.moduletable p, .custom_contacts {
@@ -246,7 +256,7 @@ div.column-1 {
 
 div.column-1, .content-full { line-height: 1.5; }
 
-/*Размер шрифта для заголовка страници*/
+/*Размер шрифта для заголовка страницы*/
 .page-header {
 	padding-top: 15px;
 	border: none;
@@ -930,23 +940,65 @@ div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .r
     margin-right: 4px;
 }
 
+/* Делаем кнопку мобильного меню другим цветом */
+.navbar .btn-navbar {
+    background-image: none;
+    background-color: #575757;
+    box-shadow: none;
+}
+
+.navbar .btn-navbar:hover {
+    background-color: #ffad29;
+}
+
+/* Убирает белый фон при наведении на ссылку в меню */
+.nav-collapse .nav>li>a:hover {
+    color: #000;
+}
+
+/* Стили будут применятся на компьютерах с разрешением от 1500 пикселей */
+@media screen and (min-width: 1500px) {
+
+    /* Увиличиваем поле поиска для экранов 22+ */
+    input.search-query {
+        width: 72%;
+    }
+}
+
 /* Стили будут применятся на компьютерах с разрешением от 1200 пикселей */
 @media screen and (min-width: 1200px) {
+
+    /* Стили вывода модулей с левой стороны */
+    .content .left {
+        width: 22%;
+        min-width: 119px; /*Стиль отвечающий за минимальную ширну при сужении окна*/
+        padding: 0 7px 1%;
+    }
+
+    /* Ширина контетной части с отступами */
+    .content .con {
+        margin: auto 0.1% auto 0.1%;
+        width: 77%;
+    }
+}
+
+/* Общие стили для экранов 1200+, 1000x1190, 800x1000*/
+@media screen and (min-width: 1200px),
+screen and (min-width: 1000px) and (max-width: 1199px) {
+    
     /*Стил горизонтального меню*/
 
-    /* Уменьшаем размер и выравниваем элементы меню по центру */
+    /* Выравниваем все содержимое по центру и задаем максимальную высоту */
     .nav-collapse {
         text-align: center;
         max-height: 42px;
     }
 
-    .align-menu {
-        display: inline-block;
-    }
-
     /* Декорация пунктов меню */
     .container-fluid .row-fluid .menu li a {
+        /*font-size: calc(8px + .5vw);*/
         border-bottom: 2px solid #434343;
+
     }
 
     .container-fluid .row-fluid .menu li a:hover {
@@ -966,38 +1018,11 @@ div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .r
         cursor: default;
         font-weight: bold;
     }
-
-    /* Стили вывода модулей с левой стороны */
-    .content .left {
-        width: 22%;
-        min-width: 119px; /*Стиль отвечающий за минимальную ширну при сужении окна*/
-        padding: 0 7px 15px;
-    }
-
-    /* Ширина контетной части с отступами */
-    .content .con {
-        /*margin-left: 0.1%;
-        margin-right: 0.1%;*/
-        margin: auto 0.1% auto 0.1%;
-        width: 77%;
-    }
-}
-
-@media screen and (min-width: 1500px) {
-
-    /* Увиличиваем поле поиска для экранов 22+ */
-    input.search-query {
-        width: 72%;
-    }
 }
 
 /* Стили будут применятся на телефонах и планшетах */
 
-@media screen and (min-width: 1000px) and (max-width: 1190px) {
-
-    .container-fluid .row-fluid .menu {
-        width: 75%;
-    }
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
 
     .content .left {
         width: 20%;
@@ -1034,22 +1059,6 @@ screen and (min-width: 760px) and (max-width: 800px),
 screen and (min-width: 590px) and (max-width: 765px),
 screen and (min-width: 480px) and (max-width: 500px),
 screen and (max-width: 479px) {
-
-    /* Делаем кнопку мобильного мен. другим цветом */
-    .navbar .btn-navbar {
-        background-image: none;
-        background-color: #575757;
-        box-shadow: none;
-    }
-
-    .navbar .btn-navbar:hover {
-        background-color: #ffad29;
-    }
-
-    /*Убирает белый фон при наведении на ссылку в меню и устанавливает картинку*/
-    .nav-collapse .nav>li>a:hover {
-        color: #000;
-    }
 
     .container-fluid .span10 .navbar-inner {
         padding-right: 10px;
