@@ -972,13 +972,13 @@ div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .r
     .content .left {
         width: 22%;
         min-width: 119px; /*Стиль отвечающий за минимальную ширну при сужении окна*/
-        padding: 0 7px 1%;
+        padding: 0 7px 15px;
     }
 
     /* Ширина контетной части с отступами */
     .content .con {
         margin: auto 0.1% auto 0.1%;
-        width: 77%;
+        width: 77.5%;
     }
 }
 
@@ -996,7 +996,6 @@ screen and (min-width: 1000px) and (max-width: 1199px) {
 
     /* Декорация пунктов меню */
     .container-fluid .row-fluid .menu li a {
-        /*font-size: calc(8px + .5vw);*/
         border-bottom: 2px solid #434343;
 
     }
@@ -1024,6 +1023,11 @@ screen and (min-width: 1000px) and (max-width: 1199px) {
 
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
 
+    /* Динамическое изменение размера текста при скалировании */
+    .container-fluid .row-fluid .menu li a {
+        font-size: calc(8px + .4vw);
+    }
+
     .content .left {
         width: 20%;
         padding: 0 7px 15px;
@@ -1039,7 +1043,7 @@ screen and (min-width: 1000px) and (max-width: 1199px) {
 
     .content .con {
         margin-left: 0.1%;
-        width: 79%;
+        width: 79.5%;
     }
 }
 
