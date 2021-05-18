@@ -182,9 +182,11 @@ input.search-query {
     border-bottom: 1px dotted #ccc;
 }
 
-/*Вывод заголовка модулей слева*/
-.moduletable h3, .moduletable_contacts h3 {
-    border-radius: 4px;
+/* Стили отступа левых блоков от верхнего меню */
+div.moduletable, div.moduletable_ad, div.moduletable_contacts { margin-top: 10px; }
+
+/* Вывод заголовка модулей левой стороны */
+.moduletable h3, .moduletable_ad h3, .moduletable_contacts h3 {
 	text-align: center;
 	background-color: #434343;
 	color: #fff;
@@ -193,10 +195,15 @@ input.search-query {
     line-height: 40px;
 }
 
-/* Стили отступа левых блоков от верхнего меню */
-div.moduletable, div.moduletable_contacts { margin-top: 10px; }
+/* Скругнелие углов у заголовков и текстовой части модулей левой стороны */
+.moduletable h3, .moduletable_ad h3,
+.moduletable_contacts h3, .custom_ad,
+.custom_contacts {
+    border-radius: 4px;
+}
 
-div.moduletable p, .custom_contacts {
+/* Стили текстовой части модулей левой стороны */
+.custom_ad, .custom_contacts {
 	margin-top: 10px;
 	padding: 7px;
 	border: 1px dotted #ccc;
@@ -248,17 +255,21 @@ div.cols-1 {
 	padding-bottom: 5px;
 }
 
-div.column-1 {
+div.column-1, .content-full {
+    border-radius: 4px;
     border: 1px #ccc solid;
     margin-top: 1%; /* Отступ контента от верхнего меню */
 	padding: 5px 10px 2px;
+    line-height: 1.5;
 }
 
-div.column-1, .content-full { line-height: 1.5; }
+.content-full {
+    margin-bottom: 10px;
+}
 
 /*Размер шрифта для заголовка страницы*/
 .page-header {
-	padding-top: 15px;
+    margin-left: 10px;
 	border: none;
 }
 
