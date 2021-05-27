@@ -8,6 +8,13 @@ body {
 	padding: 0;
 }
 
+#main-fon {
+    background-image:  url('../images/fon.jpg');
+}
+#christmas-fon {
+    background-image:  url('../images/christmas-fon.jpg');
+}
+
 .outer {
 	display: table;
 	position: absolute;
