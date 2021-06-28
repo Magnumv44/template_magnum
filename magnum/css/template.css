@@ -199,7 +199,7 @@ div.moduletable_contacts, .moduletable_googlea {
 }
 
 /* Скругление углов у заголовков и текстовой части модулей левой стороны */
-.moduletable h3, .moduletable_ad h3,
+.moduletable h3, .moduletable_a h3,
 .moduletable_contacts h3, .custom_a,
 .custom_contacts {
     border-radius: 4px;
