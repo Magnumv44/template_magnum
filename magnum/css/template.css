@@ -183,10 +183,13 @@ input.search-query {
 }
 
 /* Стили отступа левых блоков от верхнего меню */
-div.moduletable, div.moduletable_ad, div.moduletable_contacts { margin-top: 10px; }
+div.moduletable, div.moduletable_a,
+div.moduletable_contacts, .moduletable_googlea {
+    margin-top: 10px;
+}
 
 /* Вывод заголовка модулей левой стороны */
-.moduletable h3, .moduletable_ad h3, .moduletable_contacts h3 {
+.moduletable h3, .moduletable_a h3, .moduletable_contacts h3 {
 	text-align: center;
 	background-color: #434343;
 	color: #fff;
@@ -195,15 +198,15 @@ div.moduletable, div.moduletable_ad, div.moduletable_contacts { margin-top: 10px
     line-height: 40px;
 }
 
-/* Скругнелие углов у заголовков и текстовой части модулей левой стороны */
+/* Скругление углов у заголовков и текстовой части модулей левой стороны */
 .moduletable h3, .moduletable_ad h3,
-.moduletable_contacts h3, .custom_ad,
+.moduletable_contacts h3, .custom_a,
 .custom_contacts {
     border-radius: 4px;
 }
 
 /* Стили текстовой части модулей левой стороны */
-.custom_ad, .custom_contacts {
+.custom_a, .custom_contacts {
 	margin-top: 10px;
 	padding: 7px;
 	border: 1px dotted #ccc;
