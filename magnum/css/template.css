@@ -301,7 +301,6 @@ div.column-1 blockquote, .content-full blockquote {
 }
 
 div.column-1 ol, .content-full ol {
-	margin-left: 7%;
 	margin-top: 5px;
 	counter-reset: item;
 	list-style: none;
