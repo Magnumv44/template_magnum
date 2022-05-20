@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-  jQuery('body').append('<a href="#" id="go-top"><span class="icon-chevron-up"></span></span></a>');
+  jQuery('body').append('<a href="#" id="go-top"><span class="icon-chevron-up"></span></a>');
 });
 
 jQuery(function() {
