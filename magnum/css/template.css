@@ -1,66 +1,71 @@
 /*
-TODO Сверстать место под банер в десктоп версии, хотя в мобальной он более актуален
+TODO Сверстать место под банер в десктоп версии, хотя в мобильной он более актуален
 TODO сделать в версиях для маленьких экранов меньше боковые отступы, для лучшей читабельности
 */
 @charset "utf-8";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+
 /*Общие стили бля html*/
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	background-color: #efefef;
-	color: #000;
+    background-color: #efefef;
+    color: #000;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     line-height: 0;
 }
 
-p { margin: 0; }
+p {
+    margin: 0;
+}
 
-/* Делаем нестандартный цест выделения текста */
+/* Делаем нестандартный цвет выделения текста */
 ::selection {
     color: white; /* Цвет текста */
     background: #434343; /* Цвет фона */
 }
 
 a {
-	text-decoration: none;
-	color: #0a0a0a;
+    text-decoration: none;
+    color: #0a0a0a;
 }
 
 a:hover {
-	text-decoration: underline;
-	color: #0a0a0a;
+    text-decoration: underline;
+    color: #0a0a0a;
 }
 
-abbr:hover { cursor: help; }
+abbr:hover {
+    cursor: help;
+}
 
-img { border: 0; }
+img {
+    border: 0;
+}
 
 #main-fon {
-    background-image:  url('../images/fon.jpg');
-}
-#christmas-fon {
-    background-image:  url('../images/christmas-fon.jpg');
+    background-image: url("../images/fon.jpg");
 }
 
-/* Выравнивание элементов по центру */
-.container-fluid .row-fluid .logo,
-.container-fluid .row-fluid .top-menu,
-.container-fluid .content,
-.container-fluid .row-fluid .footer {
-    float: none;
-    margin: 0 auto;  
+#christmas-fon {
+    background-image: url("../images/christmas-fon.jpg");
 }
 
 /*Стили шапки сайта*/
 .logo {
     padding-left: 4em; /*Отступ слева для более красивого выравнивания на desktop*/
-    padding-bottom: 4.5em;
+    padding-bottom: 0.5em;
 }
 
 .logo img {
@@ -70,7 +75,7 @@ img { border: 0; }
 /*Импорт своего шрифта в шаблон*/
 @font-face {
     font-family: MrRobot;
-    src: url('../fonts/mrrobot.ttf');
+    src: url("../fonts/mrrobot.ttf");
 }
 
 /*Стили названия блога*/
@@ -79,7 +84,7 @@ img { border: 0; }
     color: #434343;
     font-family: MrRobot;
     font-size: 60px;
-    margin-top: 2em;
+    margin-top: 1.5em;
     margin-left: 1em;
 }
 
@@ -87,9 +92,8 @@ img { border: 0; }
 .logo-slogan {
     display: inline-block;
     color: #0088cc;
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Press Start 2P", cursive;
     font-size: 30px;
-    margin-top: 1em;
     margin-left: 3.2em;
 }
 
@@ -112,37 +116,37 @@ a .logo-slogan:hover {
 /* Убираем лишние декорации у пунктов меню 1-го уровня */
 .navbar .nav>li>a {
     text-shadow: none;
-    padding: 10px;
+    padding: 8px;
 }
 
 /* Убираем лишние декорации у активного пункта меню 1-го уровня*/
-.navbar .nav>.active>a {
+/*.navbar .nav>.active>a {
     background-color: transparent;
     box-shadow: none;
-}
+}*/
 
-.container-fluid .span10 .navbar-inner {
+.row .top-menu {
     margin: 0;
     background-image: none;
     background-repeat: no-repeat;
     background-color: #434343;
     border-left: 1px solid Gray;
-	border-right: 1px solid Gray;
+    border-right: 1px solid Gray;
     border-radius: 0;
 }
 
 /* Цвет ссылок в меню */
-.container-fluid .row-fluid .menu li a {
+.align-menu li a {
     color: white;
 }
 
-/* Стили контетной части */
+/* Стили контентной части */
 
-/* Задаем цвет фона и боковые линии у контетной части */
-.container-fluid .content {
+/* Задаем цвет фона и боковые линии у контентной части */
+.container .content {
     border-left: 1px solid Gray;
-	border-right: 1px solid Gray;
-	background-color: #f9f9f9;
+    border-right: 1px solid Gray;
+    background-color: #f9f9f9;
 }
 
 /*Стили для модулей контактов и объявлений*/
@@ -151,17 +155,21 @@ a .logo-slogan:hover {
 
 .search-on {
     text-align: center; /* Выравниваем поиск по центру блока*/
+    margin-bottom: 20px;
 }
 
 /* Размер поля для ввода поискового запроса*/
 input.search-query {
-    width: 60%;
+    width: 77%;
     border-radius: 4px;
+    display: inline-block;
 }
 
 .search .btn-primary {
     background-image: none;
     background-color: #434343;
+    border-color: transparent;
+    vertical-align: baseline;
 }
 
 .search .btn-primary:hover {
@@ -171,7 +179,9 @@ input.search-query {
 #searchForm {
     margin-left: 3px;
 }
-.search-results, .result-title {
+
+.search-results,
+.result-title {
     margin: 0 2px 0 2px;
 }
 
@@ -183,46 +193,49 @@ input.search-query {
 }
 
 /* Стили отступа левых блоков от верхнего меню */
-div.moduletable, div.moduletable_a,
-div.moduletable_contacts, .moduletable_googlea {
+.moduletable {
     margin-top: 10px;
 }
 
 /* Вывод заголовка модулей левой стороны */
-.moduletable h3, .moduletable_a h3, .moduletable_contacts h3 {
-	text-align: center;
-	background-color: #434343;
-	color: #fff;
-	font-size: 15px;
+.moduletable h3 {
+    text-align: center;
+    background-color: #434343;
+    color: #fff;
+    font-size: 15px;
     font-weight: 700;
     line-height: 40px;
 }
 
 /* Скругление углов у заголовков и текстовой части модулей левой стороны */
-.moduletable h3, .moduletable_a h3,
-.moduletable_contacts h3, .custom_a,
+.moduletable h3,
+.mag_a .custom,
 .custom_contacts {
     border-radius: 4px;
 }
 
 /* Стили текстовой части модулей левой стороны */
-.custom_a, .custom_contacts {
-	margin-top: 10px;
-	padding: 7px;
-	border: 1px dotted #ccc;
-	font-size: 1em;
-	line-height: 1.5;
+.mag_a .custom,
+.mag_contacts .custom {
+    margin-top: 10px;
+    padding: 7px;
+    border: 1px dotted #ccc;
+    font-size: 1em;
+    line-height: 1.5;
 }
 
 /* CSS спрайт с иконками контактов */
 .sprite {
-    background-image: url('../images/spritesheet.png');
+    background-image: url("../images/spritesheet.png");
     background-repeat: no-repeat;
     display: block;
     float: left;
 }
 
-.contacts-gmail, .contacts-icq, .contacts-skype, .contacts-telegram {
+.contacts-gmail,
+.contacts-icq,
+.contacts-skype,
+.contacts-telegram {
     width: 18px;
     height: 18px;
 }
@@ -244,8 +257,9 @@ div.moduletable_contacts, .moduletable_googlea {
 }
 
 .contacts-pos {
-	margin-left: 5px;
+    margin-left: 5px;
 }
+
 /*****************************************************/
 
 /*
@@ -254,15 +268,17 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
 */
 
 /* Стили вывода контента */
-div.cols-1 {
-	padding-bottom: 5px;
+.blog-item {
+    padding-bottom: 5px;
 }
 
-div.column-1, .content-full {
+.blog-item,
+.content-full {
     border-radius: 4px;
     border: 1px #ccc solid;
-    margin-top: 1%; /* Отступ контента от верхнего меню */
-	padding: 5px 10px 2px;
+    margin-top: 1%;
+    /* Отступ контента от верхнего меню */
+    padding: 5px 10px 2px;
     line-height: 1.5;
 }
 
@@ -273,18 +289,23 @@ div.column-1, .content-full {
 /*Размер шрифта для заголовка страницы*/
 .page-header {
     margin-left: 10px;
-	border: none;
+    border: none;
 }
 
-.page-header h1 { font-size: 1.2em; }
+.page-header h1 {
+    font-size: 1.2em;
+}
 
-.item-title a, .item-title-full { font: bold 16px Verdana; }
+.item-title a,
+.item-title-full {
+    font: bold 16px Verdana;
+}
 
 .item-title {
-	margin-left: 10px;
-	margin-right: 10px;
-	padding: 2px 0 2px;
-	vertical-align: top;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2px 0 2px;
+    vertical-align: top;
 }
 
 .blog .empty {
@@ -295,334 +316,718 @@ div.column-1, .content-full {
 }
 
 /*Стили вывода статей*/
-div.column-1 p, .content-full p,
-div.column-1 blockquote, .content-full blockquote {
-    word-wrap: break-word; /*Фикс для принудительного переноса строки если текст не помещается*/
+.blog-item p,
+.content-full p,
+.blog-item blockquote,
+.content-full blockquote {
+    word-wrap: break-word;
+    /*Фикс для принудительного переноса строки если текст не помещается*/
 }
 
-div.column-1 ol, .content-full ol {
-	margin-top: 5px;
-	counter-reset: item;
-	list-style: none;
+.blog-item ol,
+.content-full ol {
+    margin-top: 5px;
+    counter-reset: item;
+    list-style: none;
 }
 
 /*Многоуровневые нумерованые списки*/
-div.column-1 ol li:before, .content-full ol li:before {
-	counter-increment: item;
-	content: counter(item)". ";
+.blog-item ol li:before,
+.content-full ol li:before {
+    counter-increment: item;
+    content: counter(item) ". ";
 }
 
-div.column-1 ol li:before, .content-full ol li:before {
-	content: counters(item,".") " ";
+.blog-item ol li:before,
+.content-full ol li:before {
+    content: counters(item, ".") " ";
 }
 
 /*Отмена стилей ресета нумерованых списков*/
-div.column-1 .listNoneReset, .content-full .listNoneReset {
-	counter-reset: none;
+.blog-item .listNoneReset,
+.content-full .listNoneReset {
+    counter-reset: none;
 }
 
 /*Стили для списков с буквенной нумерацией*/
-div.column-1 .listType, .content-full .listType {
-	list-style-type: lower-alpha;
+.blog-item .listType,
+.content-full .listType {
+    list-style-type: lower-alpha;
 }
 
-div.column-1 ol.listType li:before, .content-full ol.listType li:before {
-	content: normal;
+.blog-item ol.listType li:before,
+.content-full ol.listType li:before {
+    content: normal;
 }
 
-div.column-1 ul, .content-full ul { margin-left: 6%; }
+.blog-item ul,
+.content-full ul {
+    margin-left: 6%;
+}
 
-div.column-1 blockquote, .content-full blockquote {
-	margin: 5px 30px;
+.blog-item blockquote,
+.content-full blockquote {
+    margin: 5px 30px;
     padding: 7px;
     background-color: #f6f6f6;
     border: 1px #ccc solid;
 }
 
-div.column-1 p, .content-full p, div.column-1 h4, .content-full h4, div.column-1 h5, .content-full h5,
+.blog-item p,
+.content-full p,
+.blog-item h4,
+.content-full h4,
+.blog-item h5,
+.content-full h5,
 pre {
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 /* Ширина строки для отступа между заголовками */
-div.column-1 p, .content-full p, div.column-1 h4, .content-full h4, div.column-1 h5, .content-full h5 {
+.blog-item p,
+.content-full p,
+.blog-item h4,
+.content-full h4,
+.blog-item h5,
+.content-full h5 {
     line-height: 20px;
 }
 
-div.column-1 h4, .content-full h4 { font-size: 16px; }
-
-div.column-1 blockquote p, .content-full blockquote p { font: 13px Verdana; line-height: 1.5; }
-
-div.column-1 table, .content-full table {
-	margin: 10px auto;
-	border-collapse: collapse;
+.blog-item h4,
+.content-full h4 {
+    font-size: 16px;
 }
 
-div.column-1 table, div.column-1 table th, div.column-1 table td, .content-full table, .content-full table th,
+.blog-item blockquote p,
+.content-full blockquote p {
+    font: 13px Verdana;
+    line-height: 1.5;
+}
+
+.blog-item table,
+.content-full table {
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+.blog-item table,
+.blog-item table th,
+.blog-item table td,
+.content-full table,
+.content-full table th,
 .content-full table td {
-	border: 1px solid Gray;
+    border: 1px solid Gray;
 }
 
-div.column-1 table td, .content-full table td {
-	padding: 0 4px;
+.blog-item table td,
+.content-full table td {
+    padding: 0 4px;
 }
 
-div.column-1 table pre, .content-full table pre {
-	background: none;
-	border: none;
+.blog-item table pre,
+.content-full table pre {
+    background: none;
+    border: none;
 }
 
-div.column-1 p img, .content-full p img { margin: 5px 10px; }
-
-div.column-1 p a, div.column-1 blockquote a, div.column-1 ol a, div.column-1 ul a, .content-full p a,
-.content-full blockquote a, .content-full ol a, .content-full ul a {
-	color: #2a68d2;
-	text-decoration: none;
-	background-image: none;
-	padding-right: 0;
-	word-wrap: break-word;
+.blog-item p img,
+.content-full p img {
+    margin: 5px 10px;
 }
 
-div.column-1 p a:hover, div.column-1 blockquote a:hover, div.column-1 ol a:hover, .content-full ul a:hover,
-.content-full p a:hover, .content-full blockquote a:hover, .content-full ol a:hover, .content-full ul a:hover {
-	color: #2a68d2;
-	text-decoration: underline;
+.blog-item p a,
+.blog-item blockquote a,
+.blog-item ol a,
+.blog-item ul a,
+.content-full p a,
+.content-full blockquote a,
+.content-full ol a,
+.content-full ul a {
+    color: #2a68d2;
+    text-decoration: none;
+    background-image: none;
+    padding-right: 0;
+    word-wrap: break-word;
 }
 
-div.column-1 p a[href^="http://"], div.column-1 blockquote a[href^="http://"], div.column-1 ol a[href^="http://"],
-div.column-1 ul a[href^="http://"], div.column-1 p a[href^="https://"], div.column-1 blockquote a[href^="https://"],
-div.column-1 ol a[href^="https://"], div.column-1 ul a[href^="https://"], .content-full p a[href^="http://"],
-.content-full blockquote a[href^="http://"], .content-full ol a[href^="http://"], .content-full ul a[href^="http://"],
-.content-full p a[href^="https://"], .content-full blockquote a[href^="https://"], .content-full ol a[href^="https://"],
+.blog-item p a:hover,
+.blog-item blockquote a:hover,
+.blog-item ol a:hover,
+.content-full ul a:hover,
+.content-full p a:hover,
+.content-full blockquote a:hover,
+.content-full ol a:hover,
+.content-full ul a:hover {
+    color: #2a68d2;
+    text-decoration: underline;
+}
+
+.blog-item p a[href^="http://"],
+.blog-item blockquote a[href^="http://"],
+.blog-item ol a[href^="http://"],
+.blog-item ul a[href^="http://"],
+.blog-item p a[href^="https://"],
+.blog-item blockquote a[href^="https://"],
+.blog-item ol a[href^="https://"],
+.blog-item ul a[href^="https://"],
+.content-full p a[href^="http://"],
+.content-full blockquote a[href^="http://"],
+.content-full ol a[href^="http://"],
+.content-full ul a[href^="http://"],
+.content-full p a[href^="https://"],
+.content-full blockquote a[href^="https://"],
+.content-full ol a[href^="https://"],
 .content-full ul a[href^="https://"] {
-	background: url('../images/external.png') no-repeat right top;
-	padding-right: 12px;
+    background: url("../images/external.png") no-repeat right top;
+    padding-right: 12px;
 }
 
 /* Стили PrismJS для вывода цветного кода в контенте */
 code[class*="language-"],
 pre[class*="language-"] {
-	color: black;
-	background: none;
-	text-shadow: 0 1px white;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
+    color: #000;
+    background: 0 0;
+    text-shadow: 0 1px #fff;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 1em;
     text-align: left;
-	white-space: pre-wrap; /* Перенос строки если код не помещается на экране, обычно на мобильной версии*/
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.5;
-
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
+    white-space: pre-wrap; /* Перенос строки если код не помещается на экране, обычно на мобильной версии*/
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-	text-shadow: none;
-	background: #b3d4fc;
+code[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+pre[class*="language-"]::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
 }
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-	text-shadow: none;
-	background: #b3d4fc;
+code[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+pre[class*="language-"]::selection {
+    text-shadow: none;
+    background: #b3d4fc;
 }
 
 @media print {
-	code[class*="language-"],
-	pre[class*="language-"] {
-		text-shadow: none;
-	}
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
 }
 
-/* Code blocks */
 pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #f5f2f0;
+    background: #f5f2f0;
 }
 
-/* Inline code */
 :not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
-	white-space: normal;
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
 }
 
+.token.cdata,
 .token.comment,
-.token.prolog,
 .token.doctype,
-.token.cdata {
-	color: slategray;
+.token.prolog {
+    color: #708090;
 }
 
 .token.punctuation {
-	color: #999;
+    color: #999;
 }
 
 .token.namespace {
-	opacity: .7;
+    opacity: 0.7;
 }
 
-.token.property,
-.token.tag,
 .token.boolean,
-.token.number,
 .token.constant,
+.token.deleted,
+.token.number,
+.token.property,
 .token.symbol,
-.token.deleted {
-	color: #905;
+.token.tag {
+    color: #905;
 }
 
-.token.selector,
 .token.attr-name,
-.token.string,
-.token.char,
 .token.builtin,
-.token.inserted {
-	color: #690;
+.token.char,
+.token.inserted,
+.token.selector,
+.token.string {
+    color: #690;
 }
 
-.token.operator,
-.token.entity,
-.token.url,
 .language-css .token.string,
-.style .token.string {
-	color: #9a6e3a;
-	/* This background color was intended by the author of this theme. */
-	background: hsla(0, 0%, 100%, .5);
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, 0.5);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-	color: #07a;
+    color: #07a;
 }
 
-.token.function,
-.token.class-name {
-	color: #DD4A68;
+.token.class-name,
+.token.function {
+    color: #dd4a68;
 }
 
+.token.important,
 .token.regex,
-.token.important,
 .token.variable {
-	color: #e90;
+    color: #e90;
 }
 
-.token.important,
-.token.bold {
-	font-weight: bold;
+.token.bold,
+.token.important {
+    font-weight: 700;
 }
+
 .token.italic {
-	font-style: italic;
+    font-style: italic;
 }
 
 .token.entity {
-	cursor: help;
+    cursor: help;
 }
 
 .token a {
-	color: inherit;
+    color: inherit;
 }
-span.inline-color-wrapper {
-	/*
-	 * The background image is the following SVG inline in base 64:
-	 *
-	 * <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2">
-	 *     <path fill="gray" d="M0 0h2v2H0z"/>
-	 *     <path fill="white" d="M0 0h1v1H0zM1 1h1v1H1z"/>
-	 * </svg>
-	 *
-	 * SVG-inlining explained:
-	 * https://stackoverflow.com/a/21626701/7595472
-	 */
-	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDIiPjxwYXRoIGZpbGw9ImdyYXkiIGQ9Ik0wIDBoMnYySDB6Ii8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMXYxSDB6TTEgMWgxdjFIMXoiLz48L3N2Zz4=");
-	/* This is to prevent visual glitches where one pixel from the repeating pattern could be seen. */
-	background-position: center;
-	background-size: 110%;
 
-	display: inline-block;
-	height: 1.333ch;
-	width: 1.333ch;
-	margin: 0 .333ch;
-	box-sizing: border-box;
-	border: 1px solid white;
-	outline: 1px solid rgba(0,0,0,.5);
-	overflow: hidden;
+div.code-toolbar {
+    position: relative;
+}
+
+div.code-toolbar > .toolbar {
+    position: absolute;
+    z-index: 10;
+    top: 0.3em;
+    right: 0.2em;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+    opacity: 1;
+}
+
+div.code-toolbar:focus-within > .toolbar {
+    opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item {
+    display: inline-block;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a {
+    cursor: pointer;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+    color: #bbb;
+    font-size: 0.8em;
+    padding: 0 0.5em;
+    background: #f5f2f0;
+    background: rgba(224, 224, 224, 0.2);
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+span.inline-color-wrapper {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDIiPjxwYXRoIGZpbGw9ImdyYXkiIGQ9Ik0wIDBoMnYySDB6Ii8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMXYxSDB6TTEgMWgxdjFIMXoiLz48L3N2Zz4=);
+    background-position: center;
+    background-size: 110%;
+    display: inline-block;
+    height: 1.333ch;
+    width: 1.333ch;
+    margin: 0 0.333ch;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    outline: 1px solid rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 span.inline-color {
-	display: block;
-	/* To prevent visual glitches again */
-	height: 120%;
-	width: 120%;
+    display: block;
+    height: 120%;
+    width: 120%;
+}
+
+.prism-previewer,
+.prism-previewer:after,
+.prism-previewer:before {
+    position: absolute;
+    pointer-events: none;
+}
+
+.prism-previewer,
+.prism-previewer:after {
+    left: 50%;
+}
+
+.prism-previewer {
+    margin-top: -48px;
+    width: 32px;
+    height: 32px;
+    margin-left: -16px;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+
+.prism-previewer.flipped {
+    margin-top: 0;
+    margin-bottom: -48px;
+}
+
+.prism-previewer:after,
+.prism-previewer:before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+
+.prism-previewer:before {
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.prism-previewer:after {
+    top: 100%;
+    width: 0;
+    height: 0;
+    margin: 5px 0 0 -7px;
+    border: 7px solid transparent;
+    border-color: rgba(255, 0, 0, 0);
+    border-top-color: #fff;
+}
+
+.prism-previewer.flipped:after {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-top-color: rgba(255, 0, 0, 0);
+    border-bottom-color: #fff;
+}
+
+.prism-previewer.active {
+    opacity: 1;
+}
+
+.prism-previewer-angle:before {
+    border-radius: 50%;
+    background: #fff;
+}
+
+.prism-previewer-angle:after {
+    margin-top: 4px;
+}
+
+.prism-previewer-angle svg {
+    width: 32px;
+    height: 32px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.prism-previewer-angle[data-negative] svg {
+    -webkit-transform: scaleX(-1) rotate(-90deg);
+    -moz-transform: scaleX(-1) rotate(-90deg);
+    -ms-transform: scaleX(-1) rotate(-90deg);
+    -o-transform: scaleX(-1) rotate(-90deg);
+    transform: scaleX(-1) rotate(-90deg);
+}
+
+.prism-previewer-angle circle {
+    fill: transparent;
+    stroke: #2d3438;
+    stroke-opacity: 0.9;
+    stroke-width: 32;
+    stroke-dasharray: 0, 500;
+}
+
+.prism-previewer-gradient {
+    background-image: linear-gradient(
+            45deg,
+            #bbb 25%,
+            transparent 25%,
+            transparent 75%,
+            #bbb 75%,
+            #bbb
+        ),
+        linear-gradient(45deg, #bbb 25%, #eee 25%, #eee 75%, #bbb 75%, #bbb);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+    width: 64px;
+    margin-left: -32px;
+}
+
+.prism-previewer-gradient:before {
+    content: none;
+}
+
+.prism-previewer-gradient div {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.prism-previewer-color {
+    background-image: linear-gradient(
+            45deg,
+            #bbb 25%,
+            transparent 25%,
+            transparent 75%,
+            #bbb 75%,
+            #bbb
+        ),
+        linear-gradient(45deg, #bbb 25%, #eee 25%, #eee 75%, #bbb 75%, #bbb);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+}
+
+.prism-previewer-color:before {
+    background-color: inherit;
+    background-clip: padding-box;
+}
+
+.prism-previewer-easing {
+    margin-top: -76px;
+    margin-left: -30px;
+    width: 60px;
+    height: 60px;
+    background: #333;
+}
+
+.prism-previewer-easing.flipped {
+    margin-bottom: -116px;
+}
+
+.prism-previewer-easing svg {
+    width: 60px;
+    height: 60px;
+}
+
+.prism-previewer-easing circle {
+    fill: #2d3438;
+    stroke: #fff;
+}
+
+.prism-previewer-easing path {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-width: 4;
+}
+
+.prism-previewer-easing line {
+    stroke: #fff;
+    stroke-opacity: 0.5;
+    stroke-width: 2;
+}
+
+@-webkit-keyframes prism-previewer-time {
+    0% {
+        stroke-dasharray: 0, 500;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 100, 500;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dasharray: 0, 500;
+        stroke-dashoffset: -100;
+    }
+}
+
+@-o-keyframes prism-previewer-time {
+    0% {
+        stroke-dasharray: 0, 500;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 100, 500;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dasharray: 0, 500;
+        stroke-dashoffset: -100;
+    }
+}
+
+@-moz-keyframes prism-previewer-time {
+    0% {
+        stroke-dasharray: 0, 500;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 100, 500;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dasharray: 0, 500;
+        stroke-dashoffset: -100;
+    }
+}
+
+@keyframes prism-previewer-time {
+    0% {
+        stroke-dasharray: 0, 500;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 100, 500;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dasharray: 0, 500;
+        stroke-dashoffset: -100;
+    }
+}
+
+.prism-previewer-time:before {
+    border-radius: 50%;
+    background: #fff;
+}
+
+.prism-previewer-time:after {
+    margin-top: 4px;
+}
+
+.prism-previewer-time svg {
+    width: 32px;
+    height: 32px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.prism-previewer-time circle {
+    fill: transparent;
+    stroke: #2d3438;
+    stroke-opacity: 0.9;
+    stroke-width: 32;
+    stroke-dasharray: 0, 500;
+    stroke-dashoffset: 0;
+    -webkit-animation: prism-previewer-time linear infinite 3s;
+    -moz-animation: prism-previewer-time linear infinite 3s;
+    -o-animation: prism-previewer-time linear infinite 3s;
+    animation: prism-previewer-time linear infinite 3s;
 }
 
 .token.punctuation.brace-hover,
 .token.punctuation.brace-selected {
-	outline: solid 1px;
+    outline: solid 1px;
 }
 
 .rainbow-braces .token.punctuation.brace-level-1,
 .rainbow-braces .token.punctuation.brace-level-5,
 .rainbow-braces .token.punctuation.brace-level-9 {
-	color: #E50;
-	opacity: 1;
+    color: #e50;
+    opacity: 1;
 }
+
+.rainbow-braces .token.punctuation.brace-level-10,
 .rainbow-braces .token.punctuation.brace-level-2,
-.rainbow-braces .token.punctuation.brace-level-6,
-.rainbow-braces .token.punctuation.brace-level-10 {
-	color: #0B3;
-	opacity: 1;
+.rainbow-braces .token.punctuation.brace-level-6 {
+    color: #0b3;
+    opacity: 1;
 }
+
+.rainbow-braces .token.punctuation.brace-level-11,
 .rainbow-braces .token.punctuation.brace-level-3,
-.rainbow-braces .token.punctuation.brace-level-7,
-.rainbow-braces .token.punctuation.brace-level-11 {
-	color: #26F;
-	opacity: 1;
+.rainbow-braces .token.punctuation.brace-level-7 {
+    color: #26f;
+    opacity: 1;
 }
+
+.rainbow-braces .token.punctuation.brace-level-12,
 .rainbow-braces .token.punctuation.brace-level-4,
-.rainbow-braces .token.punctuation.brace-level-8,
-.rainbow-braces .token.punctuation.brace-level-12 {
-	color: #E0E;
-	opacity: 1;
+.rainbow-braces .token.punctuation.brace-level-8 {
+    color: #e0e;
+    opacity: 1;
 }
 
-pre.diff-highlight > code .token.deleted:not(.prefix),
-pre > code.diff-highlight .token.deleted:not(.prefix) {
-	background-color: rgba(255, 0, 0, .1);
-	color: inherit;
-	display: block;
-}
-
-pre.diff-highlight > code .token.inserted:not(.prefix),
-pre > code.diff-highlight .token.inserted:not(.prefix) {
-	background-color: rgba(0, 255, 128, .1);
-	color: inherit;
-	display: block;
-}
 /********************************************************************/
 
 /* Стили для lightbox */
 
 /* Preload images */
 body:after {
-	content: url('../images/close.png') url('../images/loading.gif') url('../images/prev.png') url('../images/next.png');
-	display: none;
+    content: url("../images/close.png") url("../images/loading.gif") url("../images/prev.png") url("../images/next.png");
+    display: none;
 }
 
 body.lb-disable-scrolling {
@@ -657,7 +1062,8 @@ body.lb-disable-scrolling {
     max-width: inherit;
     max-height: none;
     border-radius: 3px;
-    border: 4px solid white; /* Image border */
+    border: 4px solid white;
+    /* Image border */
 }
 
 .lightbox a img {
@@ -671,7 +1077,8 @@ body.lb-disable-scrolling {
     height: 250px;
     margin: 0 auto;
     border-radius: 4px;
-    background-color: white; /* Background color behind image. This is visible during transitions. */
+    background-color: white;
+    /* Background color behind image. This is visible during transitions. */
 }
 
 .lb-outerContainer:after {
@@ -695,7 +1102,7 @@ body.lb-disable-scrolling {
     width: 32px;
     height: 32px;
     margin: 0 auto;
-    background: url('../images/loading.gif') no-repeat;
+    background: url("../images/loading.gif") no-repeat;
 }
 
 .lb-nav {
@@ -707,16 +1114,17 @@ body.lb-disable-scrolling {
     z-index: 10;
 }
 
-.lb-container > .nav {
+.lb-container>.nav {
     left: 0;
 }
 
 .lb-nav a {
     outline: none;
-    background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+    background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
 }
 
-.lb-prev, .lb-next {
+.lb-prev,
+.lb-next {
     height: 100%;
     cursor: pointer;
     display: block;
@@ -726,7 +1134,7 @@ body.lb-disable-scrolling {
     width: 34%;
     left: 0;
     float: left;
-    background: url('../images/prev.png') left 48% no-repeat;
+    background: url("../images/prev.png") left 48% no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     -webkit-transition: opacity 0.6s;
@@ -744,7 +1152,7 @@ body.lb-disable-scrolling {
     width: 64%;
     right: 0;
     float: right;
-    background: url('../images/next.png') right 48% no-repeat;
+    background: url("../images/next.png") right 48% no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     -webkit-transition: opacity 0.6s;
@@ -808,7 +1216,7 @@ body.lb-disable-scrolling {
     float: right;
     width: 30px;
     height: 30px;
-    background: url('../images/close.png') top right no-repeat;
+    background: url("../images/close.png") top right no-repeat;
     text-align: right;
     outline: none;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -824,62 +1232,65 @@ body.lb-disable-scrolling {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
 }
+
 /**************************************************************************/
 
 /* Стили иформации о посте */
-div.column-1 dl {
-	margin: 10px 0 0;
-    display: inline-block; /*Стиль отвечающий за то что-бы автор, дата и тд не выпадали за рамку контента*/
+.blog-item dl {
+    margin: 10px 0 0;
+    display: inline-block;
+    /*Стиль отвечающий за то что-бы автор, дата и тд не выпадали за рамку контента*/
 }
 
 /* Отключение тображения надписи "Подробности" тега <dt> для соблюдения валидации */
-.article-info-term { display: none; }
+.article-info-term {
+    display: none;
+}
 
-.createdby, .published, div.column-1 .readmore a {
-	color: #666;
+.createdby,
+.published,
+.blog-item .readmore a {
+    color: #666;
 }
 
 .createdby {
-	margin-left: 0;
-	float: left;
+    margin-left: 0;
+    float: left;
 }
 
 .published {
-	margin-left: 13px;
-	float: left;
+    margin-left: 13px;
+    float: left;
 }
 
-div.column-1 .readmore {
+.blog-item .readmore {
     margin-top: 0;
-	margin-left: 11.6em;
-	padding: 0 5px 0 14px;
-	font-weight: normal;
-	text-decoration: none;
+    margin-left: 11.6em;
+    padding: 0 5px 0 14px;
+    font-weight: normal;
+    text-decoration: none;
 }
 
-div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .readmore a:focus {
-	color: #747474;
-	border: 1px solid #dadada;
-	background-color: #ededed;
-	text-decoration: none;
+.blog-item .readmore a:hover,
+.blog-item .readmore a:active,
+.blog-item .readmore a:focus {
+    color: #747474;
+    border: 1px solid #dadada;
+    background-color: #ededed;
+    text-decoration: none;
 }
 
 /* Стили информации о посте в полном варианте */
 .content-info-full {
-	width: 100%;
+    width: 100%;
     display: inline-block;
 }
 
 .content-info-full .article-info {
     float: right;
     margin-top: 10px;
-	margin-bottom: 0;
-	padding-right: 5px;
-}
-
-/* Fix для proofreader*/
-#proofreader_form h2 {
-    line-height: 40px;
+    margin-bottom: 0;
+    padding-right: 5px;
 }
 
 /* Стили постраничной навигации */
@@ -892,7 +1303,7 @@ div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .r
 }
 
 /* Стили футера */
-.row-fluid .footer {
+.footer {
     background-color: #434343;
     border-top: 2px solid #0080c0;
     color: #fff;
@@ -901,40 +1312,43 @@ div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .r
 }
 
 .developed {
-	padding-left: 10px;
-	float: left;
+    padding-left: 10px;
+    float: left;
 }
 
 .developed a {
-	text-decoration: none;
-	color: #f5f5f5;
+    text-decoration: none;
+    color: #f5f5f5;
 }
 
 .developed a:hover {
-	text-decoration: underline;
-	color: #ccc;
+    text-decoration: underline;
+    color: #ccc;
 }
 
-.disclaimers { line-height: 5px; }
+.disclaimers {
+    line-height: 5px;
+}
 
 /* Стили кнопки Вверх */
 #go-top {
-	position: fixed;
-	line-height: 35px; /*отступ иконки от верхнего края для центровки*/
-	text-align: center;
-	bottom: 25px; /*Отступ от нижней части окна браузера*/
-	right: 11px; /*Отступ от правой части окна браузера*/
-	cursor: pointer;
-	display: none;
-	width: 34px;
-	height: 35px;
-	background-color: #f9f9f9;
-	border: solid 1px #ccc;
-	border-radius: 40px;
+    position: fixed;
+    line-height: 35px; /*отступ иконки от верхнего края для центровки*/
+    text-align: center;
+    bottom: 25px; /*Отступ от нижней части окна браузера*/
+    right: 11px; /*Отступ от правой части окна браузера*/
+    cursor: pointer;
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: solid 1px #ccc;
+    border-radius: 40px;
+    background-color: #f9f9f9;
+    padding-top: 6px;
 }
 
-.up {
-    display: inline-block; /* inline-block вместо block для того что-бы картинка и надпись были в одну строку*/
+#go-top .bi {
+    font-size: 2rem;
 }
 
 /* Responsive style */
@@ -998,34 +1412,37 @@ div.column-1 .readmore a:hover, div.column-1 .readmore a:active, div.column-1 .r
 /* Общие стили для экранов 1200+, 1000x1190, 800x1000*/
 @media screen and (min-width: 1200px),
 screen and (min-width: 1000px) and (max-width: 1199px) {
-    
     /*Стил горизонтального меню*/
 
-    /* Выравниваем все содержимое по центру и задаем максимальную высоту */
-    .nav-collapse {
+    /* Выравниваем все содержимое по центру */
+    .top-menu {
+        text-align: center;
+    }
+    /*.top-menu .align-menu {
         text-align: center;
         max-height: 42px;
-    }
+    }*/
 
     /* Декорация пунктов меню */
-    .container-fluid .row-fluid .menu li a {
+    /*.align-menu li a {
         border-bottom: 2px solid #434343;
+    }*/
 
-    }
-
-    .container-fluid .row-fluid .menu li a:hover {
+    .align-menu li a:hover {
         background-color: #e5e5e5;
+        border-top: 1px solid #e5e5e5;
         border-bottom: 2px solid #ffad29;
         color: #0a0a0a;
+        text-decoration: none;
     }
 
     /* Убираем задний фон на фокусной ссылке в меню, добавляя линию внизу и меняем цвет */
-    .container-fluid .row-fluid .menu li a:focus {
+    .align-menu li a:focus {
         background-color: transparent;
         color: white;
     }
 
-    .container-fluid .row-fluid .menu li.current a {
+    .align-menu li.current a {
         border-bottom: 2px solid #0080c0;
         cursor: default;
         font-weight: bold;
@@ -1037,9 +1454,9 @@ screen and (min-width: 1000px) and (max-width: 1199px) {
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
 
     /* Динамическое изменение размера текста при скалировании */
-    .container-fluid .row-fluid .menu li a {
-        font-size: calc(8px + .4vw);
-    }
+    /*.container .row-fluid .menu li a {
+        font-size: calc(8px + 0.4vw);
+    }*/
 
     .content .left {
         width: 20%;
@@ -1063,7 +1480,6 @@ screen and (min-width: 1000px) and (max-width: 1199px) {
 /* Общие стили для раширений 800x600, 768x1024 */
 @media screen and (min-width: 800px) and (max-width: 1000px),
 screen and (min-width: 760px) and (max-width: 800px) {
-
     .content .left {
         width: 100%;
     }
@@ -1076,8 +1492,7 @@ screen and (min-width: 760px) and (max-width: 800px),
 screen and (min-width: 590px) and (max-width: 765px),
 screen and (min-width: 480px) and (max-width: 500px),
 screen and (max-width: 479px) {
-
-    .container-fluid .span10 .navbar-inner {
+    .container .span10 .navbar-inner {
         padding-right: 10px;
     }
 
@@ -1099,7 +1514,6 @@ screen and (max-width: 479px) {
 
 /* 320x480 */
 @media screen and (max-width: 479px) {
-
     .content .left {
         width: 100%;
     }
@@ -1108,7 +1522,7 @@ screen and (max-width: 479px) {
         width: 98%;
     }
 
-    div.column-1 .readmore {
+    .blog-item .readmore {
         margin: 25px 0 0 0;
         padding-left: 0;
     }
