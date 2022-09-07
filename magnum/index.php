@@ -62,7 +62,7 @@
                 </div>
             </div>
         </header>
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-12 top-menu">
                 <?php if ($this->countModules('top-menu')) : ?>
                     <div class="align-menu">
