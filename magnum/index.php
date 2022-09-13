@@ -52,7 +52,7 @@
     <div class="container">
         <!-- Начало шапки сайта -->
         <header>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center d-none d-lg-block">
                 <div class="col-12 logo">
                     <a href="/" title="Magnum news - Блог IT-шника">
                         <img src="templates/<?php echo $this->template ?>/<?php echo $logoFile ?>" alt="Magnum news - Блог IT-шника" />

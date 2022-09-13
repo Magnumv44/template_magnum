@@ -16,9 +16,12 @@ use Joomla\CMS\Language\Text;
 //HTMLHelper::_('bootstrap.collapse');
 ?>
 
-<nav class="navbar navbar-expand-md" style="border: 1px solid red;" aria-label="<?php echo htmlspecialchars($module->title, ENT_QUOTES, 'UTF-8'); ?>">
+<nav class="navbar navbar-expand-lg" aria-label="<?php echo htmlspecialchars($module->title, ENT_QUOTES, 'UTF-8'); ?>">
 <div class="container-fluid">
-    <!--<a class="navbar-brand" href="#">Expand at md</a>-->
+    <a class="navbar-brand d-lg-none" href="/">
+                <img src="templates/magnum/images/small-logo.png" alt="Magnum news - Блог IT-шника" />
+                <span class="smal-logo-text">Magnum news</span>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar<?php echo $module->id; ?>" aria-controls="navbar<?php echo $module->id; ?>" aria-expanded="false" aria-label="<?php echo Text::_('MOD_MENU_TOGGLE'); ?>">
         <span class="bi bi-justify" aria-hidden="true"></span>
     </button>

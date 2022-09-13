@@ -64,6 +64,7 @@ img {
 
 /*Стили шапки сайта*/
 .logo {
+    display: inline-block;
     padding-left: 4em; /*Отступ слева для более красивого выравнивания на desktop*/
     padding-bottom: 0.5em;
 }
@@ -113,16 +114,6 @@ a .logo-slogan:hover {
     padding-right: 0%;
     padding-left: 0%;
 }
-
-/*.navbar .nav {
-    margin: 0;
-}*/
-
-/* Убираем лишние декорации у пунктов меню 1-го уровня */
-/*.navbar .nav>li>a {
-    text-shadow: none;
-    padding: 8px;
-}*/
 
 /* Цвет ссылок в меню */
 .top-menu ul li a {
@@ -260,8 +251,7 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
 .blog-item, .content-full {
     border-radius: 4px;
     border: 1px #ccc solid;
-    margin-top: 1%;
-    /* Отступ контента от верхнего меню */
+    margin-top: 1%;             /* Отступ контента от верхнего меню */
     padding: 5px 10px 2px;
     line-height: 1.5;
 }
@@ -315,7 +305,7 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
     list-style: none;
 }
 
-/*Многоуровневые нумерованые списки*/
+/*Многоуровневые нумерованные списки*/
 .blog-item ol li:before,
 .content-full ol li:before {
     counter-increment: item;
@@ -327,7 +317,7 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
     content: counters(item, ".") " ";
 }
 
-/*Отмена стилей ресета нумерованых списков*/
+/*Отмена стилей ресета нумерованных списков*/
 .blog-item .listNoneReset,
 .content-full .listNoneReset {
     counter-reset: none;
@@ -1070,8 +1060,7 @@ body.lb-disable-scrolling {
     height: 250px;
     margin: 0 auto;
     border-radius: 4px;
-    background-color: white;
-    /* Background color behind image. This is visible during transitions. */
+    background-color: white; /* Background color behind image. This is visible during transitions. */
 }
 
 .lb-outerContainer:after {
@@ -1228,14 +1217,14 @@ body.lb-disable-scrolling {
 
 /**************************************************************************/
 
-/* Стили иформации о посте */
+/* Стили информации о посте */
 .blog-item dl {
     margin: 10px 0 0;
     display: inline-block;
     /*Стиль отвечающий за то что-бы автор, дата и тд не выпадали за рамку контента*/
 }
 
-/* Отключение тображения надписи "Подробности" тега <dt> для соблюдения валидации */
+/* Отключение отбражения надписи "Подробности" тега <dt> для соблюдения валидации */
 .article-info-term {
     display: none;
 }
@@ -1346,14 +1335,6 @@ body.lb-disable-scrolling {
 
 /* Responsive style */
 
-/* Стили названия сайта в мобильной версии*/
-.navbar .brand {
-    color: white;
-    font-weight: 300;
-    text-shadow: none;
-    padding-left: 0;
-}
-
 /* Стили кнопки отображения мобильного меню */
 
 /* Делаем кнопку мобильного меню другим цветом */
@@ -1373,37 +1354,14 @@ body.lb-disable-scrolling {
     box-shadow: none !important;
 }
 
-/* Стили будут применятся на компьютерах с разрешением от 1500 пикселей */
-@media screen and (min-width: 1500px) {
-
-    /* Увиличиваем поле поиска для экранов 22+ */
-    input.search-query {
-        width: 72%;
-    }
-}
-
-/* Стили будут применятся на компьютерах с разрешением от 1200 пикселей */
-@media screen and (min-width: 1200px) {
-
-    /* Стили вывода модулей с левой стороны */
-    .content .left {
-        width: 22%;
-        min-width: 119px; /*Стиль отвечающий за минимальную ширну при сужении окна*/
-        padding: 0 7px 15px;
-    }
-
-    /* Ширина контетной части с отступами */
-    .content .con {
-        margin: auto 0.1% auto 0.1%;
-        width: 77.5%;
-    }
-}
 
 /* Общие стили для экранов 1200+, 1000x1190, 800x1000*/
-/*@media screen and (min-width: 1200px),
-screen and (min-width: 1000px) and (max-width: 1199px) {*/
-@media (min-width: 1200px) {
+@media (min-width: 1200px), (min-width: 992px), (min-width: 1400px) {
     /*Стил горизонтального меню*/
+    .top-menu .container-fluid {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
 
     /* Выравниваем все содержимое по центру */
     .top-menu {
@@ -1416,24 +1374,18 @@ screen and (min-width: 1000px) and (max-width: 1199px) {*/
     }
 
     .navbar {
-        max-height: 42px;
+        max-height: 41px;
         padding: 0;
     }
 
-    .top-menu ul li {
-        border: 1px solid yellow;
+    .top-menu ul li a {
+        display: block;
         height: 42px;
         padding: 8px;
-    }
-    .top-menu ul li a {
-        border: 1px solid blue;
-        display: block;
-        margin: 0 auto;
     }
 
     .top-menu ul li a:hover {
         background-color: #e5e5e5;
-        border-top: 1px solid #e5e5e5;
         border-bottom: 2px solid #ffad29;
         color: #0a0a0a;
         text-decoration: none;
@@ -1450,11 +1402,36 @@ screen and (min-width: 1000px) and (max-width: 1199px) {*/
         cursor: default;
         font-weight: bold;
     }
+
+    /* Отступы у постов */
+    .row .con {
+        padding-right: calc(var(--bs-gutter-x) * .2);
+        padding-left: calc(var(--bs-gutter-x) * .2);
+    }
 }
 
 /* Стили будут применятся на телефонах и планшетах */
-/*@media screen and (min-width: 576px) {
-    .align-menu {
-        display: block;
+@media (max-width: 991.98px) {
+    /* Стили названия сайта в мобильной версии*/
+    .navbar .navbar-brand {
+        color: white;
+        font-weight: bold;
+        padding-left: 0;
     }
-}*/
+
+    .navbar .navbar-brand:hover {
+        text-decoration: none;
+    }
+
+    /*TODO сделать отступ что бы выровнять текст по центру */
+    .navbar .navbar-brand .smal-logo-text {
+        margin-top: 2rem;
+    }
+
+    /* Ширина левой и правой частей в мобильной версии */
+    .col-3, .col-9 {
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .1);
+        padding-left: calc(var(--bs-gutter-x) * .1);
+    }
+}
