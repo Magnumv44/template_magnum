@@ -3,7 +3,7 @@ TODO Сверстать место под банер в десктоп верс�
 TODO сделать в версиях для маленьких экранов меньше боковые отступы, для лучшей читабельности
 */
 @charset "utf-8";
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 /*Общие стили бля html*/
 * {
@@ -336,7 +336,8 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
 
 .blog-item ul,
 .content-full ul {
-    margin-left: 6%;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 .blog-item blockquote,
@@ -1219,9 +1220,7 @@ body.lb-disable-scrolling {
 
 /* Стили информации о посте */
 .blog-item dl {
-    margin: 10px 0 0;
-    display: inline-block;
-    /*Стиль отвечающий за то что-бы автор, дата и тд не выпадали за рамку контента*/
+    margin: 0; /* Убираем отступы, чтобы кнопка "Подробнее" не уплывала подниз */
 }
 
 /* Отключение отбражения надписи "Подробности" тега <dt> для соблюдения валидации */
@@ -1231,26 +1230,28 @@ body.lb-disable-scrolling {
 
 .createdby,
 .published,
+.hits,
 .blog-item .readmore a {
     color: #666;
 }
 
-.createdby {
-    margin-left: 0;
+.createdby,
+.published,
+.hits {
     float: left;
 }
+.createdby {
+    margin-left: 0;
+}
 
-.published {
+.published, .hits {
     margin-left: 13px;
-    float: left;
 }
 
 .blog-item .readmore {
     margin-top: 0;
-    margin-left: 11.6em;
-    padding: 0 5px 0 14px;
-    font-weight: normal;
-    text-decoration: none;
+    margin-left: .7rem;
+    display: inline-block;
 }
 
 .blog-item .readmore a:hover,
@@ -1266,13 +1267,15 @@ body.lb-disable-scrolling {
 .content-info-full {
     width: 100%;
     display: inline-block;
+    margin-top: 1rem;
 }
 
-.content-info-full .article-info {
-    float: right;
-    margin-top: 10px;
+/*.item-content .content-info-full {
+    margin-top: 0;
+}*/
+
+.content-info-full dd {
     margin-bottom: 0;
-    padding-right: 5px;
 }
 
 /* Стили постраничной навигации */

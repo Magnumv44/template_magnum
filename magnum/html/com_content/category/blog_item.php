@@ -84,6 +84,7 @@ $isUnpublished     = $this->item->state == ContentComponent::CONDITION_UNPUBLISH
 
 	<?php echo $this->item->introtext; ?>
 
+	<div class="content-info-full">
 	<?php if ($info == 1 || $info == 2) : ?>
 		<?php if ($useDefList) : ?>
 			<?php echo LayoutHelper::render('joomla.content.info_block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
@@ -107,6 +108,7 @@ $isUnpublished     = $this->item->state == ContentComponent::CONDITION_UNPUBLISH
 		<?php echo LayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link)); ?>
 
 	<?php endif; ?>
+	</div>
 
 	<?php if ($isUnpublished) : ?>
 		</div>

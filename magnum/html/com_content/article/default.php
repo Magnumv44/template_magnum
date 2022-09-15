@@ -102,6 +102,7 @@ $isExpired         = !is_null($this->item->publish_down) && $this->item->publish
 		<?php echo $this->item->text; ?>
 	</div>
 
+	<div class="content-info-full">
 	<?php if ($info == 1 || $info == 2) : ?>
 		<?php if ($useDefList) : ?>
 			<?php echo LayoutHelper::render('joomla.content.info_block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
@@ -111,6 +112,7 @@ $isExpired         = !is_null($this->item->publish_down) && $this->item->publish
 			<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
 		<?php endif; ?>
 	<?php endif; ?>
+	</div>
 
 	<?php
 	if (!empty($this->item->pagination) && $this->item->paginationposition && !$this->item->paginationrelative) :
