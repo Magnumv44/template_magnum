@@ -133,43 +133,47 @@ a .logo-slogan:hover {
 
 /* Поиск */
 
-.search-on {
-    text-align: center; /* Выравниваем поиск по центру блока*/
+/*.search-on {
+    text-align: center; /* Выравниваем поиск по центру блока
     margin-bottom: 20px;
+}*/
+
+/* Декорация формы ввода в блоке поиска*/
+.form-control {
+    border-color: #ccc;
 }
 
-/* Размер поля для ввода поискового запроса*/
-input.search-query {
-    width: 77%;
-    border-radius: 4px;
-    display: inline-block;
+.form-control:focus {
+    border-color: #434343;
 }
 
-.search .btn-primary {
-    background-image: none;
+.btn-primary {
+/*    background-image: none;*/
     background-color: #434343;
     border-color: transparent;
-    vertical-align: baseline;
+    /*vertical-align: baseline;*/
 }
 
-.search .btn-primary:hover {
+.btn-primary:hover {
     background-color: #ffad29;
+    border-color: transparent;
 }
 
-#searchForm {
-    margin-left: 3px;
+/* Убираем голубую рамку после нажатия, это универсальное правило для почти любого элемента */
+.btn-primary:focus, .form-control:focus {
+    box-shadow: none;
 }
 
-.search-results,
-.result-title {
-    margin: 0 2px 0 2px;
+.com-finder .form-inline {
+    margin-top: 1rem;
 }
 
-.result-created {
-    font-size: 11px;
-    padding-bottom: 2px;
-    margin-bottom: 10px;
-    border-bottom: 1px dotted #ccc;
+.result__item + .result__item {
+    border-top: 1px dotted #ccc;
+}
+
+.search-pages-counter {
+    margin-bottom: 1rem;
 }
 
 /* Стили отступа левых блоков от верхнего меню */
@@ -189,55 +193,17 @@ input.search-query {
 
 /* Скругление углов у заголовков и текстовой части модулей левой стороны */
 .moduletable h3,
-.mag_a .custom,
-.custom_contacts {
+.moduletable .custom {
     border-radius: 4px;
 }
 
 /* Стили текстовой части модулей левой стороны */
-.mag_a .custom,
-.mag_contacts .custom {
+.moduletable .custom {
     margin-top: 10px;
     padding: 7px;
     border: 1px dotted #ccc;
     font-size: 1em;
     line-height: 1.5;
-}
-
-/* CSS спрайт с иконками контактов */
-.sprite {
-    background-image: url("../images/spritesheet.png");
-    background-repeat: no-repeat;
-    display: block;
-    float: left;
-}
-
-.contacts-gmail,
-.contacts-icq,
-.contacts-skype,
-.contacts-telegram {
-    width: 18px;
-    height: 18px;
-}
-
-.contacts-gmail {
-    background-position: -5px -5px;
-}
-
-.contacts-icq {
-    background-position: -33px -5px;
-}
-
-.contacts-skype {
-    background-position: -61px -5px;
-}
-
-.contacts-telegram {
-    background-position: -89px -5px;
-}
-
-.contacts-pos {
-    margin-left: 5px;
 }
 
 /*****************************************************/
@@ -1224,9 +1190,9 @@ body.lb-disable-scrolling {
 }
 
 /* Отключение отображения надписи "Подробности" тега <dt> для соблюдения валидации */
-.article-info-term {
+/*.article-info-term {
     display: none;
-}
+}*/
 
 .createdby,
 .published,
