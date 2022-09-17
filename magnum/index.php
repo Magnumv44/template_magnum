@@ -90,7 +90,7 @@
                     &copy; 2005 - <?php echo date('Y'); ?>
                     </div>
                     <div class="disclaimers">
-                        <a title="Нажмите что-бы открыть пользовательское соглашение" href="<?php echo $this->baseurl ?>terms-of-use/121-disclaimers" target="_blank">Disclaimers</a>
+                        <a title="Нажмите что-бы открыть пользовательское соглашение" href="<?php echo $this->baseurl ?>disclaimers" target="_blank">Disclaimers</a>
                     </div>
                 </div>
             </div>
