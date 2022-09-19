@@ -44,6 +44,7 @@
     <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/template.css" type="text/css" />
     <jdoc:include type="scripts" />
+    <?php echo $analytics ?>
     <link href="templates/<?php echo $this->template ?>/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
     <link href="templates/<?php echo $this->template ?>/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="templates/<?php echo $this->template ?>/images/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180">
