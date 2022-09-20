@@ -231,7 +231,8 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
 }
 
 .item-title a,
-.content-full .page-header h1 {
+.content-full .page-header h1,
+.page-header h2 {
     font: bold 16px Verdana;
 }
 
