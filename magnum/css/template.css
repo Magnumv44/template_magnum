@@ -145,7 +145,6 @@ a .logo-slogan:hover {
 /*    background-image: none;*/
     background-color: #434343;
     border-color: transparent;
-    /*vertical-align: baseline;*/
 }
 
 .btn-primary:hover {
@@ -256,8 +255,7 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
 .content-full p,
 .blog-item blockquote,
 .content-full blockquote {
-    word-wrap: break-word;
-    /*Фикс для принудительного переноса строки если текст не помещается*/
+    word-wrap: break-word;  /*Фикс для принудительного переноса строки если текст не помещается*/
 }
 
 .blog-item ol,
@@ -1410,6 +1408,18 @@ body.lb-disable-scrolling {
         margin-top: 2rem;
     }
 
+    .navbar-collapse {
+        margin-top: .5rem;
+    }
+
+    .navbar-nav li {
+        line-height: 1.7;
+    }
+
+    .navbar-nav li a:focus {
+        background-color: #fff;
+        color: #000;
+    }
     /* Ширина левой и правой частей в мобильной версии */
     .col-3, .col-9 {
         width: 100%;
