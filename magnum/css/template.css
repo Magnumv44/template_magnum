@@ -52,7 +52,9 @@ abbr:hover {
 img {
     border: 0;
 }
+/***********************************************************************/
 
+/*Стили шапки с логотипом*/
 #main-fon {
     background-image: url("../images/fon.jpg");
 }
@@ -101,6 +103,8 @@ a .logo-slogan:hover {
     text-decoration: none;
     color: #0022cc;
 }
+/**************************************************************************/
+
 
 /*Стили горизонтального меню */
 .row .top-menu {
@@ -118,11 +122,12 @@ a .logo-slogan:hover {
 .top-menu ul li a {
     color: white;
 }
+/****************************************************************************/
 
 /* Стили контентной части */
 
 /* Задаем цвет фона и боковые линии у контентной части */
-.container .content {
+.container .content { /* TODO перенести эти стили выше в один для row*/
     border-left: 1px solid Gray;
     border-right: 1px solid Gray;
     background-color: #f9f9f9;
@@ -142,7 +147,6 @@ a .logo-slogan:hover {
 }
 
 .btn-primary {
-/*    background-image: none;*/
     background-color: #434343;
     border-color: transparent;
 }
@@ -168,6 +172,7 @@ a .logo-slogan:hover {
 .search-pages-counter {
     margin-bottom: 1rem;
 }
+/********************************************************************************************/
 
 /* Стили отступа левых блоков от верхнего меню */
 .moduletable {
@@ -198,8 +203,16 @@ a .logo-slogan:hover {
     font-size: 1em;
     line-height: 1.5;
 }
+/****************************************************************************************/
 
-/*****************************************************/
+/* Стили страницы поиска */
+#search-result-empty {
+    margin-bottom: 1.5em;
+}
+
+#search-result-empty h2 {
+    font: bold 16px Verdana;
+}
 
 /*
 FIXME Сделать так, что бы таблицы не выпадали за границы по возможности
@@ -1425,5 +1438,15 @@ body.lb-disable-scrolling {
         width: 100%;
         padding-right: calc(var(--bs-gutter-x) * .1);
         padding-left: calc(var(--bs-gutter-x) * .1);
+    }
+
+    /* В месте вывода рекламы, убираем рамку для более лучше визуаьно восприятия */
+    .googlea .custom {
+        border: transparent;
+    }
+
+    /* Выравнивание кнопки "Подробнее" в мобильной версии*/
+    .blog-item .readmore {
+        margin-left: .1rem;
     }
 }
