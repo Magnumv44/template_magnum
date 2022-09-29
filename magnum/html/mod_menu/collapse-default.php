@@ -28,4 +28,5 @@ use Joomla\CMS\Language\Text;
     <div class="collapse navbar-collapse" id="navbar<?php echo $module->id; ?>">
         <?php require __DIR__ . '/default.php'; ?>
     </div>
+</div>
 </nav>
