@@ -101,10 +101,10 @@
     </div>
     <!-- Скрипты lightbox, вставки примеров кода в контент, кнопки вверх -->
     <jdoc:include type="scripts" />
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-3.6.0.min.js" type="text/javascript"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.js" type="text/javascript"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/prism.js" type="text/javascript"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/go_top.js" type="text/javascript"></script>
+    <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-3.6.0.min.js"></script>
+    <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.js"></script>
+    <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/prism.js"></script>
+    <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/go_top.js"></script>
 </body>
 </html>
