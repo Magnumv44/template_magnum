@@ -189,9 +189,11 @@ a .logo-slogan:hover {
     line-height: 40px;
 }
 
-/* Скругление углов у заголовков и текстовой части модулей левой стороны */
+/* Скругление углов у заголовков и текстовой части модулей левой стороны? а так же цитат в контенте*/
 .moduletable h3,
-.moduletable .custom {
+.moduletable .custom,
+.blog-item blockquote,
+.content-full blockquote {
     border-radius: 4px;
 }
 
@@ -315,10 +317,11 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
 
 .blog-item blockquote,
 .content-full blockquote {
-    margin: 5px 30px;
+    margin: 5px;
     padding: 7px;
     background-color: #f6f6f6;
     border: 1px #ccc solid;
+    font-style: italic;
 }
 
 .blog-item p,
@@ -355,7 +358,7 @@ pre {
 
 .blog-item blockquote p,
 .content-full blockquote p {
-    font: 13px Verdana;
+    /*font: 13px Verdana;*/
     line-height: 1.5;
 }
 
@@ -386,11 +389,16 @@ pre {
 }
 
 .blog-item p img,
-.content-full p img {
+.content-full p img, 
+.blog-item figure img,
+.content-full figure img {
     margin: 5px 10px;
     max-width:100%; /* Задание отзывчивости изображений*/
     height:auto
 }
+
+/* Верхний отступ для плагина вставки видео с YouTube */
+.ytvideo { margin-top: 10px; }
 
 .blog-item p a,
 .blog-item blockquote a,
