@@ -56,7 +56,7 @@
             <div class="row justify-content-center d-none d-lg-block">
                 <div class="col-12 logo">
                     <a href="/" title="Magnum news - Блог IT-шника">
-                        <img src="templates/<?php echo $this->template ?>/<?php echo $logoFile ?>" alt="Magnum news - Блог IT-шника" />
+                        <img src="templates/<?php echo $this->template ?>/<?php echo $logoFile ?>" alt="Magnum news - Блог IT-шника" width="175" height="270" />
                         <span class="logo-name">Magnum news</span><br />
                         <span class="logo-slogan">Блог <span style="color: red;">IT</span>-шника</span>
                     </a>
