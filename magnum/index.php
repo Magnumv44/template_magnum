@@ -42,7 +42,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/bootstrap-reboot.min.css" type="text/css" />
     <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/template.css" type="text/css" />
     <?php echo $analytics ?>
