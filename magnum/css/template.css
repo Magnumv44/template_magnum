@@ -52,6 +52,10 @@ abbr:hover {
 img {
     border: 0;
 }
+
+ol {
+    padding-left: 1rem;
+}
 /***********************************************************************/
 
 /*Стили шапки с логотипом*/
@@ -77,7 +81,8 @@ img {
 /*Импорт своего шрифта в шаблон*/
 @font-face {
     font-family: MrRobot;
-    src: url("../fonts/mrrobot.ttf");
+    src: url("../fonts/mrrobot.woff2") format("woff2");
+    font-display: swap;
 }
 
 /*Стили названия блога*/
@@ -205,6 +210,14 @@ a .logo-slogan:hover {
     font-size: 1em;
     line-height: 1.5;
 }
+
+.moduletable .custom .bi-skype {
+    color: #009fe5;
+}
+
+.moduletable .custom .bi-telegram {
+    color: #29a0dc;
+}
 /****************************************************************************************/
 
 /* Стили страницы поиска */
@@ -251,8 +264,7 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
 }
 
 .item-title {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 1px 10px 8px;
     padding: 2px 0 2px;
     vertical-align: top;
 }
@@ -1333,6 +1345,7 @@ body.lb-disable-scrolling {
 #go-top .bi {
     font-size: 2rem;
 }
+/********************************************************************************/
 
 /* Responsive style */
 
@@ -1407,7 +1420,7 @@ body.lb-disable-scrolling {
     /* Отступы у постов */
     .row .con {
         padding-right: calc(var(--bs-gutter-x) * .2);
-        padding-left: calc(var(--bs-gutter-x) * .2);
+        padding-left: calc(var(--bs-gutter-x) * .01);
     }
 }
 
