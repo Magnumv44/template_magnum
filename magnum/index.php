@@ -37,7 +37,7 @@
     <jdoc:include type="metas" />
     <jdoc:include type="styles" />
     <!--[if lt IE 9]> 
-    <script src="template/<?php echo $this->template ?>/js/html5shiv.min.js"></script>
+    <script src="templates/<?php echo $this->template ?>/js/html5shiv.min.js"></script>
     <![endif]-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
