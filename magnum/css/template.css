@@ -115,8 +115,6 @@ a .logo-slogan:hover {
 .row .top-menu {
     margin: 0;
     background-color: #434343;
-    border-left: 1px solid Gray;
-    border-right: 1px solid Gray;
     border-bottom: 1px solid #434343;
     border-radius: 0;
     padding-right: 0%;
