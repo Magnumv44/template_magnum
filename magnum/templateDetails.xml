@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
-<extension version="3.5" type="template" client="site">
-	<name>Magnum new</name>
+<extension type="template" client="site">
+	<name>magnum</name>
 	<creationDate>2014-09-05</creationDate>
 	<author>Vitalii Magnum</author>
 	<authorEmail>vitaliy1984@gmail.com</authorEmail>
 	<authorUrl>https://www.magnumblog.space</authorUrl>
 	<copyright>Copyright (C) 2005 - 2021</copyright>
 	<license>comercial</license>
-	<version>2.4.7</version>
+	<version>4.0.10</version>
 	<description>TPL_MAGNUM_DESC</description>
 
 	<files>
 		<filename>index.php</filename>
-		<filename>error.php</filename>
-		<filename>offline.php</filename>
-		<filename>templateDetails.xml</filename>
 		<filename>template_preview.png</filename>
 		<filename>template_thumbnail.png</filename>
-		<filename>favicon.ico</filename>
-		<folder>css</folder>
-		<folder>fonts</folder>
 		<folder>html</folder>
-		<folder>images</folder>
 		<folder>js</folder>
-		<folder>language</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>fonts</folder>
 	</files>
-
     <!-- Позиции модулей, используемые в шаблоне -->
 	<positions>
 		<position>top-menu</position>
 		<position>left</position>
 		<position>footer</position>
+		<position>debug</position>
 	</positions>
+
+	<!-- Установка/Удаление файлов локализации -->
+    <languages folder="language">
+        <language tag="ru-RU">ru-RU/tpl_magnum.ini</language>
+        <language tag="ru-RU">ru-RU/tpl_magnum.sys.ini</language>
+	</languages>
 
     <!-- Вывод параметров в админку шаблона -->
     <config>
@@ -73,10 +73,4 @@
             </fieldset>
         </fields>
     </config>
-
-	<!-- Установка/Удаление файлов локализации -->
-    <languages folder="language">
-        <language tag="ru-RU">ru-RU/ru-RU.tpl_magnum.ini</language>
-        <language tag="ru-RU">ru-RU/ru-RU.tpl_magnum.sys.ini</language>
-	</languages>
 </extension>

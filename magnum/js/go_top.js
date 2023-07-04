@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-  jQuery('body').append('<a href="#" id="go-top"><span class="icon-chevron-up"></span></a>');
+  jQuery('body').append('<a href="#" id="go-top"><span class="bi bi-arrow-up-short"></span></a>');
 });
 
 jQuery(function() {
@@ -12,7 +12,7 @@ jQuery(function() {
    else jQuery(scrollDiv).fadeIn("slow")
   });
   jQuery(this).click(function() {
-   jQuery("html, body").animate({scrollTop: 0}, "slow")
+   jQuery("html, body").animate({scrollTop: 0}, "fast")
   })
  }
 });
