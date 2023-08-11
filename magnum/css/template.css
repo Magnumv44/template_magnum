@@ -216,6 +216,10 @@ a .logo-slogan:hover {
 .moduletable .custom .bi-telegram {
     color: #29a0dc;
 }
+
+.moduletable .custom .bi-instagram {
+    color: red;
+}
 /****************************************************************************************/
 
 /* Стили страницы поиска */
