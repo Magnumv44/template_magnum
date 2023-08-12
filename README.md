@@ -22,4 +22,4 @@
 * Додавання коду Google Аналітики
 
 ## License
-MIT License
+[MIT License](LICENSE "Ліцензійна уогода")
