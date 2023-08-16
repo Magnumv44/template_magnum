@@ -1,11 +1,11 @@
 <?php
 /**
- * Данный шаблон был разработан для сайта https://www.magnumblog.space
- * При копировнии данного шаблона в обязательном порядке уведомите администрацию сайта https://www.magnumblog.space
- * И пропишите копирайты разработчика:
+ * Даний шаблон був розроблений сепціально для сайту https://www.magnumblog.space
+ * При копіюванні даного шаблона, обо'язково сповістіть адміністратора сайту https://www.magnumblog.space
+ * Та вкажіть в видимій частині копірайт:
  * Developed by Magnum https://www.magnumblog.space
  */
-    // Запрет на прямое обращение к файлам
+    // Заборона на пряме звернення до файлів
     defined('_JEXEC') or die;
 
     use Joomla\CMS\Factory;
@@ -17,10 +17,10 @@
 
     $wa  = $this->getWebAssetManager();
 
-    // Отключили мета-тег generator Joomla
+    // Прибираємо-тег generator Joomla
     $wa  = $this->setGenerator(null);
 
-    // Извлечение переменных из параметров шаблона
+    // Отримуєм змінні ж параметрів шаблону
     $analytics = $this->params->get("analytics");
     $backgroundFon = $this->params->get("backgroundFon");
     $logoFile = $this->params->get("logoFile");
@@ -51,7 +51,7 @@
 </head>
 <body id="<?php echo $backgroundFon ?>">
     <div class="container">
-        <!-- Начало шапки сайта -->
+        <!-- Початок шапки сайту -->
         <header>
             <div class="row justify-content-center d-none d-lg-block">
                 <div class="col-12 logo">
@@ -98,10 +98,10 @@
         </div>
         </footer>
     </div>
-    <!-- Скрипты lightbox, вставки примеров кода в контент, кнопки вверх -->
+    <!-- Скрипти lightbox, prism, jquery, bootstrap, кнопки вгору -->
     <jdoc:include type="scripts" />
     <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.bundle.min.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-3.6.0.min.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-3.7.0.min.js"></script>
     <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.min.js"></script>
     <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/prism.js"></script>
     <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/go_top.js"></script>
