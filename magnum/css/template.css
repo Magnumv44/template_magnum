@@ -2,7 +2,7 @@
 TODO Сверстать место под банер в десктоп версии, хотя в мобильной он более актуален
 */
 @charset "utf-8";
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 /*Общие стили бля html*/
 * {
