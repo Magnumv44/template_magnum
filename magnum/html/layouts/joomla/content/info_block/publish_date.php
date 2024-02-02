@@ -16,7 +16,7 @@ use Joomla\CMS\Language\Text;
 ?>
 <dd class="published">
     <span class="bi bi-calendar3" aria-hidden="true"></span>
-    <time datetime="<?php echo HTMLHelper::_('date', $displayData['item']->publish_up, 'c'); ?>" itemprop="datePublished">
+    <time datetime="<?php echo HTMLHelper::_('date', $displayData['item']->publish_up, 'c'); ?>">
         <?php echo Text::sprintf(HTMLHelper::_('date', $displayData['item']->publish_up, Text::_('DATE_FORMAT_LC1'))); ?>
     </time>
 </dd>

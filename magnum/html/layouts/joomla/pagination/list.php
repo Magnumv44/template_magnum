@@ -20,6 +20,25 @@ $list = $displayData['list'];
         <?php echo $list['start']['data']; ?>
         <?php echo $list['previous']['data']; ?>
 
+        <?php // Блок тимчасового хака для посторінкової навігації, розміщений до офіційного вирішення проблеми
+            $maxPages = 5;
+            $list["pages"] = array_values($list["pages"]);
+            
+            while (count($list["pages"]) > $maxPages) {
+                foreach ($list["pages"] as $key => $val) {
+                    if (!$val["active"]) {
+                        break;
+                    }
+                }
+                
+                if ($key > $maxPages / 2) {
+                    array_shift($list["pages"]);
+                } else {
+                    array_pop($list["pages"]);
+                }
+            }
+        ?>
+
         <?php foreach ($list['pages'] as $page) : ?>
             <?php echo $page['data']; ?>
         <?php endforeach; ?>
