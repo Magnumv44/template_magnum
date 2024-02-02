@@ -411,9 +411,6 @@ pre {
     height:auto
 }
 
-/* Верхний отступ для плагина вставки видео с YouTube */
-.ytvideo { margin-top: 10px; }
-
 .blog-item p a,
 .blog-item blockquote a,
 .blog-item ol a,
