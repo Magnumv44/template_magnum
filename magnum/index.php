@@ -101,7 +101,7 @@
     <!-- Скрипти lightbox, prism, jquery, bootstrap, кнопки вгору -->
     <jdoc:include type="scripts" />
     <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.bundle.min.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-3.7.0.min.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-3.7.1.min.js"></script>
     <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.min.js"></script>
     <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/prism.js"></script>
     <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/go_top.js"></script>
