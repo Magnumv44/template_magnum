@@ -348,6 +348,10 @@ pre {
     margin-top: 10px;
 }
 
+.blog-item .item-title {
+    margin-top: 0;
+}
+
 /* Ширина строки для отступа между заголовками */
 .blog-item p,
 .content-full p,
