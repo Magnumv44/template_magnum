@@ -2,7 +2,7 @@
 TODO Сверстать место под банер в десктоп версии, хотя в мобильной он более актуален
 */
 @charset "utf-8";
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css");
 
 /*Общие стили бля html*/
 * {
@@ -209,10 +209,6 @@ a .logo-slogan:hover {
     line-height: 1.5;
 }
 
-.moduletable .custom .bi-skype {
-    color: #009fe5;
-}
-
 .moduletable .custom .bi-telegram {
     color: #29a0dc;
 }
@@ -340,6 +336,10 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
 
 .blog-item p,
 .content-full p,
+.blog-item h2,
+.content-full h2,
+.blog-item h3,
+.content-full h3,
 .blog-item h4,
 .content-full h4,
 .blog-item h5,
@@ -348,9 +348,17 @@ pre {
     margin-top: 10px;
 }
 
+.blog-item .item-title {
+    margin-top: 0;
+}
+
 /* Ширина строки для отступа между заголовками */
 .blog-item p,
 .content-full p,
+.blog-item h2,
+.content-full h2,
+.blog-item h3,
+.content-full h3,
 .blog-item h4,
 .content-full h4,
 .blog-item h5,
@@ -358,21 +366,33 @@ pre {
     line-height: 20px;
 }
 
+.blog-item h2,
+.content-full h2,
+.blog-item h3,
+.content-full h3,
+.blog-item h4,
+.content-full h4,
+.blog-item h5,
+.content-full h5 {
+    font-size: 16px;
+}
+
+.blog-item h2,
+.content-full h2,
+.blog-item h3,
+.content-full h3,
 .blog-item h4,
 .content-full h4 {
-    font-size: 16px;
     font-weight: bold;
 }
 
 .blog-item h5,
 .content-full h5 {
-    font-size: 16px;
     font-style: italic;
 }
 
 .blog-item blockquote p,
 .content-full blockquote p {
-    /*font: 13px Verdana;*/
     line-height: 1.5;
 }
 
@@ -410,9 +430,6 @@ pre {
     max-width:100%; /* Задание отзывчивости изображений*/
     height:auto
 }
-
-/* Верхний отступ для плагина вставки видео с YouTube */
-.ytvideo { margin-top: 10px; }
 
 .blog-item p a,
 .blog-item blockquote a,
@@ -851,10 +868,6 @@ body.lb-disable-scrolling {
     display: inline-block;
     margin-top: 1rem;
 }
-
-/*.item-content .content-info-full {
-    margin-top: 0;
-}*/
 
 .content-info-full dd {
     margin-bottom: 0;

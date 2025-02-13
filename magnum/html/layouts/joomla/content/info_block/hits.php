@@ -15,6 +15,6 @@ use Joomla\CMS\Language\Text;
 ?>
 <dd class="hits">
     <span class="bi bi-eye" aria-hidden="true"></span>
-    <meta itemprop="interactionCount" content="UserPageVisits:<?php echo $displayData['item']->hits; ?>">
+    <meta content="UserPageVisits:<?php echo $displayData['item']->hits; ?>">
     <?php echo Text::sprintf($displayData['item']->hits); ?>
 </dd>
