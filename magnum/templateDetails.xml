@@ -7,7 +7,7 @@
 	<authorUrl>https://www.magnumblog.space</authorUrl>
 	<copyright>Copyright (C) 2005 - 2021</copyright>
 	<license>MIT</license>
-	<version>5.0.4</version>
+	<version>5.0.5</version>
 	<description>TPL_MAGNUM_DESC</description>
 
 	<files>
@@ -20,7 +20,7 @@
 		<folder>images</folder>
 		<folder>fonts</folder>
 	</files>
-    <!-- Позиции модулей, используемые в шаблоне -->
+    <!-- Позиції модулів у шаблоні -->
 	<positions>
 		<position>top-menu</position>
 		<position>left</position>
@@ -28,13 +28,13 @@
 		<position>debug</position>
 	</positions>
 
-	<!-- Установка/Удаление файлов локализации -->
+	<!-- Встановлення та видалення файлів мовних констант -->
     <languages folder="language">
         <language tag="ru-RU">ru-RU/tpl_magnum.ini</language>
         <language tag="ru-RU">ru-RU/tpl_magnum.sys.ini</language>
 	</languages>
 
-    <!-- Вывод параметров в админку шаблона -->
+    <!-- Вивід параметрів в адміністративній частині шаблону -->
     <config>
         <fields name="params">
             <fieldset name="TPL_GOOGLE_ANALYTICS" >
