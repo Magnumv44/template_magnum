@@ -2,7 +2,7 @@
 [![Joomla 5](https://img.shields.io/badge/Joomla-5.2.3-brightgreen)](https://www.joomla.org)
 [![PrismJS](https://img.shields.io/badge/PrismJS-1.29.0-brightgreen)](https://github.com/PrismJS/prism)
 [![Lightbox2](https://img.shields.io/badge/Lightbox2-2.11.4-brightgreen)](https://github.com/lokesh/lightbox2)
-[![Bootstrap 5](https://img.shields.io/badge/Bootstrap-5.3.3-6610f2](https://getbootstrap.com/)
+[![Bootstrap 5](https://img.shields.io/badge/Bootstrap-5.3.3-blue)](https://getbootstrap.com)
 [![jQuery 3](https://img.shields.io/badge/jQuery-3.7.1-0769AD)](https://jquery.org)
 
 # Шаблон персонального блогу Magnum news
