@@ -7,11 +7,12 @@
 	<authorUrl>https://www.magnumblog.space</authorUrl>
 	<copyright>Copyright (C) 2005 - 2021</copyright>
 	<license>MIT</license>
-	<version>5.0.5</version>
+	<version>5.1.0b</version>
 	<description>TPL_MAGNUM_DESC</description>
 
 	<files>
 		<filename>index.php</filename>
+		<filename>joomla.asset.json</filename>
 		<filename>template_preview.png</filename>
 		<filename>template_thumbnail.png</filename>
 		<folder>html</folder>
