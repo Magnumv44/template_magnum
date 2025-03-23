@@ -15,10 +15,14 @@
 
     /** @var Joomla\CMS\Document\HtmlDocument $this */
 
-    $wa  = $this->getWebAssetManager();
+    // Отримуємо Web Asset Manager
+    $wa = $this->getWebAssetManager();
 
     // Прибираємо-тег generator Joomla
     $wa  = $this->setGenerator(null);
+
+    // Підключаємо ресурси з joomla.asset.json
+    $wa->usePreset('template.magnum');
 
     // Отримуєм змінні ж параметрів шаблону
     $analytics = $this->params->get("analytics");
@@ -35,15 +39,16 @@
     <meta name="google-site-verification" content="3EutjLuhAK4xbS7NQzrUoQ6oYs5eTv3nWno9ZiEEdOU" />
     <meta name="wot-verification" content="0da95e472682f0116875"/>
     <jdoc:include type="metas" />
-    <jdoc:include type="styles" />
     <!--[if lt IE 9]> 
     <script src="templates/<?php echo $this->template ?>/js/html5shiv.min.js"></script>
     <![endif]-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/template.css" type="text/css" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    </noscript>
+    <jdoc:include type="styles" />
     <?php echo $analytics ?>
     <link href="templates/<?php echo $this->template ?>/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
     <link href="templates/<?php echo $this->template ?>/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -100,10 +105,5 @@
     </div>
     <!-- Скрипти lightbox, prism, jquery, bootstrap, кнопки вгору -->
     <jdoc:include type="scripts" />
-    <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.bundle.min.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-3.7.1.min.js"></script>
-    <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lightbox.min.js"></script>
-    <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/prism.js"></script>
-    <script async src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/go_top.js"></script>
 </body>
 </html>
