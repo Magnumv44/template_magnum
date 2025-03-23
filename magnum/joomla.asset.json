@@ -1,0 +1,57 @@
+{
+    "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+    "name": "magnum",
+    "version": "1.0.0",
+    "assets": [
+        {
+            "name": "template.bootstrap",
+            "type": "style",
+            "uri": "css/bootstrap.min.css"
+        },
+        {
+            "name": "template.styles",
+            "type": "style",
+            "uri": "css/template.css"
+        },
+        {
+            "name": "template.bootstrap",
+            "type": "script",
+            "uri": "js/bootstrap.bundle.min.js",
+            "attributes": {
+                "defer": true
+            }
+        },
+        {
+            "name": "template.jquery",
+            "type": "script",
+            "uri": "js/jquery-3.7.1.min.js",
+            "attributes": {
+                "defer": true
+            }
+        },
+        {
+            "name": "template.lightbox",
+            "type": "script",
+            "uri": "js/lightbox.min.js",
+            "attributes": {
+                "defer": true
+            }
+        },
+        {
+            "name": "template.prism",
+            "type": "script",
+            "uri": "js/prism.js",
+            "attributes": {
+                "defer": true
+            }
+        },
+        {
+            "name": "template.go_top",
+            "type": "script",
+            "uri": "js/go_top.js",
+            "attributes": {
+            "defer": true
+            }
+        }
+    ]
+}
