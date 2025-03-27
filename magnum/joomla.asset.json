@@ -2,21 +2,23 @@
     "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
     "name": "magnum",
     "version": "1.0.0",
+    "description": "This file contains details of the assets used template by magnum.",
+    "license": "GPL-2.0-or-later",
     "assets": [
         {
-            "name": "template.bootstrap",
+            "name": "template.bootstrap.style",
             "type": "style",
-            "uri": "css/bootstrap.min.css"
+            "uri": "bootstrap.min.css"
         },
         {
             "name": "template.styles",
             "type": "style",
-            "uri": "css/template.css"
+            "uri": "template.css"
         },
         {
-            "name": "template.bootstrap",
+            "name": "template.bootstrap.script",
             "type": "script",
-            "uri": "js/bootstrap.bundle.min.js",
+            "uri": "bootstrap.bundle.min.js",
             "attributes": {
                 "defer": true
             }
@@ -24,7 +26,7 @@
         {
             "name": "template.jquery",
             "type": "script",
-            "uri": "js/jquery-3.7.1.min.js",
+            "uri": "jquery-3.7.1.min.js",
             "attributes": {
                 "defer": true
             }
@@ -32,7 +34,7 @@
         {
             "name": "template.lightbox",
             "type": "script",
-            "uri": "js/lightbox.min.js",
+            "uri": "lightbox.min.js",
             "attributes": {
                 "defer": true
             }
@@ -40,7 +42,7 @@
         {
             "name": "template.prism",
             "type": "script",
-            "uri": "js/prism.js",
+            "uri": "prism.js",
             "attributes": {
                 "defer": true
             }
@@ -48,7 +50,7 @@
         {
             "name": "template.go_top",
             "type": "script",
-            "uri": "js/go_top.js",
+            "uri": "go_top.js",
             "attributes": {
             "defer": true
             }
