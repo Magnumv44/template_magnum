@@ -1,5 +1,10 @@
 <?php
 /**
+ * @package     joomla.site
+ * @subpackage  templates.magnum
+ * @copyright 2005-2025 Magnum
+ * @license MIT; see LICENSE https://github.com/Magnumv44/template_magnum/blob/main/LICENSE
+ * 
  * Даний шаблон був розроблений сепціально для сайту https://www.magnumblog.space
  * При копіюванні даного шаблона, обо'язково сповістіть адміністратора сайту https://www.magnumblog.space
  * Та вкажіть в видимій частині копірайт:
@@ -19,17 +24,16 @@
     $wa  = $this->setGenerator(null);
 
     // Отримуємо Web Asset Manager
-    $app = Factory::getApplication();
-    $wa  = $this->getWebAssetManager(); //TODO: Перевірити чи можна змінити ім'я змінної
+    $jwa  = $this->getWebAssetManager();
 
     // Підключаємо ресурси з joomla.asset.json
-    $wa->useStyle('template.bootstrap.style');
-    $wa->useStyle('template.styles');
-    $wa->useScript('template.bootstrap.script');
-    $wa->useScript('template.jquery');
-    $wa->useScript('template.lightbox');
-    $wa->useScript('template.prism');
-    $wa->useScript('template.go_top');
+    $jwa->useStyle('template.bootstrap.style');
+    $jwa->useStyle('template.styles');
+    $jwa->useScript('template.bootstrap.script');
+    $jwa->useScript('template.jquery');
+    $jwa->useScript('template.lightbox');
+    $jwa->useScript('template.prism');
+    $jwa->useScript('template.go_top');
 
     // Отримуєм змінні ж параметрів шаблону
     $analytics = $this->params->get("analytics");
