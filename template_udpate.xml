@@ -12,9 +12,10 @@
         <tags>
             <tag>stable</tag>
         </tags>
+        <section>Updates</section>
+        <targetplatform name="joomla" version="5.[0123456789]" />
         <maintainer>Vitalii Magnum</maintainer>
         <maintainerurl>https://www.magnumblog.space</maintainerurl>
-        <targetplatform name="joomla" version="5.0" />
         <client>site</client>
     </update>
 </updates>

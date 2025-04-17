@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="template" client="site">
+<extension type="template" client="site" version="5.0" method="upgrade">
 	<name>magnum</name>
 	<creationDate>2014-09-05</creationDate>
 	<author>Vitalii Magnum</author>
 	<authorEmail>vitaliy1984@gmail.com</authorEmail>
 	<authorUrl>https://www.magnumblog.space</authorUrl>
-	<copyright>Copyright (C) 2005 - 2021</copyright>
+	<copyright>Copyright (C) 2005 - 2025</copyright>
 	<license>MIT</license>
 	<version>5.2.1</version>
-	<targetplatform name="joomla" version="5.3" />
+	<targetplatform name="joomla" version="5.0" />
 	<description>TPL_MAGNUM_DESC</description>
-	<inheritable>1</inheritable>
+	<inheritable>false</inheritable>
 
 	<files>
 		<filename>index.php</filename>
@@ -77,4 +77,8 @@
             </fieldset>
         </fields>
     </config>
+	<!-- Параметри серверу оновлення шаблону -->
+    <updateservers>
+        <server type="extension" priority="1" name="magnum-template-updates">https://www.magnumblog.space/template_udpate.xml</server>
+    </updateservers>
 </extension>
