@@ -12,16 +12,19 @@
     "assets": [
         {
             "name": "template.bootstrap.style",
+            "description": "Bootstrap 5.3.3 CSS style. Must be placed in media/templates/site/magnum/css/bootstrap.min.css",
             "type": "style",
             "uri": "bootstrap.min.css"
         },
         {
             "name": "template.styles",
+            "description": "Primary css style. Must be placed in media/templates/site/magnum/css/user.css",
             "type": "style",
             "uri": "template.css"
         },
         {
             "name": "template.bootstrap.script",
+            "description": "Bootstrap 5.3.3 JS script. Must be placed in media/templates/site/magnum/js/bootstrap.bundle.min.js",
             "type": "script",
             "uri": "bootstrap.bundle.min.js",
             "attributes": {
@@ -30,6 +33,7 @@
         },
         {
             "name": "template.jquery",
+            "description": "jQuery 3.7.1 JS script. Must be placed in media/templates/site/magnum/js/jquery-3.7.1.min.js",
             "type": "script",
             "uri": "jquery-3.7.1.min.js",
             "attributes": {
@@ -38,6 +42,7 @@
         },
         {
             "name": "template.lightbox",
+            "description": "Lightbox JS script. Must be placed in media/templates/site/magnum/js/lightbox.min.js",
             "type": "script",
             "uri": "lightbox.min.js",
             "attributes": {
@@ -46,6 +51,7 @@
         },
         {
             "name": "template.prism",
+            "description": "Prism JS 1.30.0 script. Must be placed in media/templates/site/magnum/js/prism.js",
             "type": "script",
             "uri": "prism.js",
             "attributes": {
@@ -54,6 +60,7 @@
         },
         {
             "name": "template.go_top",
+            "description": "JS script button up on jQuery. Must be placed in media/templates/site/magnum/js/go_top.js",
             "type": "script",
             "uri": "go_top.js",
             "attributes": {
