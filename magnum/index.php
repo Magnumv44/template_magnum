@@ -74,7 +74,7 @@
                 <div class="col-12 logo">
                     <a href="/" title="Magnum news - Блог IT-шника">
                         <img src="media/templates/site/<?php echo $this->template ?>/<?php echo $logoFile ?>" alt="Magnum news - Блог IT-шника" width="175" height="270" />
-                        <span class="logo-name">Magnum news</span><br />
+                        <span class="logo-name"><?php echo Text::_('TPL_MAGNUM_SITE_NAME_SHORT'); ?></span><br />
                         <span class="logo-slogan">Блог <span style="color: red;">IT</span>-шника</span>
                     </a>
                 </div>
