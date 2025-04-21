@@ -10,7 +10,7 @@
 	<version>5.2.2</version>
 	<targetplatform name="joomla" version="5.0" />
 	<description>TPL_MAGNUM_DESC</description>
-	<inheritable>false</inheritable>
+	<inheritable>1</inheritable>
 
 	<files>
 		<filename>index.php</filename>
