@@ -8,7 +8,7 @@
 
 # Шаблон персонального блогу Magnum news
 <p align="center">
-<img src="https://github.com/Magnumv44/template_magnum/blob/development/magnum/images/template_preview.png?raw=true" title="Magnum news" alt="Magnum news">
+<img src="https://github.com/Magnumv44/template_magnum/blob/development/magnum/media/images/template_preview.png?raw=true" title="Magnum news" alt="Magnum news">
 </p>
 
 Кастомний шаблон [персонального блогу](https://www.magnumblog.space "Натисніть щоб відкрити"), який базується на [**CMS Joomla**](https://www.joomla.org "Натисніть щоб відкрити").
