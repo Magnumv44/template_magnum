@@ -5,7 +5,7 @@
         <description>Template for blog Magnum news</description>
         <element>magnum</element>
         <type>template</type>
-        <version>5.2.2</version>
+        <version>5.2.3</version>
         <client>site</client>
         <downloads>
             <downloadurl type="full" format="zip">https://www.magnumblog.space/files/magnum.zip</downloadurl>
