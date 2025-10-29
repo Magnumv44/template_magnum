@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="template" client="site">
+<extension type="template" client="site" version="5.0" method="upgrade">
 	<name>magnum</name>
 	<creationDate>2014-09-05</creationDate>
 	<author>Vitalii Magnum</author>
 	<authorEmail>vitaliy1984@gmail.com</authorEmail>
 	<authorUrl>https://www.magnumblog.space</authorUrl>
-	<copyright>Copyright (C) 2005 - 2021</copyright>
+	<copyright>Copyright (C) 2005 - 2025</copyright>
 	<license>MIT</license>
-	<version>5.0.5</version>
+	<version>5.2.3</version>
+	<targetplatform name="joomla" version="5.0" />
 	<description>TPL_MAGNUM_DESC</description>
+	<inheritable>1</inheritable>
 
 	<files>
 		<filename>index.php</filename>
-		<filename>template_preview.png</filename>
-		<filename>template_thumbnail.png</filename>
+		<filename>joomla.asset.json</filename>
+		<filename>templateDetails.xml</filename>
 		<folder>html</folder>
+	</files>
+	<media destination="templates/site/magnum" folder="media">
 		<folder>js</folder>
 		<folder>css</folder>
 		<folder>images</folder>
 		<folder>fonts</folder>
-	</files>
+	</media>
     <!-- Позиції модулів у шаблоні -->
 	<positions>
 		<position>top-menu</position>
@@ -73,4 +77,8 @@
             </fieldset>
         </fields>
     </config>
+	<!-- Параметри серверу оновлення шаблону -->
+    <updateservers>
+        <server type="extension" priority="1" name="magnum-template-updates">https://www.magnumblog.space/template_udpate.xml</server>
+    </updateservers>
 </extension>
