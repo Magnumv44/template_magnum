@@ -1,22 +1,49 @@
-jQuery(document).ready(function() {
-  jQuery('body').append('<a href="#" id="go-top"><span class="bi bi-arrow-up-short"></span></a>');
-});
+// Чекаємо, поки весь HTML-документ завантажиться
+document.addEventListener('DOMContentLoaded', function() {
 
-jQuery(function() {
- jQuery.fn.scrollToTop = function() {
-  jQuery(this).hide().removeAttr("href");
-  if (jQuery(window).scrollTop() >= "250") jQuery(this).fadeIn("slow")
-  var scrollDiv = jQuery(this);
-  jQuery(window).scroll(function() {
-   if (jQuery(window).scrollTop() <= "250") jQuery(scrollDiv).fadeOut("slow")
-   else jQuery(scrollDiv).fadeIn("slow")
-  });
-  jQuery(this).click(function() {
-   jQuery("html, body").animate({scrollTop: 0}, "fast")
-  })
- }
-});
+    // Створюємо HTML-код кнопки
+    const goTopHTML = '<a href="#" id="go-top"><span class="bi bi-arrow-up-short"></span></a>';
 
-jQuery(function() {
- jQuery("#go-top").scrollToTop();
+    // Додаємо HTML в кінець <body>
+    document.body.insertAdjacentHTML('beforeend', goTopHTML);
+
+    // Знаходимо додану кнопку
+    const goTopButton = document.getElementById('go-top');
+
+    // Переконуємося, що кнопка існує, перш ніж працювати з нею
+    if (goTopButton) {
+
+        // Прибираємо атрибут href
+        goTopButton.removeAttribute('href');
+
+        // Функція для перевірки, чи потрібно показати/сховати кнопку
+        const checkScroll = () => {
+            if (window.scrollY >= 250) {
+                // Показуємо кнопку
+                goTopButton.classList.add('show');
+            } else {
+                // Ховаємо кнопку
+                goTopButton.classList.remove('show');
+            }
+        };
+
+        // Перевіряємо стан прокрутки одразу при завантаженні сторінки
+        checkScroll();
+
+        // Обробник події "scroll"
+        window.addEventListener('scroll', checkScroll);
+
+        // Обробник кліку
+        goTopButton.addEventListener('click', (e) => {
+            // Забороняємо <a> тегу переходити за посиланням (оскільки href був #)
+            e.preventDefault();
+
+            // Плавно прокручуємо сторінку до верху
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
 });
