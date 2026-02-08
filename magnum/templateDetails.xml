@@ -7,7 +7,7 @@
 	<authorUrl>https://www.magnumblog.space</authorUrl>
 	<copyright>Copyright (C) 2005 - 2025</copyright>
 	<license>MIT</license>
-	<version>5.2.3</version>
+	<version>5.2.4</version>
 	<targetplatform name="joomla" version="5.0" />
 	<description>TPL_MAGNUM_DESC</description>
 	<inheritable>1</inheritable>

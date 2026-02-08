@@ -81,15 +81,17 @@
             </div>
         </header>
         <!-- Початок меню сайту -->
-        <div class="row">
-            <div class="col-12 top-menu">
-                <?php if ($this->countModules('top-menu')) : ?>
-                    <div class="align-menu">
-                    <jdoc:include type="modules" name="top-menu" style="none" />
-                    </div>
-                <?php endif; ?>
+        <aside>
+            <div class="row">
+                <div class="col-12 top-menu">
+                    <?php if ($this->countModules('top-menu')) : ?>
+                        <div class="align-menu">
+                            <jdoc:include type="modules" name="top-menu" style="none" />
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
-        </div>
+        </aside>
         <!-- Початок контенту сайту -->
         <main>
             <div class="row justify-content-center content">
