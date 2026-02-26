@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="template" client="site" version="5.0" method="upgrade">
+<extension type="template" client="site" version="6.0" method="upgrade">
 	<name>magnum</name>
-	<creationDate>2014-09-05</creationDate>
+	<creationDate>2026-02-08</creationDate>
 	<author>Vitalii Magnum</author>
 	<authorEmail>vitaliy1984@gmail.com</authorEmail>
 	<authorUrl>https://www.magnumblog.space</authorUrl>
-	<copyright>Copyright (C) 2005 - 2025</copyright>
+	<copyright>Copyright (C) 2005 - 2026</copyright>
 	<license>MIT</license>
-	<version>5.2.4</version>
-	<targetplatform name="joomla" version="5.0" />
+	<version>6.0.1</version>
+	<targetplatform name="joomla" version="6.0" />
 	<description>TPL_MAGNUM_DESC</description>
 	<inheritable>1</inheritable>
 
@@ -34,8 +34,8 @@
 
 	<!-- Встановлення та видалення файлів мовних констант -->
     <languages folder="language">
-        <language tag="ru-RU">ru-RU/tpl_magnum.ini</language>
-        <language tag="ru-RU">ru-RU/tpl_magnum.sys.ini</language>
+        <language tag="uk-UA">uk-UA/tpl_magnum.ini</language>
+        <language tag="uk-UA">uk-UA/tpl_magnum.sys.ini</language>
 	</languages>
 
     <!-- Вивід параметрів в адміністративній частині шаблону -->
