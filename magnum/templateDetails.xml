@@ -7,7 +7,7 @@
 	<authorUrl>https://www.magnumblog.space</authorUrl>
 	<copyright>Copyright (C) 2005 - 2026</copyright>
 	<license>MIT</license>
-	<version>6.0.1</version>
+	<version>6.0.2</version>
 	<targetplatform name="joomla" version="6.0" />
 	<description>TPL_MAGNUM_DESC</description>
 	<inheritable>1</inheritable>
@@ -42,18 +42,26 @@
     <config>
         <fields name="params">
             <fieldset name="TPL_GOOGLE_ANALYTICS" >
-                <field 
-                name="analytics"
-					type="textarea"
-					rows="15"
-					cols="25"
-					default=""
-					filter="raw"
-					label="TPL_ANALYTICS"
-					description="TPL_ANALYTICS_DESC"
-				/>
+                <field
+                    name="analytics_id"
+                    type="text"
+                    default=""
+                    filter="string"
+                    label="TPL_ANALYTICS_ID"
+                    description="TPL_ANALYTICS_ID_DESC"
+                />
+                <!-- Запасне поле — для нестандартних випадків -->
+                <field
+                    name="analytics_custom"
+                    type="textarea"
+                    rows="10"
+                    default=""
+                    filter="raw"
+                    label="TPL_ANALYTICS_CUSTOM"
+                    description="TPL_ANALYTICS_CUSTOM_DESC"
+                />
             </fieldset>
-			<fieldset name="TPL_LOGO" >
+            <fieldset name="TPL_LOGO" >
                 <field
                     name="logoFile"
                     type="radio"

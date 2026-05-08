@@ -36,7 +36,8 @@
     $jwa->useScript('template.go_top');
 
     // Отримуєм змінні ж параметрів шаблону
-    $analytics = $this->params->get("analytics");
+    $analyticsId = $this->params->get('analytics_id');
+    $analyticsCustom = $this->params->get('analytics_custom');
     $backgroundFon = $this->params->get("backgroundFon");
     $logoFile = $this->params->get("logoFile");
 ?>
@@ -61,7 +62,17 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     </noscript>
     <jdoc:include type="styles" />
-    <?php echo $analytics ?>
+    <?php if ($analyticsId && preg_match('/^(G-[A-Z0-9]+|UA-\d+-\d+)$/', $analyticsId)) :?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo htmlspecialchars($analyticsId); ?>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '<?php echo htmlspecialchars($analyticsId); ?>');
+    </script>
+    <?php elseif ($analyticsCustom) :
+        echo $analyticsCustom;
+    endif; ?>
     <link href="media/templates/site/<?php echo $this->template ?>/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
     <link href="media/templates/site/<?php echo $this->template ?>/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="media/templates/site/<?php echo $this->template ?>/images/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180">
