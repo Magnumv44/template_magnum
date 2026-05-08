@@ -7,16 +7,18 @@
 	<authorUrl>https://www.magnumblog.space</authorUrl>
 	<copyright>Copyright (C) 2005 - 2026</copyright>
 	<license>MIT</license>
-	<version>6.0.2</version>
+	<version>6.1.0</version>
 	<targetplatform name="joomla" version="6.0" />
 	<description>TPL_MAGNUM_DESC</description>
 	<inheritable>1</inheritable>
 
 	<files>
 		<filename>index.php</filename>
+        <filename>component.php</filename>
 		<filename>joomla.asset.json</filename>
 		<filename>templateDetails.xml</filename>
 		<folder>html</folder>
+        <folder>subform</folder>
 	</files>
 	<media destination="templates/site/magnum" folder="media">
 		<folder>js</folder>
@@ -82,6 +84,19 @@
                     <option value="main-fon">TPL_MAGNUM_FON_OPTIONS_MAIN</option>
                     <option value="christmas-fon">TPL_MAGNUM_FON_OPTIONS_CHRISTMAS</option>
                 </field>
+            </fieldset>
+            <!-- Налаштування meta-тегів верифікації пошукових систем-->
+            <fieldset name="TPL_VERIFICATION">
+                <field
+                    name="verification_codes"
+                    type="subform"
+                    label="TPL_MAGNUM_VERIFICATION_LABEL"
+                    description="TPL_MAGNUM_VERIFICATION_DESC"
+                    layout="joomla.form.field.subform.repeatable-table"
+                    formsource="templates/magnum/subform/verification_codes.xml"
+                    multiple="true"
+                    buttons="add,remove"
+                />
             </fieldset>
         </fields>
     </config>

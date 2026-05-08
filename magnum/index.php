@@ -36,6 +36,7 @@
     $jwa->useScript('template.go_top');
 
     // Отримуєм змінні ж параметрів шаблону
+    $verificationCodes = $this->params->get('verification_codes', null);
     $analyticsId = $this->params->get('analytics_id');
     $analyticsCustom = $this->params->get('analytics_custom');
     $backgroundFon = $this->params->get("backgroundFon");
@@ -48,10 +49,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--TODO: спробувати перевести коди в параметри шаблону-->
     <meta name="theme-color" content="#434343">
-    <meta name="yandex-verification" content="078ecede026c3de9" />
-    <meta name="google-site-verification" content="3EutjLuhAK4xbS7NQzrUoQ6oYs5eTv3nWno9ZiEEdOU" />
-    <meta name="wot-verification" content="0da95e472682f0116875"/>
     <jdoc:include type="metas" />
+    <?php foreach ((array) $verificationCodes as $item) :
+            if (!empty($item->service) && !empty($item->code)) :
+    ?>
+    <meta name="<?php echo htmlspecialchars($item->service, ENT_QUOTES, 'UTF-8'); ?>" content="<?php echo htmlspecialchars($item->code, ENT_QUOTES, 'UTF-8'); ?>" />
+    <?php
+            endif;
+        endforeach;
+    ?>
     <!--[if lt IE 9]> 
     <script src="media/templates/site/<?php echo $this->template ?>/js/html5shiv.min.js"></script>
     <![endif]-->
