@@ -2,7 +2,7 @@
 /**
  * @package     joomla.site
  * @subpackage  templates.magnum
- * @copyright 2005-2025 Magnum
+ * @copyright 2005-2026 Magnum
  * @license MIT; see LICENSE https://github.com/Magnumv44/template_magnum/blob/main/LICENSE
  * 
  * Даний шаблон був розроблений сепціально для сайту https://www.magnumblog.space
@@ -28,6 +28,7 @@
 
     // Підключаємо ресурси з joomla.asset.json
     $jwa->useStyle('template.bootstrap.style');
+    $jwa->useStyle('template.bootstrap.icons');
     $jwa->useStyle('template.styles');
     $jwa->useScript('template.bootstrap.script');
     $jwa->useScript('template.jquery');
@@ -35,7 +36,7 @@
     $jwa->useScript('template.prism');
     $jwa->useScript('template.go_top');
 
-    // Отримуєм змінні ж параметрів шаблону
+    // Отримуєм змінні з параметрів шаблону
     $verificationCodes = $this->params->get('verification_codes', null);
     $analyticsId = $this->params->get('analytics_id');
     $analyticsCustom = $this->params->get('analytics_custom');
