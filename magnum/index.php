@@ -82,16 +82,16 @@
     <link href="media/templates/site/<?php echo $this->template ?>/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="media/templates/site/<?php echo $this->template ?>/images/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180">
 </head>
-<body id="<?php echo $backgroundFon ?>">
+<body id="<?php echo htmlspecialchars($backgroundFon, ENT_QUOTES, 'UTF-8'); ?>">
     <div class="container">
         <!-- Початок шапки сайту -->
         <header>
             <div class="row justify-content-center d-none d-lg-block">
                 <div class="col-12 logo">
-                    <a href="<?php echo $this->baseurl ?>" title="<?php echo Text::_('TPL_MAGNUM_SITE_NAME_FULL'); ?>">
-                        <img src="<?php echo $this->baseurl . '/media/templates/site/' . $this->template . '/' . $logoFile; ?>" alt="<?php echo Text::_('TPL_MAGNUM_SITE_NAME_FULL'); ?>" width="175" height="270" />
+                    <a href="<?php echo htmlspecialchars($this->baseurl, ENT_QUOTES, 'UTF-8'); ?>" title="<?php echo htmlspecialchars(Text::_('TPL_MAGNUM_SITE_NAME_FULL'), ENT_QUOTES, 'UTF-8'); ?>">
+                        <img src="<?php echo htmlspecialchars($this->baseurl . '/media/templates/site/' . $this->template . '/' . $logoFile, ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars(Text::_('TPL_MAGNUM_SITE_NAME_FULL'), ENT_QUOTES, 'UTF-8'); ?>" width="175" height="270" />
                         <span class="logo-name"><?php echo Text::_('TPL_MAGNUM_SITE_NAME_SHORT'); ?></span><br />
-                        <span class="logo-slogan">Блог <span style="color: red;">IT</span>-шника</span>
+                        <span class="logo-slogan"><?php echo Text::_('TPL_MAGNUM_SLOGAN'); ?></span>
                     </a>
                 </div>
             </div>
@@ -130,7 +130,7 @@
                     &copy; 2005 - <?php echo date('Y'); ?>
                     </div>
                     <div class="disclaimers">
-                        <a title="Натисніть щоб відкрити користувальницьку угоду." href="<?php echo $this->baseurl ?>disclaimers" target="_blank">Disclaimers</a>
+                        <a title="Натисніть щоб відкрити користувальницьку угоду." href="<?php echo htmlspecialchars($this->baseurl . '/disclaimers', ENT_QUOTES, 'UTF-8'); ?>" target="_blank">Disclaimers</a>
                     </div>
                 </div>
             </div>
