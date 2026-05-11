@@ -1,7 +1,7 @@
 [![MIT License](https://img.shields.io/github/license/Magnumv44/template_magnum)](LICENSE "Ліцензійна угода")
 [![Joomla 6](https://img.shields.io/badge/Joomla-6.x-brightgreen)](https://www.joomla.org)
 [![Bootstrap 5](https://img.shields.io/badge/Bootstrap-5.3.8-blue)](https://getbootstrap.com)
-[![Bootstrap Icons](https://img.shields.io/badge/Bootstrap_Icons-1.11.3-blue)](https://icons.getbootstrap.com)
+[![Bootstrap Icons](https://img.shields.io/badge/Bootstrap_Icons-1.13.1-blue)](https://icons.getbootstrap.com)
 [![jQuery 3](https://img.shields.io/badge/jQuery-3.7.1-0769AD)](https://jquery.org)
 [![PrismJS](https://img.shields.io/badge/PrismJS-1.30.0-brightgreen)](https://github.com/PrismJS/prism)
 [![Lightbox2](https://img.shields.io/badge/Lightbox2-2.11.4-brightgreen)](https://github.com/lokesh/lightbox2)
