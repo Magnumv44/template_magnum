@@ -2,7 +2,7 @@
 /**
  * @package     joomla.site
  * @subpackage  templates.magnum
- * @copyright 2005-2025 Magnum
+ * @copyright 2005-2026 Magnum
  * @license MIT; see LICENSE https://github.com/Magnumv44/template_magnum/blob/main/LICENSE
  * 
  * Даний шаблон був розроблений сепціально для сайту https://www.magnumblog.space
@@ -28,6 +28,7 @@
 
     // Підключаємо ресурси з joomla.asset.json
     $jwa->useStyle('template.bootstrap.style');
+    $jwa->useStyle('template.bootstrap.icons');
     $jwa->useStyle('template.styles');
     $jwa->useScript('template.bootstrap.script');
     $jwa->useScript('template.jquery');
@@ -35,22 +36,27 @@
     $jwa->useScript('template.prism');
     $jwa->useScript('template.go_top');
 
-    // Отримуєм змінні ж параметрів шаблону
-    $analytics = $this->params->get("analytics");
+    // Отримуєм змінні з параметрів шаблону
+    $verificationCodes = $this->params->get('verification_codes', null);
+    $analyticsId = $this->params->get('analytics_id');
+    $analyticsCustom = $this->params->get('analytics_custom');
     $backgroundFon = $this->params->get("backgroundFon");
     $logoFile = $this->params->get("logoFile");
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
-    <!-- Required meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--TODO: спробувати перевести коди в параметри шаблону-->
     <meta name="theme-color" content="#434343">
-    <meta name="yandex-verification" content="078ecede026c3de9" />
-    <meta name="google-site-verification" content="3EutjLuhAK4xbS7NQzrUoQ6oYs5eTv3nWno9ZiEEdOU" />
-    <meta name="wot-verification" content="0da95e472682f0116875"/>
     <jdoc:include type="metas" />
+    <?php foreach ((array) $verificationCodes as $item) :
+            if (!empty($item->service) && !empty($item->code)) :
+    ?>
+    <meta name="<?php echo htmlspecialchars($item->service, ENT_QUOTES, 'UTF-8'); ?>" content="<?php echo htmlspecialchars($item->code, ENT_QUOTES, 'UTF-8'); ?>" />
+    <?php
+            endif;
+        endforeach;
+    ?>
     <!--[if lt IE 9]> 
     <script src="media/templates/site/<?php echo $this->template ?>/js/html5shiv.min.js"></script>
     <![endif]-->
@@ -61,21 +67,31 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     </noscript>
     <jdoc:include type="styles" />
-    <?php echo $analytics ?>
+    <?php if ($analyticsId && preg_match('/^(G-[A-Z0-9]+|UA-\d+-\d+)$/', $analyticsId)) :?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo htmlspecialchars($analyticsId); ?>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '<?php echo htmlspecialchars($analyticsId); ?>');
+    </script>
+    <?php elseif ($analyticsCustom) :
+        echo $analyticsCustom;
+    endif; ?>
     <link href="media/templates/site/<?php echo $this->template ?>/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
     <link href="media/templates/site/<?php echo $this->template ?>/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="media/templates/site/<?php echo $this->template ?>/images/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180">
 </head>
-<body id="<?php echo $backgroundFon ?>">
+<body id="<?php echo htmlspecialchars($backgroundFon, ENT_QUOTES, 'UTF-8'); ?>">
     <div class="container">
         <!-- Початок шапки сайту -->
         <header>
             <div class="row justify-content-center d-none d-lg-block">
                 <div class="col-12 logo">
-                    <a href="/" title="Magnum news - Блог IT-шника">
-                        <img src="media/templates/site/<?php echo $this->template ?>/<?php echo $logoFile ?>" alt="Magnum news - Блог IT-шника" width="175" height="270" />
+                    <a href="<?php echo htmlspecialchars($this->baseurl, ENT_QUOTES, 'UTF-8'); ?>" title="<?php echo htmlspecialchars(Text::_('TPL_MAGNUM_SITE_NAME_FULL'), ENT_QUOTES, 'UTF-8'); ?>">
+                        <img src="<?php echo htmlspecialchars($this->baseurl . '/media/templates/site/' . $this->template . '/' . $logoFile, ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars(Text::_('TPL_MAGNUM_SITE_NAME_FULL'), ENT_QUOTES, 'UTF-8'); ?>" width="175" height="270" />
                         <span class="logo-name"><?php echo Text::_('TPL_MAGNUM_SITE_NAME_SHORT'); ?></span><br />
-                        <span class="logo-slogan">Блог <span style="color: red;">IT</span>-шника</span>
+                        <span class="logo-slogan"><?php echo Text::_('TPL_MAGNUM_SLOGAN'); ?></span>
                     </a>
                 </div>
             </div>
@@ -110,11 +126,11 @@
         <div class="row justify-content-center">
             <div class="col-12 footer">
                 <div class="developed">
-                    <div>Developed by: <a href="http://www.magnumblog.space" title="Developed by Magnum">Magnum</a>
+                    <div>Developed by: <a href="https://www.magnumblog.space" title="Developed by Magnum">Magnum</a>
                     &copy; 2005 - <?php echo date('Y'); ?>
                     </div>
                     <div class="disclaimers">
-                        <a title="Натисніть щоб відкрити користувальницьку угоду." href="<?php echo $this->baseurl ?>disclaimers" target="_blank">Disclaimers</a>
+                        <a title="Натисніть щоб відкрити користувальницьку угоду." href="<?php echo htmlspecialchars($this->baseurl . '/disclaimers', ENT_QUOTES, 'UTF-8'); ?>" target="_blank">Disclaimers</a>
                     </div>
                 </div>
             </div>

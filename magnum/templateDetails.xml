@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="template" client="site" version="5.0" method="upgrade">
+<extension type="template" client="site" version="6.0" method="upgrade">
 	<name>magnum</name>
-	<creationDate>2014-09-05</creationDate>
+	<creationDate>2026-02-08</creationDate>
 	<author>Vitalii Magnum</author>
 	<authorEmail>vitaliy1984@gmail.com</authorEmail>
 	<authorUrl>https://www.magnumblog.space</authorUrl>
-	<copyright>Copyright (C) 2005 - 2025</copyright>
+	<copyright>Copyright (C) 2005 - 2026</copyright>
 	<license>MIT</license>
-	<version>5.2.4</version>
-	<targetplatform name="joomla" version="5.0" />
+	<version>6.1.4</version>
+	<targetplatform name="joomla" version="6.0" />
 	<description>TPL_MAGNUM_DESC</description>
 	<inheritable>1</inheritable>
 
 	<files>
 		<filename>index.php</filename>
+        <filename>component.php</filename>
 		<filename>joomla.asset.json</filename>
 		<filename>templateDetails.xml</filename>
 		<folder>html</folder>
+        <folder>subform</folder>
 	</files>
 	<media destination="templates/site/magnum" folder="media">
 		<folder>js</folder>
@@ -34,26 +36,34 @@
 
 	<!-- Встановлення та видалення файлів мовних констант -->
     <languages folder="language">
-        <language tag="ru-RU">ru-RU/tpl_magnum.ini</language>
-        <language tag="ru-RU">ru-RU/tpl_magnum.sys.ini</language>
+        <language tag="uk-UA">uk-UA/tpl_magnum.ini</language>
+        <language tag="uk-UA">uk-UA/tpl_magnum.sys.ini</language>
 	</languages>
 
     <!-- Вивід параметрів в адміністративній частині шаблону -->
     <config>
         <fields name="params">
             <fieldset name="TPL_GOOGLE_ANALYTICS" >
-                <field 
-                name="analytics"
-					type="textarea"
-					rows="15"
-					cols="25"
-					default=""
-					filter="raw"
-					label="TPL_ANALYTICS"
-					description="TPL_ANALYTICS_DESC"
-				/>
+                <field
+                    name="analytics_id"
+                    type="text"
+                    default=""
+                    filter="string"
+                    label="TPL_ANALYTICS_ID"
+                    description="TPL_ANALYTICS_ID_DESC"
+                />
+                <!-- Запасне поле — для нестандартних випадків -->
+                <field
+                    name="analytics_custom"
+                    type="textarea"
+                    rows="10"
+                    default=""
+                    filter="raw"
+                    label="TPL_ANALYTICS_CUSTOM"
+                    description="TPL_ANALYTICS_CUSTOM_DESC"
+                />
             </fieldset>
-			<fieldset name="TPL_LOGO" >
+            <fieldset name="TPL_LOGO" >
                 <field
                     name="logoFile"
                     type="radio"
@@ -74,6 +84,19 @@
                     <option value="main-fon">TPL_MAGNUM_FON_OPTIONS_MAIN</option>
                     <option value="christmas-fon">TPL_MAGNUM_FON_OPTIONS_CHRISTMAS</option>
                 </field>
+            </fieldset>
+            <!-- Налаштування meta-тегів верифікації пошукових систем-->
+            <fieldset name="TPL_VERIFICATION">
+                <field
+                    name="verification_codes"
+                    type="subform"
+                    label="TPL_MAGNUM_VERIFICATION_LABEL"
+                    description="TPL_MAGNUM_VERIFICATION_DESC"
+                    layout="joomla.form.field.subform.repeatable-table"
+                    formsource="templates/magnum/subform/verification_codes.xml"
+                    multiple="true"
+                    buttons="add,remove"
+                />
             </fieldset>
         </fields>
     </config>

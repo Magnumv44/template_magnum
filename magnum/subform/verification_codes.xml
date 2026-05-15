@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="verification_codes_fieldset">
+        <field
+            name="service"
+            type="list"
+            label="TPL_MAGNUM_VERIFICATION_SERVICE"
+        >
+            <option value="yandex-verification">Yandex Webmaster</option>
+            <option value="google-site-verification">Google Search Console</option>
+            <option value="wot-verification">WOT</option>
+            <option value="msvalidate.01">Bing Webmaster</option>
+            <option value="baidu-site-verification">Baidu</option>
+            <option value="p:domain_verify">Pinterest</option>
+        </field>
+        <field
+            name="code"
+            type="text"
+            label="TPL_MAGNUM_VERIFICATION_CODE"
+        />
+    </fieldset>
+</form>
