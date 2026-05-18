@@ -1,0 +1,52 @@
+name: Release Template
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    name: Build and Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+
+      - name: Build release archive
+        run: |
+          cd magnum
+          zip -r "../template_magnum_v${{ steps.version.outputs.VERSION }}.zip" . \
+            --exclude "*.git*" \
+            --exclude "*/.DS_Store" \
+            --exclude "*/Thumbs.db" \
+            --exclude "*/__MACOSX*"
+          cd ..
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Magnum Template v${{ steps.version.outputs.VERSION }}"
+          tag_name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          files: |
+            template_magnum_v${{ steps.version.outputs.VERSION }}.zip
+          body: |
+            ## 🚀 Встановлення
+
+            1. Завантажте архів `template_magnum_v${{ steps.version.outputs.VERSION }}.zip`
+            2. В адмінці Joomla: **System → Install → Extensions** → завантажте архів
+            3. Активуйте шаблон: **System → Site Templates Styles** → встановіть як Default
+
+            ## 📋 Вимоги
+            - Joomla 6.0+
+            - PHP 8.1+
