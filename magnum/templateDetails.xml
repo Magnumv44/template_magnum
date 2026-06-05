@@ -7,7 +7,7 @@
 	<authorUrl>https://www.magnumblog.space</authorUrl>
 	<copyright>Copyright (C) 2005 - 2026</copyright>
 	<license>MIT</license>
-	<version>6.1.5</version>
+	<version>6.1.6</version>
 	<targetplatform name="joomla" version="6.0" />
 	<description>TPL_MAGNUM_DESC</description>
 	<inheritable>1</inheritable>
@@ -43,7 +43,7 @@
     <!-- Вивід параметрів в адміністративній частині шаблону -->
     <config>
         <fields name="params">
-            <fieldset name="TPL_GOOGLE_ANALYTICS" >
+            <fieldset name="TPL_GOOGLE_ANALYTICS">
                 <field
                     name="analytics_id"
                     type="text"
@@ -63,7 +63,7 @@
                     description="TPL_ANALYTICS_CUSTOM_DESC"
                 />
             </fieldset>
-            <fieldset name="TPL_LOGO" >
+            <fieldset name="TPL_LOGO">
                 <field
                     name="logoFile"
                     type="radio"
@@ -84,8 +84,38 @@
                     <option value="main-fon">TPL_MAGNUM_FON_OPTIONS_MAIN</option>
                     <option value="christmas-fon">TPL_MAGNUM_FON_OPTIONS_CHRISTMAS</option>
                 </field>
+                <field
+                    name="themeColor"
+                    type="color"
+                    default="#434343"
+                    label="TPL_MAGNUM_THEME_COLOR_LABEL"
+                    description="TPL_MAGNUM_THEME_COLOR_DESC"
+                />
             </fieldset>
-            <!-- Налаштування meta-тегів верифікації пошукових систем-->
+            <fieldset name="TPL_COLORS">
+                <field
+                    name="colorPrimary"
+                    type="color"
+                    default="#434343"
+                    label="TPL_MAGNUM_COLOR_PRIMARY_LABEL"
+                    description="TPL_MAGNUM_COLOR_PRIMARY_DESC"
+                />
+                <field
+                    name="colorAccent"
+                    type="color"
+                    default="#ffad29"
+                    label="TPL_MAGNUM_COLOR_ACCENT_LABEL"
+                    description="TPL_MAGNUM_COLOR_ACCENT_DESC"
+                />
+                <field
+                    name="colorLink"
+                    type="color"
+                    default="#0080c0"
+                    label="TPL_MAGNUM_COLOR_LINK_LABEL"
+                    description="TPL_MAGNUM_COLOR_LINK_DESC"
+                />
+            </fieldset>
+            <!-- Налаштування meta-тегів верифікації пошукових систем -->
             <fieldset name="TPL_VERIFICATION">
                 <field
                     name="verification_codes"
