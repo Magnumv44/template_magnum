@@ -1,9 +1,6 @@
-/*
-TODO Сверстать место под банер в десктоп версии, хотя в мобильной он более актуален
-*/
 @charset "utf-8";
 
-/*Общие стили бля html*/
+/*Загальні стилі html*/
 * {
     margin: 0;
     padding: 0;
@@ -28,10 +25,10 @@ p {
     margin: 0;
 }
 
-/* Делаем нестандартный цвет выделения текста */
+/* Робимо нестандартний колір виділення тексту */
 ::selection {
-    color: white; /* Цвет текста */
-    background: #434343; /* Цвет фона */
+    color: white; /* Колір тексту */
+    background: #434343; /* Колір фону */
 }
 
 a {
@@ -57,7 +54,7 @@ ol {
 }
 /***********************************************************************/
 
-/*Стили шапки с логотипом*/
+/* Стилі шапки з логотипом */
 #main-fon {
     background-image: url("../images/fon.jpg");
 }
@@ -66,25 +63,25 @@ ol {
     background-image: url("../images/christmas-fon.jpg");
 }
 
-/*Стили шапки сайта*/
+/* Стилі шапки сайту*/
 .logo {
     display: inline-block;
-    padding-left: 4em; /*Отступ слева для более красивого выравнивания на desktop*/
+    padding-left: 4em; /* Відступ зліба для більш гарно відображення на desktop*/
     padding-bottom: 0.5em;
 }
 
 .logo img {
-    float: left; /*Для обтекания текста справа от логотипа*/
+    float: left; /* Для обтікання тексту праворуч від логотипу */
 }
 
-/*Импорт своего шрифта в шаблон*/
+/* Імпорт свого шрифту в шаблон */
 @font-face {
     font-family: MrRobot;
     src: url("../fonts/mrrobot.woff2") format("woff2");
     font-display: swap;
 }
 
-/*Стили названия блога*/
+/* Стилі назви блогу */
 .logo-name {
     display: inline-block;
     color: #434343;
@@ -94,7 +91,7 @@ ol {
     margin-left: 1em;
 }
 
-/*Стили слогана во шапке*/
+/* Стилі слогану в шапці сайту */
 .logo-slogan {
     display: inline-block;
     color: #0088cc;
@@ -114,7 +111,7 @@ a .logo-slogan:hover {
 /**************************************************************************/
 
 
-/*Стили горизонтального меню */
+/* Стилі горизонтального меню */
 .row .top-menu {
     margin: 0;
     background-color: #434343;
@@ -124,26 +121,26 @@ a .logo-slogan:hover {
     padding-left: 0%;
 }
 
-/* Цвет ссылок в меню */
+/* Колір посилань в меню */
 .top-menu ul li a {
     color: white;
 }
 /****************************************************************************/
 
-/* Стили контентной части */
+/* Стіли контентної частини */
 
-/* Задаем цвет фона и боковые линии у контентной части */
+/* Задаємо колір фону та бічні лінії у контентній частині */
 .container .content { /* TODO перенести эти стили выше в один для row*/
     border-left: 1px solid Gray;
     border-right: 1px solid Gray;
     background-color: #f9f9f9;
 }
 
-/*Стили для модулей контактов и объявлений*/
+/* Стилі для модулів контактів та оголошень */
 
-/* Поиск */
+/* Пошук */
 
-/* Декорация формы ввода в блоке поиска*/
+/* Декорація форми введення у блоці пошуку */
 .form-control {
     border-color: #ccc;
 }
@@ -162,7 +159,7 @@ a .logo-slogan:hover {
     border-color: transparent;
 }
 
-/* Убираем голубую рамку после нажатия, это универсальное правило для почти любого элемента */
+/* Прибираємо блакитну рамку після натискання, це універсальне правило майже для будь-якого елемента */
 .btn-primary:focus, .form-control:focus {
     box-shadow: none;
 }
@@ -180,12 +177,12 @@ a .logo-slogan:hover {
 }
 /********************************************************************************************/
 
-/* Стили отступа левых блоков от верхнего меню */
+/* Стилі відступу лівих блоків від верхнього меню */
 .moduletable {
     margin-top: 10px;
 }
 
-/* Вывод заголовка модулей левой стороны */
+/* Виведення заголовка модулів лівої частини */
 .moduletable h3 {
     text-align: center;
     background-color: #434343;
@@ -195,7 +192,7 @@ a .logo-slogan:hover {
     line-height: 40px;
 }
 
-/* Скругление углов у заголовков и текстовой части модулей левой стороны? а так же цитат в контенте*/
+/* Заокруглення кутів у заголовків та текстової частини модулів лівої сторони, а також цитат у контенті */
 .moduletable h3,
 .moduletable .custom,
 .blog-item blockquote,
@@ -203,7 +200,7 @@ a .logo-slogan:hover {
     border-radius: 4px;
 }
 
-/* Стили текстовой части модулей левой стороны */
+/* Стилі текстової частини модулів лівої частини */
 .moduletable .custom {
     margin-top: 10px;
     padding: 7px;
@@ -221,7 +218,7 @@ a .logo-slogan:hover {
 }
 /****************************************************************************************/
 
-/* Стили страницы поиска */
+/* Стилі сторінки пошуку */
 #search-result-empty {
     margin-bottom: 1.5em;
 }
@@ -230,16 +227,11 @@ a .logo-slogan:hover {
     font: bold 16px Verdana;
 }
 
-/*
-FIXME Сделать так, что бы таблицы не выпадали за границы по возможности
-https://www.magnumblog.space/java/131-translating-java-code-conventions
-*/
-
-/* Стили вывода контента */
+/* Стилі виводу матеріалів */
 .blog-item, .content-full {
     border-radius: 4px;
     border: 1px #ccc solid;
-    margin-top: 1%;             /* Отступ контента от верхнего меню */
+    margin-top: 1%;             /* Відступ контенту від верхнього меню */
     padding: 5px 10px 2px;
     line-height: 1.5;
 }
@@ -248,7 +240,7 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
     margin-bottom: 10px;
 }
 
-/*Размер шрифта для заголовка страницы*/
+/* Розмір шрифту для заголовка сторінки */
 .page-header {
     margin-left: 10px;
     border: none;
@@ -278,12 +270,12 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
     border-color: #ccc;
 }
 
-/*Стили вывода статей*/
+/* Стилі виведення матеріалів */
 .blog-item p,
 .content-full p,
 .blog-item blockquote,
 .content-full blockquote {
-    word-wrap: break-word;  /*Фикс для принудительного переноса строки если текст не помещается*/
+    word-wrap: break-word;  /* Фікс для примусового перенесення рядка якщо текст не міститься */
 }
 
 .blog-item ol,
@@ -293,7 +285,7 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
     list-style: none;
 }
 
-/*Многоуровневые нумерованные списки*/
+/* Багаторівневі нумеровані списки */
 .blog-item ol li:before,
 .content-full ol li:before {
     counter-increment: item;
@@ -305,13 +297,13 @@ https://www.magnumblog.space/java/131-translating-java-code-conventions
     content: counters(item, ".") " ";
 }
 
-/*Отмена стилей ресета нумерованных списков*/
+/* Скасування стилів ресета нумерованих списків */
 .blog-item .listNoneReset,
 .content-full .listNoneReset {
     counter-reset: none;
 }
 
-/*Стили для списков с буквенной нумерацией*/
+/* Стилі для списків із літерною нумерацією */
 .blog-item .listType,
 .content-full .listType {
     list-style-type: lower-alpha;
@@ -355,7 +347,7 @@ pre {
     margin-top: 0;
 }
 
-/* Ширина строки для отступа между заголовками */
+/* Ширина рядка для відступу між заголовками */
 .blog-item p,
 .content-full p,
 .blog-item h2,
@@ -430,7 +422,7 @@ pre {
 .blog-item figure img,
 .content-full figure img {
     margin: 5px 10px;
-    max-width:100%; /* Задание отзывчивости изображений*/
+    max-width:100%; /* Задання responsibility зображень залежно від розміру екрану*/
     height:auto
 }
 
@@ -481,7 +473,7 @@ pre {
     padding-right: 12px;
 }
 
-/* Стили PrismJS для вывода цветного кода в контенте */
+/* Стилі PrismJS для виведення кольорового коду у контенті */
 code[class*=language-],
 pre[class*=language-] {
     color:#000;
@@ -490,7 +482,7 @@ pre[class*=language-] {
     font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
     font-size:1em;
     text-align:left;
-    white-space:pre-wrap; /* Перенос строки если код не помещается на экране, обычно на мобильной версии*/
+    white-space:pre-wrap; /* Перенесення рядка якщо код не вміщується на екрані, зазвичай на мобільній версії */
     word-spacing:normal;
     word-break:normal;
     word-wrap:normal;
@@ -645,7 +637,7 @@ pre[class*=language-] {
 
 /********************************************************************/
 
-/* Стили для lightbox */
+/* Стилі для lightbox */
 
 /* Preload images */
 body:after {
@@ -855,9 +847,9 @@ body.lb-disable-scrolling {
 
 /**************************************************************************/
 
-/* Стили информации о посте */
+/* Стилі інформації про пост */
 .blog-item dl {
-    margin: 0; /* Убираем отступы, чтобы кнопка "Подробнее" не уплывала под низ */
+    margin: 0; /* Забираємо відступи, щоб кнопка "Докладніше" не спливала під низ */
 }
 
 .createdby,
@@ -899,7 +891,7 @@ body.lb-disable-scrolling {
     text-decoration: none;
 }
 
-/* Стили информации о посте в полном варианте */
+/* Стилі інформації про пост у повному варіанті матеріалу */
 .content-info-full {
     width: 100%;
     display: inline-block;
@@ -910,7 +902,7 @@ body.lb-disable-scrolling {
     margin-bottom: 0;
 }
 
-/* Стили постраничной навигации */
+/* Стилі посторінкової навігації */
 .pagination {
     margin: 20px 0 10px 0;
 }
@@ -937,15 +929,15 @@ body.lb-disable-scrolling {
 }
 
 .pagination a:focus {
-    box-shadow: none; /* TODO вынести это правило в отдельное и скорее всего для всех ссылок*/
+    box-shadow: none;
 }
 
-/* Стили футера */
+/* Стилі підвалу сайту */
 .footer {
     background-color: #434343;
     border-top: 2px solid #0080c0;
     color: #fff;
-    line-height: 35px; /*Выравнивает по вертикали благодаря междустрочному интервалу*/
+    line-height: 35px; /* Вирівнює по вертикалі завдяки міжрядковому інтервалу */
     min-height: 50px;
     padding-bottom: .8em;
 }
@@ -969,7 +961,7 @@ body.lb-disable-scrolling {
     line-height: 5px;
 }
 
-/* Стили кнопки Вверх */
+/* Стилі кнопки "Вгору" */
 #go-top {
     width: 50px;
     height: 50px;
@@ -997,9 +989,9 @@ body.lb-disable-scrolling {
 
 /* Responsive style */
 
-/* Стили кнопки отображения мобильного меню */
+/* Стилі кнопки відображення мобільного меню */
 
-/* Делаем кнопку мобильного меню другим цветом */
+/* Робимо кнопку мобільного меню іншим кольором */
 .navbar-toggler {
     background-color: #575757;
     color: #fff;
@@ -1010,27 +1002,27 @@ body.lb-disable-scrolling {
     background-color: #ffad29;
 }
 
-/* Убираем жирную рамку после нажатия на кнопу*/
+/* Забираємо чорну рамку після натискання на кнопку */
 .navbar-toggler:focus {
     outline: 0;
     box-shadow: none !important;
 }
 
 
-/* Общие стили для экранов 1200+, 1000x1190, 800x1000*/
+/* Загальні стилі для екранів 1200+, 1000x1190, 800x1000 */
 @media (min-width: 1200px), (min-width: 992px), (min-width: 1400px) {
-    /*Стил горизонтального меню*/
+    /* Стил горизонтального меню */
     .top-menu .container-fluid {
         padding-left: 0%;
         padding-right: 0%;
     }
 
-    /* Выравниваем все содержимое по центру */
+    /* Вирівнюємо весь вміст по центру */
     .top-menu {
         text-align: center;
     }
 
-    /* Делаем элемент блочным для выравнивания меню по центру */
+    /* Робимо елемент блоковим для вирівнювання меню по центру */
     .align-menu {
         display: inline-block;
     }
@@ -1053,7 +1045,7 @@ body.lb-disable-scrolling {
         text-decoration: none;
     }
 
-    /* Убираем задний фон на фокусной ссылке в меню, добавляя линию внизу и меняем цвет */
+    /* Забираємо заднє тло на фокусованому посиланні в меню, додаючи лінію внизу і змінюємо колір */
     .top-menu ul li a:focus {
         background-color: transparent;
         color: white;
@@ -1065,16 +1057,16 @@ body.lb-disable-scrolling {
         font-weight: bold;
     }
 
-    /* Отступы у постов */
+    /* Відступи біля постів */
     .row .con {
         padding-right: calc(var(--bs-gutter-x) * .2);
         padding-left: calc(var(--bs-gutter-x) * .01);
     }
 }
 
-/* Стили будут применятся на телефонах и планшетах */
+/* Стилі будуть застосовані на телефонах та планшетах */
 @media (max-width: 991.98px) {
-    /* Стили названия сайта в мобильной версии*/
+    /* Стилі назви сайту у мобільній версії */
     .navbar .navbar-brand {
         color: white;
         font-weight: bold;
@@ -1085,7 +1077,6 @@ body.lb-disable-scrolling {
         text-decoration: none;
     }
 
-    /*TODO сделать отступ что бы выровнять текст по центру */
     .navbar .navbar-brand .smal-logo-text {
         margin-top: 2rem;
     }
@@ -1102,19 +1093,19 @@ body.lb-disable-scrolling {
         background-color: #fff;
         color: #000;
     }
-    /* Ширина левой и правой частей в мобильной версии */
+    /* Ширина лівої та правої частин у мобільній версії */
     .col-3, .col-9 {
         width: 100%;
         padding-right: calc(var(--bs-gutter-x) * .1);
         padding-left: calc(var(--bs-gutter-x) * .1);
     }
 
-    /* В месте вывода рекламы, убираем рамку для более лучше визуаьно восприятия */
+    /* У місці виведення реклами, прибираємо рамку для кращого візуального сприйняття */
     .googlea .custom {
         border: transparent;
     }
 
-    /* Выравнивание кнопки "Подробнее" в мобильной версии*/
+    /* Вирівнювання кнопки "Докладніше" у мобільній версії */
     .blog-item .readmore {
         margin-left: .1rem;
     }
