@@ -1,9 +1,21 @@
 @charset "utf-8";
 
-/*Загальні стилі html*/
-* {
-    margin: 0;
-    padding: 0;
+/* Змінні кольорів шаблону */
+:root {
+    --color-primary:      #434343;
+    --color-accent:       #ffad29;
+    --color-link:         #0080c0;
+    --color-logo-name:    #434343;
+    --color-slogan:       #0088cc;
+    --color-slogan-hover: #0022cc;
+    --color-logo-it:      #ff0000;
+}
+
+/* Загальні стилі html */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 body {
@@ -18,7 +30,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    line-height: 0;
+    line-height: 1.2;
 }
 
 p {
@@ -28,7 +40,7 @@ p {
 /* Робимо нестандартний колір виділення тексту */
 ::selection {
     color: white; /* Колір тексту */
-    background: #434343; /* Колір фону */
+    background: var(--color-primary); /* Колір фону */
 }
 
 a {
@@ -45,10 +57,6 @@ abbr:hover {
     cursor: help;
 }
 
-img {
-    border: 0;
-}
-
 ol {
     padding-left: 1rem;
 }
@@ -63,10 +71,10 @@ ol {
     background-image: url("../images/christmas-fon.jpg");
 }
 
-/* Стилі шапки сайту*/
+/* Стилі шапки сайту */
 .logo {
     display: inline-block;
-    padding-left: 4em; /* Відступ зліба для більш гарно відображення на desktop*/
+    padding-left: 4em; /* Відступ зліва для більш гарного відображення на desktop */
     padding-bottom: 0.5em;
 }
 
@@ -84,7 +92,7 @@ ol {
 /* Стилі назви блогу */
 .logo-name {
     display: inline-block;
-    color: #434343;
+    color: var(--color-logo-name);
     font-family: MrRobot;
     font-size: 60px;
     margin-top: 1.5em;
@@ -94,7 +102,7 @@ ol {
 /* Стилі слогану в шапці сайту */
 .logo-slogan {
     display: inline-block;
-    color: #0088cc;
+    color: var(--color-slogan);
     font-family: "Press Start 2P", cursive;
     font-size: 30px;
     margin-left: 3.2em;
@@ -102,11 +110,11 @@ ol {
 
 a .logo-slogan:hover {
     text-decoration: none;
-    color: #0022cc;
+    color: var(--color-slogan-hover);
 }
 
 .logo-it {
-    color: red;
+    color: var(--color-logo-it);
 }
 /**************************************************************************/
 
@@ -114,11 +122,11 @@ a .logo-slogan:hover {
 /* Стилі горизонтального меню */
 .row .top-menu {
     margin: 0;
-    background-color: #434343;
-    border-bottom: 1px solid #434343;
+    background-color: var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
     border-radius: 0;
-    padding-right: 0%;
-    padding-left: 0%;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 /* Колір посилань в меню */
@@ -127,10 +135,10 @@ a .logo-slogan:hover {
 }
 /****************************************************************************/
 
-/* Стіли контентної частини */
+/* Стилі контентної частини */
 
 /* Задаємо колір фону та бічні лінії у контентній частині */
-.container .content { /* TODO перенести эти стили выше в один для row*/
+.container .content {
     border-left: 1px solid Gray;
     border-right: 1px solid Gray;
     background-color: #f9f9f9;
@@ -146,16 +154,16 @@ a .logo-slogan:hover {
 }
 
 .form-control:focus {
-    border-color: #434343;
+    border-color: var(--color-primary);
 }
 
 .btn-primary {
-    background-color: #434343;
+    background-color: var(--color-primary);
     border-color: transparent;
 }
 
 .btn-primary:hover {
-    background-color: #ffad29;
+    background-color: var(--color-accent);
     border-color: transparent;
 }
 
@@ -185,7 +193,7 @@ a .logo-slogan:hover {
 /* Виведення заголовка модулів лівої частини */
 .moduletable h3 {
     text-align: center;
-    background-color: #434343;
+    background-color: var(--color-primary);
     color: #fff;
     font-size: 15px;
     font-weight: 700;
@@ -214,7 +222,7 @@ a .logo-slogan:hover {
 }
 
 .moduletable .custom .bi-instagram {
-    color: red;
+    color: #C13584;
 }
 /****************************************************************************************/
 
@@ -224,7 +232,10 @@ a .logo-slogan:hover {
 }
 
 #search-result-empty h2 {
-    font: bold 16px Verdana;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.2;
 }
 
 /* Стилі виводу матеріалів */
@@ -253,7 +264,10 @@ a .logo-slogan:hover {
 .item-title a,
 .content-full .page-header h1,
 .page-header h2 {
-    font: bold 16px Verdana;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.2;
 }
 
 .item-title {
@@ -289,11 +303,6 @@ a .logo-slogan:hover {
 .blog-item ol li:before,
 .content-full ol li:before {
     counter-increment: item;
-    content: counter(item) ". ";
-}
-
-.blog-item ol li:before,
-.content-full ol li:before {
     content: counters(item, ".") " ";
 }
 
@@ -347,7 +356,7 @@ pre {
     margin-top: 0;
 }
 
-/* Ширина рядка для відступу між заголовками */
+/* Міжрядковий інтервал для параграфів та заголовків */
 .blog-item p,
 .content-full p,
 .blog-item h2,
@@ -358,7 +367,7 @@ pre {
 .content-full h4,
 .blog-item h5,
 .content-full h5 {
-    line-height: 20px;
+    line-height: 1.5;
 }
 
 .blog-item h2,
@@ -418,12 +427,12 @@ pre {
 }
 
 .blog-item p img,
-.content-full p img, 
+.content-full p img,
 .blog-item figure img,
 .content-full figure img {
     margin: 5px 10px;
-    max-width:100%; /* Задання responsibility зображень залежно від розміру екрану*/
-    height:auto
+    max-width: 100%; /* Задання responsibility зображень залежно від розміру екрану */
+    height: auto;
 }
 
 .blog-item p a,
@@ -934,8 +943,8 @@ body.lb-disable-scrolling {
 
 /* Стилі підвалу сайту */
 .footer {
-    background-color: #434343;
-    border-top: 2px solid #0080c0;
+    background-color: var(--color-primary);
+    border-top: 2px solid var(--color-link);
     color: #fff;
     line-height: 35px; /* Вирівнює по вертикалі завдяки міжрядковому інтервалу */
     min-height: 50px;
@@ -970,7 +979,7 @@ body.lb-disable-scrolling {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #434343;
+    background-color: var(--color-primary);
     color: white;
     cursor: pointer;
     position: fixed;
@@ -995,11 +1004,10 @@ body.lb-disable-scrolling {
 .navbar-toggler {
     background-color: #575757;
     color: #fff;
-    line-height: inherit;
 }
 
 .navbar-toggler:hover {
-    background-color: #ffad29;
+    background-color: var(--color-accent);
 }
 
 /* Забираємо чорну рамку після натискання на кнопку */
@@ -1009,12 +1017,12 @@ body.lb-disable-scrolling {
 }
 
 
-/* Загальні стилі для екранів 1200+, 1000x1190, 800x1000 */
-@media (min-width: 1200px), (min-width: 992px), (min-width: 1400px) {
-    /* Стил горизонтального меню */
+/* Загальні стилі для екранів від 992px */
+@media (min-width: 992px) {
+    /* Стилі горизонтального меню */
     .top-menu .container-fluid {
-        padding-left: 0%;
-        padding-right: 0%;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     /* Вирівнюємо весь вміст по центру */
@@ -1040,7 +1048,7 @@ body.lb-disable-scrolling {
 
     .top-menu ul li a:hover {
         background-color: #e5e5e5;
-        border-bottom: 2px solid #ffad29;
+        border-bottom: 2px solid var(--color-accent);
         color: #0a0a0a;
         text-decoration: none;
     }
@@ -1052,7 +1060,7 @@ body.lb-disable-scrolling {
     }
 
     .top-menu ul li.current a {
-        border-bottom: 2px solid #0080c0;
+        border-bottom: 2px solid var(--color-link);
         cursor: default;
         font-weight: bold;
     }
