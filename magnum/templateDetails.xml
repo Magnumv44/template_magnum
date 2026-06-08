@@ -63,6 +63,7 @@
                     description="TPL_ANALYTICS_CUSTOM_DESC"
                 />
             </fieldset>
+            <!-- Вкладка 1: вибір логотипу та фону -->
             <fieldset name="TPL_LOGO">
                 <field
                     name="logoFile"
@@ -84,6 +85,9 @@
                     <option value="main-fon">TPL_MAGNUM_FON_OPTIONS_MAIN</option>
                     <option value="christmas-fon">TPL_MAGNUM_FON_OPTIONS_CHRISTMAS</option>
                 </field>
+            </fieldset>
+            <!-- Вкладка 2: глобальні кольори шаблону -->
+            <fieldset name="TPL_COLORS">
                 <field
                     name="themeColor"
                     type="color"
@@ -91,8 +95,6 @@
                     label="TPL_MAGNUM_THEME_COLOR_LABEL"
                     description="TPL_MAGNUM_THEME_COLOR_DESC"
                 />
-            </fieldset>
-            <fieldset name="TPL_COLORS">
                 <field
                     name="colorPrimary"
                     type="color"
@@ -113,6 +115,37 @@
                     default="#0080c0"
                     label="TPL_MAGNUM_COLOR_LINK_LABEL"
                     description="TPL_MAGNUM_COLOR_LINK_DESC"
+                />
+            </fieldset>
+            <!-- Вкладка 3: кольори шапки сайту -->
+            <fieldset name="TPL_HEADER_COLORS">
+                <field
+                    name="colorLogoName"
+                    type="color"
+                    default="#434343"
+                    label="TPL_MAGNUM_COLOR_LOGO_NAME_LABEL"
+                    description="TPL_MAGNUM_COLOR_LOGO_NAME_DESC"
+                />
+                <field
+                    name="colorSlogan"
+                    type="color"
+                    default="#0088cc"
+                    label="TPL_MAGNUM_COLOR_SLOGAN_LABEL"
+                    description="TPL_MAGNUM_COLOR_SLOGAN_DESC"
+                />
+                <field
+                    name="colorSloganHover"
+                    type="color"
+                    default="#0022cc"
+                    label="TPL_MAGNUM_COLOR_SLOGAN_HOVER_LABEL"
+                    description="TPL_MAGNUM_COLOR_SLOGAN_HOVER_DESC"
+                />
+                <field
+                    name="colorLogoIt"
+                    type="color"
+                    default="#ff0000"
+                    label="TPL_MAGNUM_COLOR_LOGO_IT_LABEL"
+                    description="TPL_MAGNUM_COLOR_LOGO_IT_DESC"
                 />
             </fieldset>
             <!-- Налаштування meta-тегів верифікації пошукових систем -->

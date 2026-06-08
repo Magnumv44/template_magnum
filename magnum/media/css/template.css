@@ -2,9 +2,13 @@
 
 /* Змінні кольорів шаблону */
 :root {
-    --color-primary: #434343;
-    --color-accent:  #ffad29;
-    --color-link:    #0080c0;
+    --color-primary:      #434343;
+    --color-accent:       #ffad29;
+    --color-link:         #0080c0;
+    --color-logo-name:    #434343;
+    --color-slogan:       #0088cc;
+    --color-slogan-hover: #0022cc;
+    --color-logo-it:      #ff0000;
 }
 
 /* Загальні стилі html */
@@ -88,7 +92,7 @@ ol {
 /* Стилі назви блогу */
 .logo-name {
     display: inline-block;
-    color: var(--color-primary);
+    color: var(--color-logo-name);
     font-family: MrRobot;
     font-size: 60px;
     margin-top: 1.5em;
@@ -98,7 +102,7 @@ ol {
 /* Стилі слогану в шапці сайту */
 .logo-slogan {
     display: inline-block;
-    color: #0088cc;
+    color: var(--color-slogan);
     font-family: "Press Start 2P", cursive;
     font-size: 30px;
     margin-left: 3.2em;
@@ -106,11 +110,11 @@ ol {
 
 a .logo-slogan:hover {
     text-decoration: none;
-    color: #0022cc;
+    color: var(--color-slogan-hover);
 }
 
 .logo-it {
-    color: red;
+    color: var(--color-logo-it);
 }
 /**************************************************************************/
 

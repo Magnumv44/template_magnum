@@ -39,20 +39,28 @@
     $analyticsCustom   = $this->params->get('analytics_custom');
     $backgroundFon     = $this->params->get('backgroundFon');
     $logoFile          = $this->params->get('logoFile');
-    $themeColor        = $this->params->get('themeColor',   '#434343');
-    $colorPrimary      = $this->params->get('colorPrimary', '#434343');
-    $colorAccent       = $this->params->get('colorAccent',  '#ffad29');
-    $colorLink         = $this->params->get('colorLink',    '#0080c0');
+    $themeColor        = $this->params->get('themeColor',        '#434343');
+    $colorPrimary      = $this->params->get('colorPrimary',      '#434343');
+    $colorAccent       = $this->params->get('colorAccent',       '#ffad29');
+    $colorLink         = $this->params->get('colorLink',         '#0080c0');
+    $colorLogoName     = $this->params->get('colorLogoName',     '#434343');
+    $colorSlogan       = $this->params->get('colorSlogan',       '#0088cc');
+    $colorSloganHover  = $this->params->get('colorSloganHover',  '#0022cc');
+    $colorLogoIt       = $this->params->get('colorLogoIt',       '#ff0000');
 
     // Валідація кольорів — лише hex формат
     $validateColor = function(string $color, string $default): string {
         return preg_match('/^#[0-9A-Fa-f]{6}$/', $color) ? $color : $default;
     };
 
-    $themeColor   = $validateColor($themeColor,   '#434343');
-    $colorPrimary = $validateColor($colorPrimary, '#434343');
-    $colorAccent  = $validateColor($colorAccent,  '#ffad29');
-    $colorLink    = $validateColor($colorLink,    '#0080c0');
+    $themeColor       = $validateColor($themeColor,       '#434343');
+    $colorPrimary     = $validateColor($colorPrimary,     '#434343');
+    $colorAccent      = $validateColor($colorAccent,      '#ffad29');
+    $colorLink        = $validateColor($colorLink,        '#0080c0');
+    $colorLogoName    = $validateColor($colorLogoName,    '#434343');
+    $colorSlogan      = $validateColor($colorSlogan,      '#0088cc');
+    $colorSloganHover = $validateColor($colorSloganHover, '#0022cc');
+    $colorLogoIt      = $validateColor($colorLogoIt,      '#ff0000');
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -77,9 +85,13 @@
     <jdoc:include type="styles" />
     <style>
         :root {
-            --color-primary: <?php echo $colorPrimary; ?>;
-            --color-accent:  <?php echo $colorAccent; ?>;
-            --color-link:    <?php echo $colorLink; ?>;
+            --color-primary:      <?php echo $colorPrimary; ?>;
+            --color-accent:       <?php echo $colorAccent; ?>;
+            --color-link:         <?php echo $colorLink; ?>;
+            --color-logo-name:    <?php echo $colorLogoName; ?>;
+            --color-slogan:       <?php echo $colorSlogan; ?>;
+            --color-slogan-hover: <?php echo $colorSloganHover; ?>;
+            --color-logo-it:      <?php echo $colorLogoIt; ?>;
         }
     </style>
     <?php if ($analyticsId && preg_match('/^(G-[A-Z0-9]+|UA-\d+-\d+)$/', $analyticsId)) :?>
