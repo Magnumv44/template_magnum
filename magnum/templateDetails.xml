@@ -7,7 +7,7 @@
 	<authorUrl>https://www.magnumblog.space</authorUrl>
 	<copyright>Copyright (C) 2005 - 2026</copyright>
 	<license>MIT</license>
-	<version>6.1.6</version>
+	<version>6.2.0</version>
 	<targetplatform name="joomla" version="6.0" />
 	<description>TPL_MAGNUM_DESC</description>
 	<inheritable>1</inheritable>
@@ -15,6 +15,7 @@
 	<files>
 		<filename>index.php</filename>
         <filename>component.php</filename>
+        <filename>error.php</filename>
 		<filename>joomla.asset.json</filename>
 		<filename>templateDetails.xml</filename>
 		<folder>html</folder>
@@ -63,7 +64,7 @@
                     description="TPL_ANALYTICS_CUSTOM_DESC"
                 />
             </fieldset>
-            <!-- Вкладка 1: вибір логотипу та фону -->
+            <!-- Вкладка вибору логотипа та фону -->
             <fieldset name="TPL_LOGO">
                 <field
                     name="logoFile"
@@ -86,7 +87,7 @@
                     <option value="christmas-fon">TPL_MAGNUM_FON_OPTIONS_CHRISTMAS</option>
                 </field>
             </fieldset>
-            <!-- Вкладка 2: глобальні кольори шаблону -->
+            <!-- Вкладка глобальних кольорів шаблону -->
             <fieldset name="TPL_COLORS">
                 <field
                     name="themeColor"
@@ -117,7 +118,7 @@
                     description="TPL_MAGNUM_COLOR_LINK_DESC"
                 />
             </fieldset>
-            <!-- Вкладка 3: кольори шапки сайту -->
+            <!-- Вкладка кольорів шапки сайту -->
             <fieldset name="TPL_HEADER_COLORS">
                 <field
                     name="colorLogoName"
@@ -146,6 +147,54 @@
                     default="#ff0000"
                     label="TPL_MAGNUM_COLOR_LOGO_IT_LABEL"
                     description="TPL_MAGNUM_COLOR_LOGO_IT_DESC"
+                />
+            </fieldset>
+            <!-- Вкладка фраз для сторінок помилок 404, 403, і тд. -->
+            <fieldset name="TPL_ERROR_PHRASES">
+                <field
+                    name="error_phrases_404"
+                    type="textarea"
+                    rows="8"
+                    default=""
+                    filter="string"
+                    label="TPL_MAGNUM_ERROR_PHRASES_404_LABEL"
+                    description="TPL_MAGNUM_ERROR_PHRASES_404_DESC"
+                />
+                <field
+                    name="error_phrases_403"
+                    type="textarea"
+                    rows="6"
+                    default=""
+                    filter="string"
+                    label="TPL_MAGNUM_ERROR_PHRASES_403_LABEL"
+                    description="TPL_MAGNUM_ERROR_PHRASES_403_DESC"
+                />
+                <field
+                    name="error_phrases_401"
+                    type="textarea"
+                    rows="5"
+                    default=""
+                    filter="string"
+                    label="TPL_MAGNUM_ERROR_PHRASES_401_LABEL"
+                    description="TPL_MAGNUM_ERROR_PHRASES_401_DESC"
+                />
+                <field
+                    name="error_phrases_500"
+                    type="textarea"
+                    rows="6"
+                    default=""
+                    filter="string"
+                    label="TPL_MAGNUM_ERROR_PHRASES_500_LABEL"
+                    description="TPL_MAGNUM_ERROR_PHRASES_500_DESC"
+                />
+                <field
+                    name="error_phrases_503"
+                    type="textarea"
+                    rows="5"
+                    default=""
+                    filter="string"
+                    label="TPL_MAGNUM_ERROR_PHRASES_503_LABEL"
+                    description="TPL_MAGNUM_ERROR_PHRASES_503_DESC"
                 />
             </fieldset>
             <!-- Налаштування meta-тегів верифікації пошукових систем -->
