@@ -38,6 +38,16 @@
             }
         },
         {
+            "name": "template.error.style",
+            "description": "Error pages (404, 403, 401, 500, 503) css style. Must be placed in media/templates/site/magnum/css/error.css",
+            "type": "style",
+            "uri": "error.css",
+            "dependencies": ["template.styles"],
+            "attributes": {
+                "rel": "stylesheet"
+            }
+        },
+        {
             "name": "template.jquery",
             "description": "jQuery 3.7.1 JS script. Must be placed in media/templates/site/magnum/js/jquery-3.7.1.min.js",
             "type": "script",
