@@ -30,6 +30,13 @@ jobs:
             --exclude "*/__MACOSX*"
           cd ..
 
+      - name: Calculate SHA-256 checksum
+        id: checksum
+        run: |
+          HASH=$(sha256sum "template_magnum_v${{ steps.version.outputs.VERSION }}.zip" | cut -d' ' -f1)
+          echo "SHA256=$HASH" >> $GITHUB_OUTPUT
+          echo "Контрольна сума: $HASH"
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
@@ -44,9 +51,14 @@ jobs:
             ## 🚀 Встановлення
 
             1. Завантажте архів `template_magnum_v${{ steps.version.outputs.VERSION }}.zip`
-            2. В адмінці Joomla: **System → Install → Extensions** → завантажте архів
-            3. Активуйте шаблон: **System → Site Templates Styles** → встановіть як Default
+            2. В адмінці Joomla: **Система** → **Встановлення** → **Розширення** → завантажте архів та встановіть шаблон
+            3. Активуйте шаблон: **Система** → **Стилі сайту** → встановіть як шаблон за замовчуванням
 
             ## 📋 Вимоги
             - Joomla 6.0+
             - PHP 8.1+
+
+            ## 🔐 Контрольна сума (SHA-256)
+            ```
+            ${{ steps.checksum.outputs.SHA256 }}
+            ```
