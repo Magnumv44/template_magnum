@@ -7,7 +7,7 @@
 	<authorUrl>https://www.magnumblog.space</authorUrl>
 	<copyright>Copyright (C) 2005 - 2026</copyright>
 	<license>MIT</license>
-	<version>6.2.0</version>
+	<version>6.2.1</version>
 	<targetplatform name="joomla" version="6.0" />
 	<description>TPL_MAGNUM_DESC</description>
 	<inheritable>1</inheritable>
@@ -151,6 +151,15 @@
             </fieldset>
             <!-- Вкладка фраз для сторінок помилок 404, 403, і тд. -->
             <fieldset name="TPL_ERROR_PHRASES">
+                <field
+                    name="error_redirect_seconds"
+                    type="number"
+                    default="15"
+                    min="5"
+                    max="300"
+                    label="TPL_MAGNUM_ERROR_REDIRECT_SECONDS_LABEL"
+                    description="TPL_MAGNUM_ERROR_REDIRECT_SECONDS_DESC"
+                />
                 <field
                     name="error_phrases_404"
                     type="textarea"

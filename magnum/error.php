@@ -102,6 +102,10 @@ $defaultPhrase = $defaultPhrases[$errorCode] ?? implode("\n", [
 
 $phrases = $getPhrases($phraseParam, $defaultPhrase);
 
+// Час до автоматичного редіректу (в секундах), з обмеженням 5-300 для захисту від некоректних значень
+$redirectSeconds = (int) $this->params->get('error_redirect_seconds', 15);
+$redirectSeconds = max(5, min(300, $redirectSeconds));
+
 // Чи показувати таймер редіректу (лише для 404)
 $showRedirect = ($errorCode === 404);
 ?>
@@ -172,7 +176,7 @@ $showRedirect = ($errorCode === 404);
 
         <?php if ($showRedirect) : ?>
         <div class="redirect-info">
-            <?php echo Text::_('TPL_MAGNUM_ERROR_REDIRECT_TEXT'); ?> <span id="countdown">15</span> <?php echo Text::_('TPL_MAGNUM_ERROR_REDIRECT_SEC'); ?>
+            <?php echo Text::_('TPL_MAGNUM_ERROR_REDIRECT_TEXT'); ?> <span id="countdown"><?php echo $redirectSeconds; ?></span> <?php echo Text::_('TPL_MAGNUM_ERROR_REDIRECT_SEC'); ?>
         </div>
         <?php endif; ?>
         <div class="buttons">
@@ -220,7 +224,7 @@ $showRedirect = ($errorCode === 404);
         const TYPING_SPEED = 45;
         const DELETING_SPEED = 20;
         const PAUSE_AFTER = 2800;
-        const TIME_TO_REDIRECT = 60; // Час до автоматичного редіректу в секундах
+        const TIME_TO_REDIRECT = <?php echo $redirectSeconds; ?>; // Час до автоматичного редіректу в секундах
 
         function type() {
             if (!el || phrases.length === 0) return;
