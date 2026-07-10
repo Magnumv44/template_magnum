@@ -10,7 +10,7 @@
         <downloads>
             <downloadurl type="full" format="zip">https://www.magnumblog.space/files/magnum.zip</downloadurl>
         </downloads>
-        <sha256sum>4e457e45d12eba743194bd0681cc6db68f7031ba86d5a784606bb60de6fc9a36</sha256sum>
+        <sha256>4e457e45d12eba743194bd0681cc6db68f7031ba86d5a784606bb60de6fc9a36</sha256>
         <tags>
             <tag>stable</tag>
         </tags>
