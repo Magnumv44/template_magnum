@@ -146,6 +146,9 @@
                 <div class="col-9 con">
                     <jdoc:include type="message" />
                     <jdoc:include type="component" />
+                    <?php if ($this->countModules('article-footer')) : ?>
+                        <jdoc:include type="modules" name="article-footer" style="none" />
+                    <?php endif; ?>
                 </div>
             </div>
         </main>
