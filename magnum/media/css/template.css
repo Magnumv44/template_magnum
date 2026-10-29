@@ -911,6 +911,41 @@ body.lb-disable-scrolling {
     margin-bottom: 0;
 }
 
+/* Модуль mod_articlefooter: блок із кнопкою обговорення під матеріалом */
+.mod-articlefooter {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 10px;
+    padding: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mod-articlefooter .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 28px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Темний текст на акцентному фоні при наведенні читається краще за білий */
+.mod-articlefooter .btn-primary:hover {
+    color: #222;
+}
+
+/* Шаблон прибирає box-shadow при фокусі, тому лишаємо видиму рамку для навігації з клавіатури */
+.mod-articlefooter .btn-primary:focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+}
+/************************************************************************/
+
 /* Стилі посторінкової навігації */
 .pagination {
     margin: 20px 0 10px 0;
